@@ -1,0 +1,31 @@
+#Turn Rewrite Engine On
+RewriteEngine on 
+
+#Rewrite for index.php
+RewriteRule ^$ index.php [NC,L]
+
+#Rewrite for privacy-policy.php
+RewriteRule ^privacy-policy$ privacy-policy.php [NC,L]
+
+#Rewrite for contact.php
+RewriteRule ^contact-us$ contact.php [NC,L]
+
+#Rewrite for about.php
+RewriteRule ^about-us$ about.php [NC,L]
+
+# NC makes the rule non case sensitive
+# L makes this the last rule that this specific condition will match
+# $ in the regular expression makes the matching stop so that "customblah" will not work
+
+# Rewrite for user.php?u=xxxxx
+ RewriteRule ^blog/([^/\.]+)/?$ post.php?id=$1 [L]
+
+# Redirect to www
+RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
+RewriteCond %{HTTPS}s ^on(s)|
+RewriteRule ^ http%1://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+Options -Indexes 
+
+RewriteEngine on
+ErrorDocument 404 /404.php

@@ -1,0 +1,94 @@
+<?php session_start(); // place it on the top of the script ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/bootstrap-override.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
+    <title>Blogg Bat</title>
+  </head>
+  <body>
+
+   <?php include 'partials/_header.php'; ?>
+   <?php include 'partials/_dbconnect.php'; ?>
+
+    <!-- *********First Section start******* -->
+
+    <Section id="FirstSection">
+        <div class="container newsletterForm">
+            <div class="container imageBox">
+                <img  src="/assets/img/img1.jpg" alt="">
+            </div>
+            <div class="spacer"></div>
+        <div class="container formBox">
+            <h2 class="formText">Join the Blogg Bat Army!</h2>
+            <p class="formTextSmall">Signup and receive our exclusive blogging and digital marketing tips right in your inbox.</p>
+            <form class = "emailForm" action="/action.php" method="POST">
+                <div class="mb-3">
+                <input type="text" class="form-control" id="name" name="fname" placeholder="Enter your first name">
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary btn-mail" type="Submit">Sign Up</button>
+              </div>
+              <?php
+    $statusMsg = !empty($_SESSION['msg'])?$_SESSION['msg']:'';
+    unset($_SESSION['msg']);
+    echo $statusMsg;
+?>
+            </form>
+        </div>
+    </div>
+</Section>
+
+<Section id="SecondSection">
+    <h1 class="BigText">MOST RECENT POST</h1>
+    <div class="row" id="cardHolder">
+
+    <!--fetch all the post-->
+    <?php 
+    $sql = "SELECT * FROM `blogs` ORDER BY `sr_no` DESC LIMIT 9";
+    $result = mysqli_query($conn , $sql);
+    while($row = mysqli_fetch_assoc($result)){
+      $content = $row['content'];
+      
+       $content = str_replace("h1", "p" , $content);
+       
+      $srno = $row['sr_no'];
+      $title = $row['title'];
+      $image = $row['image'];
+      $url = $row['url'];
+      
+      echo ' <div class="col-md-4">
+      <div class="card">
+          <img src="/assets/img/'.$image.'" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">'.substr($title,0,50).'</h5>
+            <p class="card-text">'.substr($content,0,150).'</p>
+            <a href="blog/'.$url.'" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+     </div>';
+
+    }
+
+    ?>
+ </div>
+   
+</Section>
+<?php include 'partials/_footer.php'; ?>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+  </body>
+</html>

@@ -1,0 +1,59 @@
+.alert-success {
+    color: #0f5132;
+    margin-top: 8px!important;
+    background-color: #d1e7dd;
+    border-color: #badbcc;
+}
+
+.btn-outline-success {
+    color: #fff!important;
+    border:none!important;
+    display: none!important;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: #fff!important;
+    font-weight: bold;
+}
+
+.bg-light {
+    background-color: #0D1239!important;
+    padding: 15px;
+    top: 0px;
+    position: sticky;
+    z-index: +1;
+}
+
+.btn-primary {
+    color: #000;
+    background-color: transparent!important;
+    border: none!important;
+}
+.btn-primary:hover {
+    color: white;
+    background-color: yellow!important;
+}
+.card{
+    border: none!important;
+}
+
+.card{
+    margin-top: 30px;
+}
+.btn-mail{
+    background-color: orange!important;
+}
+
+.btn-light {
+    color: #000;
+    background-color: #87afd7!important;
+    border-color: #f8f9fa;
+    margin: 18px 0px;
+}
+
+.commentLog{
+    color: #000000!important;
+    margin-top: 8px!important;
+    background-color: white!important;
+    border: none!important;
+}
