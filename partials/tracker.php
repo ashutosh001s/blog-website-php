@@ -1,5 +1,6 @@
 <?php
 date_default_timezone_set("Asia/Kolkata");
+$today = date("F j, Y, g:i a");
 
 // get address using ip
 function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
@@ -102,11 +103,11 @@ function get_client_ip() {
 
   if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ 
   
-    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`,`v_time`) VALUES ('$userIp', '$email', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', current_timestamp())";
+    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`,`v_time`) VALUES ('$userIp', '$email', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', $today)";
     $result = mysqli_query($conn, $sql);
   }
   else{
-    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `v_time`) VALUES ('$userIp', 'Not Logged In', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', current_timestamp())";
+    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `v_time`) VALUES ('$userIp', 'Not Logged In', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', $today)";
     $result = mysqli_query($conn, $sql);
     
   }
