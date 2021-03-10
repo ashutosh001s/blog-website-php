@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set("Asia/Kolkata");
 
 // get address using ip
 function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
