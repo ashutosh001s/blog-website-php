@@ -1,6 +1,5 @@
 <?php
-date_default_timezone_set("Asia/Kolkata");
-$today = date("F j, Y, g:i a");
+
 
 // get address using ip
 function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
@@ -99,6 +98,8 @@ function get_client_ip() {
 
 
     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    date_default_timezone_set("Asia/Kolkata");
+    $today = date("F j, Y, g:i a");
 
 
   if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ 
