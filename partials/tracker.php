@@ -100,15 +100,18 @@ function get_client_ip() {
     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     date_default_timezone_set("Asia/Kolkata");
     $today = date("F j, Y, g:i a");
+    $endtime = microtime(true); // Bottom of page
+    $loadTime = $endtime - $starttime;
+
 
 
   if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ 
   
-    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`,`v_time`) VALUES ('$userIp', '$email', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', '$today')";
+    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `load_time`, `v_time`) VALUES ('$userIp', '$email', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address','$loadTime', '$today')";
     $result = mysqli_query($conn, $sql);
   }
   else{
-    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `v_time`) VALUES ('$userIp', 'Not Logged In', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', '$today')";
+    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `load_time`, `v_time`) VALUES ('$userIp', 'Not Logged In', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', '$loadTime', '$today')";
     $result = mysqli_query($conn, $sql);
     
   }

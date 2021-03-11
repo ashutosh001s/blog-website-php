@@ -94,9 +94,3 @@
   </body>
 </html>
 <?php include 'partials/tracker.php'; ?>
-<?php
-$endtime = microtime(true); // Bottom of page
-$loadTime = $endtime - $starttime;
-
-echo $loadTime;
-?>
