@@ -108,7 +108,7 @@ function get_client_ip() {
     $result = mysqli_query($conn, $sql);
   }
   else{
-    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `v_time`) VALUES ('$userIp', 'Not Logged In', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', '$loadTime')";
+    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `v_time`) VALUES ('$userIp', 'Not Logged In', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', '$today')";
     $result = mysqli_query($conn, $sql);
     
   }

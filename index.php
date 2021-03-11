@@ -98,5 +98,5 @@
 $endtime = microtime(true); // Bottom of page
 $loadTime = $endtime - $starttime;
 
-printf("Page loaded in %f seconds", $endtime - $starttime );
+echo $loadTime;
 ?>
