@@ -78,10 +78,12 @@
            
           </tr>
         </tbody>
-      </table>
-      </div>';
+     ';
       }
       ?>
+
+    </table>
+</div>
 
 
     <script src="./assets/js/script.js"></script>
