@@ -23,6 +23,25 @@ echo ' <!-- *********Navigation start******* -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/privacy-policy">Privacy Policy</a>
           </li>';
+
+          
+  include 'partials/_dbconnect.php';
+ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+    $useremail = $_SESSION['useremail'];
+    $sql = "SELECT * FROM `users` WHERE user_roles = 'administrator'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $adminEmail = $row['user_email'];
+    
+    if($useremail == $adminEmail){
+      echo '<li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/inspect.php" target="_blank">Inspect</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/write-post.php" target="_blank">Post</a>
+    </li>';
+    }
+ }
           
           if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
               echo '<li class="nav-item">
@@ -97,6 +116,7 @@ else if (isset($_GET['login']) && $_GET['login']=='true'){
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>';
 }
+    
 
 
 ?>
