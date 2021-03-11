@@ -24,6 +24,24 @@
   <?php include 'partials/_dbconnect.php'; ?>
   <?php include 'partials/inspector_menu.php'; ?>
 
+  <div class="container">
+    <table class="table table-dark table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Sr No</th>
+          <th scope="col">Ip</th>
+          <th scope="col">Email</th>
+          <th scope="col">Url</th>
+          <th scope="col">Country</th>
+          <th scope="col">Country Code</th>
+          <th scope="col">State</th>
+          <th scope="col">City</th>
+          <th scope="col">Address</th>
+          <th scope="col">Load Time</th>
+          <th scope="col">Visit Time</th>
+        </tr>
+      </thead>
+
  <?php 
       $sr_no = 0;
       $sql = "SELECT * FROM `visitors`";
@@ -43,23 +61,7 @@
         
         
 
-      echo'<div class="container">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Sr No</th>
-            <th scope="col">Ip</th>
-            <th scope="col">Email</th>
-            <th scope="col">Url</th>
-            <th scope="col">Country</th>
-            <th scope="col">Country Code</th>
-            <th scope="col">State</th>
-            <th scope="col">City</th>
-            <th scope="col">Address</th>
-            <th scope="col">Load Time</th>
-            <th scope="col">Visit Time</th>
-          </tr>
-        </thead>
+      echo'
         <tbody>
           <tr>
             <th scope="row">'.$sr_no.'</th>
