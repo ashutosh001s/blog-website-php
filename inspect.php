@@ -47,17 +47,17 @@
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-            <th scope="col">Handle</th>
-            <th scope="col">Handle</th>
-            <th scope="col">Handle</th>
-            <th scope="col">Handle</th>
-            <th scope="col">Handle</th>
-            <th scope="col">Handle</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Sr No</th>
+            <th scope="col">Ip</th>
+            <th scope="col">Email</th>
+            <th scope="col">Url</th>
+            <th scope="col">Country</th>
+            <th scope="col">Country Code</th>
+            <th scope="col">State</th>
+            <th scope="col">City</th>
+            <th scope="col">Address</th>
+            <th scope="col">Load Time</th>
+            <th scope="col">Visit Time</th>
           </tr>
         </thead>
         <tbody>
