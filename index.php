@@ -1,3 +1,4 @@
+<?php $starttime = microtime(true); // Top of page?>
 <?php session_start(); // place it on the top of the script ?>
 <!doctype html>
 <html lang="en">
@@ -8,10 +9,10 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/footer.css">
-    <link rel="stylesheet" href="./assets/css/bootstrap-override.css">
-    <link rel="stylesheet" href="./assets/css/responsive.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/style.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/footer.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap-override.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/responsive.css">
 
     <title>Blogg Bat</title>
   </head>
@@ -87,9 +88,15 @@
    
 </Section>
 <?php include 'partials/_footer.php'; ?>
-<?php include 'partials/tracker.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 
   </body>
 </html>
+<?php include 'partials/tracker.php'; ?>
+<?php
+$endtime = microtime(true); // Bottom of page
+$loadTime = $endtime - $starttime;
+
+printf("Page loaded in %f seconds", $endtime - $starttime );
+?>
