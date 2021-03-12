@@ -40,11 +40,11 @@ echo'<!doctype html>
           <th scope="col">Ip</th>
           <th scope="col">Email</th>
           <th scope="col">Url</th>
-          <th scope="col">Country</th>
-          <th scope="col">Country Code</th>
-          <th scope="col">State</th>
-          <th scope="col">City</th>
-          <th scope="col">Address</th>
+          <!-- <th scope="col">Country</th> -->
+          <!-- <th scope="col">Country Code</th> -->
+          <!-- <th scope="col">State</th> -->
+          <!-- <th scope="col">City</th> -->
+          <!-- <th scope="col">Address</th> -->
           <th scope="col">Load Time</th>
           <th scope="col">Visit Time</th>
         </tr>
@@ -59,11 +59,11 @@ echo'<!doctype html>
         $v_ip = $row['v_ip'];
         $v_email = $row['v_email'];
         $v_url = $row['v_url'];
-        $v_country = $row['v_country'];
-        $v_country_code = $row['v_country_code'];
-        $v_state = $row['v_state'];
-        $v_city = $row['v_city'];
-        $v_address = $row['v_address'];
+        //$v_country = $row['v_country'];
+        //$v_country_code = $row['v_country_code'];
+        //$v_state = $row['v_state'];
+        //$v_city = $row['v_city'];
+        //$v_address = $row['v_address'];
         $v_load_time = $row['load_time'];
         $v_time = $row['v_time'];
         
@@ -76,11 +76,11 @@ echo'<!doctype html>
             <td>'.$v_ip.'</td>
             <td>'.$v_email.'</td>
             <td>'.$v_url.'</td>
-            <td>'.$v_country.'</td>
-            <td>'.$v_country_code.'</td>
-            <td>'.$v_state.'</td>
-            <td>'.$v_city.'</td>
-            <td>'.$v_address.'</td>
+            <!-- <td>'.$v_country.'</td> -->
+            <!-- <td>'.$v_country_code.'</td> -->
+            <!-- <td>'.$v_state.'</td> -->
+            <!-- <td>'.$v_city.'</td> -->
+            <!-- <td>'.$v_address.'</td> -->
             <td>'.$v_load_time.'</td>
             <td>'.$v_time.'</td>
            
