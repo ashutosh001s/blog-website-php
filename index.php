@@ -73,7 +73,7 @@
       
       echo ' <div class="col-md-4">
       <div class="card">
-          <img src="/assets/img/cover'.$image.'" class="card-img-top" alt="...">
+          <img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">'.substr($title,0,50).'</h5>
             <p class="card-text">'.substr($content,0,150).'</p>
