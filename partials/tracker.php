@@ -1,6 +1,4 @@
 <?php
-
-
 // get address using ip
 function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
     $output = NULL;

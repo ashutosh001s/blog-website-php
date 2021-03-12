@@ -13,6 +13,7 @@
     <link type="text/css" rel="stylesheet" href="./assets/css/footer.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/bootstrap-override.css">
     <link type="text/css" rel="stylesheet" href="./assets/css/responsive.css">
+    <?php include 'partials/analytics.php'; ?>
 
     <title>Blogg Bat</title>
   </head>

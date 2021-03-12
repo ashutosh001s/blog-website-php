@@ -151,3 +151,4 @@ path#XMLID_11_ ,path#XMLID_2_ {
 </div>
 </body>
 	</html>
+  <?php include 'partials/tracker.php'; ?>

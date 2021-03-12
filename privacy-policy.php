@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/css/bootstrap-override.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <style> body{background-color: whitesmoke;}</style>
+    <?php include 'partials/analytics.php'; ?>
 
     <title>Hello, world!</title>
   </head>

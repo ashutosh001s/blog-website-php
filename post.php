@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/bootstrap-override.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
+    <?php include 'partials/analytics.php'; ?>
     
     <style>
     body{background-color: whitesmoke;}
@@ -44,14 +45,9 @@
     $date = $row['date'];
     $readMin= $row['read_time'];
     $image= $row['image'];
-    $date = $row['date'];;
-    echo '
-      
+    $date = $row['date'];
 
-    
-
-    
-    <div class="postImage">
+    echo '    <div class="postImage">
       <img src="/assets/img/'.$image.'" alt="">
     </div>
 
