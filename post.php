@@ -139,7 +139,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         
 
       echo'<div class="media comments">
-        <img  src="/assets/img/cover/user1.png" class="mr-3 userImage" alt="...">
+        <img  src="/assets/img/cover/user.png" class="mr-3 userImage" alt="...">
         <div class="media-body">
           <h5 class="mt-0 commentBy">Asked by ' .$commentBy. '  On ' .$commentDate. '</h5>
           <p>'.$comment.'</p>
