@@ -54,7 +54,7 @@ $start = $time;
     $date = $row['date'];
 
     echo '    <div class="postImage">
-      <img src="/assets/img/'.$image.'" alt="">
+      <img src="/assets/img/cover/'.$image.'" alt="">
     </div>
 
     <div class="post" id="post">
@@ -139,7 +139,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         
 
       echo'<div class="media comments">
-        <img  src="/assets/img/user1.png" class="mr-3 userImage" alt="...">
+        <img  src="/assets/img/cover/user1.png" class="mr-3 userImage" alt="...">
         <div class="media-body">
           <h5 class="mt-0 commentBy">Asked by ' .$commentBy. '  On ' .$commentDate. '</h5>
           <p>'.$comment.'</p>
