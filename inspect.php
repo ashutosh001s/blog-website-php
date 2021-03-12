@@ -98,7 +98,6 @@ echo'<!doctype html>
 
   </body>
 </html>';
-include 'partials/tracker.php';
 
 }
 else{
