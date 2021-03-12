@@ -16,7 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $filename = $_FILES["uploadfile"]["name"]; 
     $tempname = $_FILES["uploadfile"]["tmp_name"];     
-    $folder = "./assets/img/".$filename; 
+    $folder = "./assets/img/hpage/".$filename; 
     move_uploaded_file($tempname, $folder);
           
     $sql = "INSERT INTO `blogs` (`url`, `title`, `content`, `category`, `tags`, `date`, `author`, `read_time`, `image`) VALUES ('$url', '$title', '$content', '$category', '$tags', '$date', '$author', '$readTime', '$filename');";

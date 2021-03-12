@@ -42,7 +42,7 @@ echo'<!doctype html>
   <body>
     <div>
       <h1 class="m-5" style="text-align: center;">Write Post</h1>
-      <form action="/submit-post.php" method="POST" >
+      <form action="/submit-post.php" method="POST" enctype="multipart/form-data">
 
       <div class="formLeft">
       <div class="mb-3">
