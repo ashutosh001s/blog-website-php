@@ -1,4 +1,5 @@
 <?php
+/* to activate for ip to location data
 // get address using ip
 function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
     $output = NULL;
@@ -65,6 +66,8 @@ function ip_info($ip = NULL, $purpose = "location", $deep_detect = TRUE) {
     return $output;
 }
 
+ */
+
 // Function to get the client IP address
 function get_client_ip() {
     $ipaddress = '';
@@ -84,32 +87,39 @@ function get_client_ip() {
         $ipaddress = 'UNKNOWN';
     return $ipaddress;
   }
+ 
   
   $userIp = get_client_ip($ipaddress);
   $email = $_SESSION['useremail'];
 
-    $v_country =  ip_info("$userIp", "Country"); // India
+  /* to activate for ip to location data
+  
+  $v_country =  ip_info("$userIp", "Country"); // India
     $v_country_code =  ip_info("$userIp", "Country Code"); // IN
     $v_state = ip_info("$userIp", "State"); // Andhra Pradesh
     $v_city = ip_info("$userIp", "City"); // Proddatur
     $v_address = ip_info("$userIp", "Address"); // Proddatur, Andhra Pradesh, India
-
+    
+*/
 
     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
     date_default_timezone_set("Asia/Kolkata");
     $today = date("F j, Y, g:i a");
-    $endtime = microtime(true); // Bottom of page
-    $loadTime = $endtime - $starttime;
+    $time = microtime();
+    $time = explode(' ', $time);
+    $time = $time[1] + $time[0];
+    $finish = $time;
+    $total_time = round(($finish - $start), 4);
 
 
 
   if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){ 
   
-    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `load_time`, `v_time`) VALUES ('$userIp', '$email', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address','$loadTime', '$today')";
+    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `load_time`, `v_time`) VALUES ('$userIp', '$email', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address','$total_time', '$today')";
     $result = mysqli_query($conn, $sql);
   }
   else{
-    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `load_time`, `v_time`) VALUES ('$userIp', 'Not Logged In', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', '$loadTime', '$today')";
+    $sql = "INSERT INTO `visitors` (`v_ip`, `v_email`, `v_url`, `v_country`, `v_country_code`, `v_state`, `v_city`, `v_address`, `load_time`, `v_time`) VALUES ('$userIp', 'Not Logged In', '$actual_link', '$v_country', '$v_country_code', '$v_state', '$v_city', '$v_address', '$total_time', '$today')";
     $result = mysqli_query($conn, $sql);
     
   }

@@ -1,4 +1,9 @@
-<?php $starttime = microtime(true); // Top of page?>
+<?php
+$time = microtime();
+$time = explode(' ', $time);
+$time = $time[1] + $time[0];
+$start = $time;
+?>
 <?php session_start(); // place it on the top of the script ?>
 <!doctype html>
 <html lang="en">
