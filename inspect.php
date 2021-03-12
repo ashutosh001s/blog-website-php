@@ -52,7 +52,7 @@ echo'<!doctype html>
 
  
       $sr_no = 0;
-      $sql = "SELECT * FROM `visitors`";
+      $sql = "SELECT * FROM `visitors` ORDER BY `v_no` DESC";
       $result = mysqli_query($conn , $sql);
       while($row = mysqli_fetch_assoc($result)){
         $sr_no++;
