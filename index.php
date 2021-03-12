@@ -27,7 +27,7 @@
     <Section id="FirstSection">
         <div class="container newsletterForm">
             <div class="container imageBox">
-                <img  src="/assets/img/img1.jpg" alt="">
+                <img  src="/assets/img/cover/img1.jpg" alt="">
             </div>
             <div class="spacer"></div>
         <div class="container formBox">
@@ -73,7 +73,7 @@
       
       echo ' <div class="col-md-4">
       <div class="card">
-          <img src="/assets/img/'.$image.'" class="card-img-top" alt="...">
+          <img src="/assets/img/cover'.$image.'" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">'.substr($title,0,50).'</h5>
             <p class="card-text">'.substr($content,0,150).'</p>
