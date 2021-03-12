@@ -39,6 +39,9 @@ echo ' <!-- *********Navigation start******* -->
     </li>
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="/write-post.php" target="_blank">Post</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="/text-editor.php" target="_blank">Editor</a>
     </li>';
     }
  }
