@@ -62,9 +62,10 @@ echo ' <!-- *********Navigation start******* -->
           </li>';}
         echo'</ul>
       </div>
-      <img  src="/assets/img/cover/user.png" class="mr-3 userImage dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="...">
+     
 
       <div class="dropdown">
+      <img  src="/assets/img/cover/user.png" class="mr-3 userImage dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" alt="...">
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <a class="dropdown-item" href="#">Action</a>
         <a class="dropdown-item" href="#">Another action</a>
