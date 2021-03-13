@@ -36,4 +36,8 @@
         width: 100%;
         padding: 20px;
     }
+
+    .btn-info {
+        margin-top: 15px;
+    }
   }

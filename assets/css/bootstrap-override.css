@@ -58,7 +58,7 @@
     border: none!important;
 }
 .btn-info {
-    color: white;
+    color: white!important;
     background-color: transparent!important;
     border-color: none!important;
 }
