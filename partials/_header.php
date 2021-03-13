@@ -32,7 +32,7 @@ echo ' <!-- *********Navigation start******* -->
        echo' <div class="dropdown">
 
          <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1"       data-bs-toggle="dropdown" aria-expanded="false">
-           Welcome '.$_SESSION['username'].'
+          '.$_SESSION['username'].'
          </button>
 
          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
