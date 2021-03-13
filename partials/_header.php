@@ -22,50 +22,51 @@ echo ' <!-- *********Navigation start******* -->
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/privacy-policy">Privacy Policy</a>
-          </li>';
+          </li>';        
+       
+       echo' </ul>
+      </div>';
 
-          
-  include 'partials/_dbconnect.php';
- if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-    $useremail = $_SESSION['useremail'];
-    $sql = "SELECT * FROM `users` WHERE user_roles = 'administrator'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $adminEmail = $row['user_email'];
-    
-    if($useremail == $adminEmail){
-      echo '<li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="/inspect.php" target="_blank">Inspect</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="/write-post.php" target="_blank">Post</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="/text-editor.php" target="_blank">Editor</a>
-    </li>';
-    }
- }
-          
+      if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
+
+       echo' <div class="dropdown">
+
+         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"       data-bs-toggle="dropdown" aria-expanded="false">
+           Welcome '.$_SESSION['username'].'
+         </button>
+
+         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
+         include 'partials/_dbconnect.php';
           if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-              echo '<li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Welcome '.$_SESSION['username'].' </a>
-          </li>';
-            echo '<li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/partials/_logout.php">Logout</a>
-          </li>';
+             $useremail = $_SESSION['useremail'];
+             $sql = "SELECT * FROM `users` WHERE user_roles = 'administrator'";
+             $result = mysqli_query($conn, $sql);
+             $row = mysqli_fetch_assoc($result);
+             $adminEmail = $row['user_email'];
+                  if($useremail == $adminEmail){
+           echo'<li><a class="nav-link active" aria-current="page" href="/inspect.php" target="_blank">Inspect</a></li>
+           <li><a class="nav-link active" aria-current="page" href="/write-post.php" target="_blank">Post</a></li>
+           <li><a class="nav-link active" aria-current="page" href="/text-editor.php" target="_blank">Editor</a></li>';
+         }
         }
-            else{echo '<li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</a>
-          </li>';}
-        echo'</ul>
-      </div>
-    </div>
-  </nav>
+           echo' <li><a class="nav-link active" aria-current="page" href="/partials/_logout.php">Logout</a></li>
+         </ul>
+
+        </div>';
+
+      }else{
+        echo '<li class="nav-item">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+      </li>
+      <li class="nav-item">
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+      </li>';
+    }
+
+   echo' </div>
+  </nav>';
         
-<!-- *********Navigation end******* -->';
+//<!-- *********Navigation end******* -->
 
 
 include 'partials/_loginModal.php';

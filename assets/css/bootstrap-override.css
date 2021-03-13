@@ -57,3 +57,8 @@
     background-color: white!important;
     border: none!important;
 }
+.btn-info {
+    color: white;
+    background-color: transparent!important;
+    border-color: none!important;
+}
