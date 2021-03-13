@@ -31,7 +31,7 @@ echo ' <!-- *********Navigation start******* -->
 
        echo' <div class="dropdown">
 
-         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"       data-bs-toggle="dropdown" aria-expanded="false">
+         <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1"       data-bs-toggle="dropdown" aria-expanded="false">
            Welcome '.$_SESSION['username'].'
          </button>
 
