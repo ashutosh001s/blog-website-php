@@ -1,25 +1,69 @@
- function chooseColor(){
-      var mycolor = document.getElementById("myColor").value;
-      document.execCommand('foreColor', false, mycolor);
-    }
+var btn = document.querySelector(".sai");
+var getText = document.querySelector(".getText");
+var content = document.querySelector(".getcontent");
+var editorContent = document.querySelector(".editor");
 
-    function changeFont(){
-      var myFont = document.getElementById("input-font").value;
-      document.execCommand('fontName', false, myFont);
-    }
+btn.addEventListener("click", function() {
+  var s = editorContent.innerHTML;
+  content.style.display = "block";
+  content.textContent = s;
+});
 
-    function changeSize(){
-      var mysize = document.getElementById("fontSize").value;
-      document.execCommand('fontSize', false, mysize);
-    }
+getText.addEventListener("click", function() {
+  const old = editorContent.textContent;
+  content.style.display = "block";
+  content.textContent = old;
+});
 
-    function checkDiv(){
-      var editorText = document.getElementById("editor1").innerHTML;
-      if(editorText === ''){
-        document.getElementById("editor1").style.border = '5px solid red';
-      }
-    }
+function link() {
+  var url = prompt("Enter the URL");
+  document.execCommand("createLink", false, url);
+}
 
-    function removeBorder(){
-      document.getElementById("editor1").style.border = '1px solid transparent';
-    }
+function copy() {
+  document.execCommand("copy", false, "");
+}
+
+function changeColor() {
+  var color = prompt("Enter your color in hex ex:#f1f233");
+  document.execCommand("foreColor", false, color);
+}
+
+
+function getImage() {
+  var file = document.querySelector("input[type=file]").files[0];
+
+  var reader = new FileReader();
+
+  let dataURI;
+
+  reader.addEventListener(
+    "load",
+    function() {
+      dataURI = reader.result;
+
+      const img = document.createElement("img");
+      img.src = dataURI;
+      editorContent.appendChild(img);
+    },
+    false
+  );
+
+  if (file) {
+    console.log("s");
+    reader.readAsDataURL(file);
+  }
+}
+
+function printMe() {
+  if (confirm("Check your Content before print")) {
+    const body = document.body;
+    let s = body.innerHTML;
+    body.textContent = editorContent.innerHTML;
+
+    document.execCommandShowHelp;
+    body.style.whiteSpace = "pre";
+    window.print();
+    location.reload();
+  }
+}
