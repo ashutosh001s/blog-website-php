@@ -40,4 +40,11 @@
     .btn-info {
         margin-top: 15px;
     }
+    .btn-danger {
+       
+        margin-top: 20px;
+    }
+    .btn-warning {
+        margin-top: 20px;
+    }
   }
