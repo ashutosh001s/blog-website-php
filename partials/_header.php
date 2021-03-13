@@ -62,6 +62,7 @@ echo ' <!-- *********Navigation start******* -->
           </li>';}
         echo'</ul>
       </div>
+      <img  src="/assets/img/cover/user.png" class="mr-3 userImage" alt="...">
     </div>
   </nav>
         
