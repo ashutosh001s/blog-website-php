@@ -23,7 +23,7 @@ html{
 }
 
 .tool-items{
-    background-color: rgb(27, 26, 26);
+    background-color: #0D1239;
      padding-top: .6rem;
      padding-bottom:.6rem;
     cursor: pointer;
@@ -71,7 +71,7 @@ html{
 
 .btn{
       padding: .5rem;
-      background-color: #7e1111;
+      background-color: #0D1239;
       margin-right: 1rem;
       color: #fffffc;
       letter-spacing: .1rem;
