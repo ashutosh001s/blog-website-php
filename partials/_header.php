@@ -45,8 +45,7 @@ echo ' <!-- *********Navigation start******* -->
              $adminEmail = $row['user_email'];
                   if($useremail == $adminEmail){
            echo'<li><a class="nav-link active" aria-current="page" href="/inspect.php" target="_blank">Inspect</a></li>
-           <li><a class="nav-link active" aria-current="page" href="/write-post.php" target="_blank">Post</a></li>
-           <li><a class="nav-link active" aria-current="page" href="/text-editor.php" target="_blank">Editor</a></li>';
+           <li><a class="nav-link active" aria-current="page" href="/write-post.php" target="_blank">Post</a></li>';
          }
         }
            echo' <li><a class="nav-link active" aria-current="page" href="/partials/_logout.php">Logout</a></li>
