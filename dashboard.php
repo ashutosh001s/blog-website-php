@@ -19,24 +19,24 @@ echo'<!doctype html>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="./assets/css/dashboard.css" rel="stylesheet">
-    <script src="https://cdn.tiny.cloud/1/f78fim1rlfmk51mmqwkbubj31o4dwybrbi30kliqoin43ovu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/f78fim1rlfmk51mmqwkbubj31o4dwybrbi30kliqoin43ovu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>';
 
-    /*<style>
-    form{
-      display: flex;
-      width: 100%;
-    }
+    // <style>
+    // form{
+    //   display: flex;
+    //   width: 100%;
+    // }
 
-    .formLeft{
-        width: 50%;
-        margin: 20px;
-      }
+    // .formLeft{
+    //     width: 50%;
+    //     margin: 20px;
+    //   }
 
-      .formRight{
-        //width: 50%;
-        //margin: 20px;
-      }
-    </style>*/';
+    //   .formRight{
+    //     width: 50%;
+    //     margin: 20px;
+    //   }
+    // </style>
 
     echo" <script>
     tinymce.init({
