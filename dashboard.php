@@ -52,18 +52,22 @@ echo'<!doctype html>
       </div>
     </nav>
 
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">';
 
-      <h2>Section title</h2>
+    $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+    if($host == "https://www.bloggbat.com/dashboard.php?inspect=true"){
+
+     echo' <h2>Section title</h2>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
-              <th>Header</th>
+              <th>Sr No</th>
+              <th>Ip</th>
+              <th>Email</th>
+              <th>Url</th>
+              <th>Load Time</th>
+              <th>Visit Time</th>
             </tr>
           </thead>';
           $sr_no = 0;
@@ -98,8 +102,9 @@ echo'<!doctype html>
             </tbody>';
           }
         echo'</table>
-      </div>
-    </main>
+      </div>';
+        }
+    echo'</main>
   </div>
 </div>
 
