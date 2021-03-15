@@ -44,8 +44,7 @@ echo ' <!-- *********Navigation start******* -->
              $row = mysqli_fetch_assoc($result);
              $adminEmail = $row['user_email'];
                   if($useremail == $adminEmail){
-           echo'<li><a class="nav-link active" aria-current="page" href="/inspect.php" target="_blank">Inspect</a></li>
-           <li><a class="nav-link active" aria-current="page" href="/write-post.php" target="_blank">Post</a></li>';
+           echo'<li><a class="nav-link active" aria-current="page" href="/dashboard.php?inspect=true" target="_blank">Dashboard</a></li>';
          }
         }
            echo' <li><a class="nav-link active" aria-current="page" href="/partials/_logout.php">Logout</a></li>

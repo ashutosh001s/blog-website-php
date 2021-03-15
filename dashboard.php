@@ -81,11 +81,17 @@ echo'<!doctype html>
       <div class="position-sticky pt-3">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="/dashboard.php?inspect=true">
               <span data-feather="home"></span>
-              Dashboard
+              Inspect
             </a>
           </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/dashboard.php?post=true">
+            <span data-feather="home"></span>
+            Write Post
+          </a>
+        </li>
         </ul>
       </div>
     </nav>
