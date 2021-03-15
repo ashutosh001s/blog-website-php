@@ -47,4 +47,16 @@
     .btn-warning {
         margin-top: 20px;
     }
+
+    .postImage {
+    height: 100%;
+    overflow: hidden;
+    }
+    .commentSection {
+        margin: auto;
+        width: 100%;
+    }
+    .comments {
+        margin: 10px;
+    }
   }
