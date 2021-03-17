@@ -31,9 +31,9 @@ echo ' <!-- *********Navigation start******* -->
 
        echo' <div class="dropdown">
 
-         <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1"       data-bs-toggle="dropdown" aria-expanded="false">
+         <a class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1"       data-bs-toggle="dropdown" aria-expanded="false">
           '.$_SESSION['username'].'
-         </button>
+         </a>
 
          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';
          include 'partials/_dbconnect.php';
@@ -48,20 +48,17 @@ echo ' <!-- *********Navigation start******* -->
          }
         }
            echo' <li><a class="nav-link active" aria-current="page" href="/partials/_logout.php">Logout</a></li>
-         </ul>
-
-        </div>';
-
-      }else{
-        echo '<li class="nav-item">
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
-      </li>
-      <li class="nav-item">
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
-      </li>';
-    }
-
-   echo' </div>
+         </ul>';
+        } else{
+          echo '<li class="nav-item">
+          <a class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+           </li>
+           <li class="nav-item">
+          <a class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</a>
+          </li>';
+      }
+      echo' </div>
+    </div>
   </nav>';
         
 //<!-- *********Navigation end******* -->
