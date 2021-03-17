@@ -55,7 +55,8 @@ echo ' <!-- *********Navigation start******* -->
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
       </li>
       <li class="nav-item">
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal" style="
+        list-style: none;>Sign up</button>
       </li>';
     }
 
