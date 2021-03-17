@@ -4,7 +4,7 @@ $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
 ?>
-<?php session_start(); // place it on the top of the script ?>
+<?php session_start(); // place it on the top of  script ?>
 <!doctype html>
 <html lang="en">
   <head>
