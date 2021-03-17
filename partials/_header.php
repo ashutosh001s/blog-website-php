@@ -52,9 +52,7 @@ echo ' <!-- *********Navigation start******* -->
 
       }else{
         echo '<li class="nav-item">
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal" style="
-        background: transparent;
-        border: none;>Login</button>
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
       </li>
       <li class="nav-item">
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal" style="
