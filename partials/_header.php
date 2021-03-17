@@ -22,8 +22,10 @@ echo ' <!-- *********Navigation start******* -->
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/privacy-policy">Privacy Policy</a>
-          </li>
-          </ul>';        
+          </li>';        
+       
+       echo' </ul>
+      </div>';
 
       if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
 
@@ -55,14 +57,11 @@ echo ' <!-- *********Navigation start******* -->
         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
       </li>
       <li class="nav-item">
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal" style="
-        list-style: none;>Sign up</button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
       </li>';
     }
 
-   echo' 
-   </div>
-   </div>
+   echo' </div>
   </nav>';
         
 //<!-- *********Navigation end******* -->
