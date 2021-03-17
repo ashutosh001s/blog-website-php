@@ -52,10 +52,13 @@ echo ' <!-- *********Navigation start******* -->
 
       }else{
         echo '<li class="nav-item">
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#loginModal" style="
+        background: transparent;
+        border: none;>Login</button>
       </li>
       <li class="nav-item">
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal" style="
+        list-style: none;>Sign up</button>
       </li>';
     }
 

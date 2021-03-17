@@ -12,12 +12,12 @@
 }
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
-    color: #fff!important;
+    color: rgb(0, 0, 0)!important;
     font-weight: bold;
 }
 
 .bg-light {
-    background-color: #0D1239!important;
+    background-color: #ffffff!important;
     padding: 15px;
     top: 0px;
     position: sticky;

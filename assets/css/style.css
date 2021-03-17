@@ -88,6 +88,7 @@
     height: 50px;
     width: 140px;
     margin-right: 50px;
+    filter: drop-shadow(2px 4px 6px black);
 }
 
 .postImage{
