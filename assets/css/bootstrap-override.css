@@ -65,3 +65,8 @@
 .nav-item{
     list-style: none;
 }
+.btn-danger {
+   
+    background-color: transparent!important;
+    border: none!important;
+}
