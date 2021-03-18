@@ -22,10 +22,10 @@ echo ' <!-- *********Navigation start******* -->
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/privacy-policy">Privacy Policy</a>
-          </li>';        
+          </li>
        
-       echo' </ul>
-      </div>';
+      </ul>
+      ';
 
       if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
 
@@ -61,7 +61,9 @@ echo ' <!-- *********Navigation start******* -->
       </li>';
     }
 
-   echo' </div>
+   echo' 
+   </div>
+   </div>
   </nav>';
         
 //<!-- *********Navigation end******* -->
