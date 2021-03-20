@@ -9,6 +9,7 @@ $start = $time;
  <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+   <link rel="shortcut icon" href="./assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);" type="image/x-icon"> 
    
 	 <style>
 	     *{
