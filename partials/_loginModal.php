@@ -9,10 +9,10 @@
       <div class="modal-body">
         <form action = "https://www.bloggbat.com/partials/_handleLogin.php" method = "POST">
             <div class="mb-3">
-             <input type="email" class="form-control" id="loginId" name="loginId" placeholder="Email" required>
+             <input type="email" class="form-control" id="loginId" name="loginId" placeholder="Email" autocomplete="on" required>
             </div>
             <div class="mb-3">
-             <input type="password" class="form-control" id="loginPass" name="loginPass" placeholder="Password" required>
+             <input type="password" class="form-control" id="loginPass" name="loginPass" placeholder="Password" autocomplete="on" required>
             </div>
         
       </div>

@@ -9,16 +9,16 @@
       <div class="modal-body">
         <form action = "https://www.bloggbat.com/partials/_handleSignup.php" method = "POST">
             <div class="mb-3">
-             <input type="text" class="form-control" id="signupName" name="signupName" placeholder="Name" required>
+             <input type="text" class="form-control" id="signupName" name="signupName" placeholder="Name" autocomplete="off" required>
             </div>
             <div class="mb-3">
-             <input type="email" class="form-control" id="signupEmail" name="signupEmail" placeholder="Email" required>
+             <input type="email" class="form-control" id="signupEmail" name="signupEmail" placeholder="Email" autocomplete="off" required>
             </div>
             <div class="mb-3">
-             <input type="password" class="form-control" id="signupPass" name="signupPass" placeholder="Password" required>
+             <input type="password" class="form-control" id="signupPass" name="signupPass" placeholder="Password" autocomplete="off" required>
             </div>
             <div class="mb-3">
-             <input type="password" class="form-control" id="signupPassConform" name="signupPassConform" placeholder="Conform Password" required>
+             <input type="password" class="form-control" id="signupPassConform" name="signupPassConform" placeholder="Conform Password" autocomplete="off" required>
             </div>
         
       </div>
