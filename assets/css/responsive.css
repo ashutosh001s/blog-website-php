@@ -35,6 +35,8 @@
         min-height: 80vh;
         width: 100%;
         padding: 20px;
+        margin-top: 0px;
+        border-radius: 0px;
     }
 
     .btn-info {
