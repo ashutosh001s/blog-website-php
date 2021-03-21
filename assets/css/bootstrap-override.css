@@ -79,3 +79,8 @@
     background-color: transparent!important;
     border: none!important;
 }
+.btn-warning {
+    color: white!important;
+    background-color: #008eff!important;
+    border: none!important;
+}
