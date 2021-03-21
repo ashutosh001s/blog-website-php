@@ -40,8 +40,9 @@
 .formText{
     padding: 20px 0px;
     font-weight: 900;
+    color: cadetblue;
     font-size: 3rem;
-    font-family: 'Montserrat', sans-serif;
+    
 }
 .formTextSmall{
     color:#00000061;
@@ -88,7 +89,7 @@
     height: 50px;
     width: 140px;
     margin-right: 50px;
-    filter: drop-shadow(2px 4px 6px black);
+    filter: invert(1);
 }
 
 .postImage{

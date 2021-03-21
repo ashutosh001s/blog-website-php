@@ -57,7 +57,7 @@ function minifier($code) {
     <Section id="FirstSection">
         <div class="container newsletterForm">
             <div class="container imageBox">
-                <img  src="/assets/img/cover/img1.jpg" alt="">
+                <img  src="/assets/img/cover/img2.png" alt="">
             </div>
             <div class="spacer"></div>
         <div class="container formBox">

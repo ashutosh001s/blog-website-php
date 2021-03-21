@@ -34,14 +34,23 @@
     background-color: yellow!important;
 }
 .card{
-    border: none!important;
+    box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%), 0 12px 90px 0 rgb(103 151 255 / 11%);
+    border-radius: 20px;
+    height: 96%;
+    border: none;
+}
+
+.card img{
+    border-radius: 20px 20px 0 0;
+    height: 250px;
 }
 
 .card{
     margin-top: 30px;
 }
 .btn-mail{
-    background-color: orange!important;
+    background-color: #008eff!important;
+    color: white;
 }
 
 .btn-light {
