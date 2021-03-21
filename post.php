@@ -64,7 +64,6 @@ function minifier($code) {
     <?php include 'partials/analytics.php'; ?>
     
     <style>
-    body{background-color: whitesmoke;}
     .commentBy{
     font-size: 18px;
     font-family: fantasy;
