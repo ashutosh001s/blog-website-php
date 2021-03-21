@@ -10,6 +10,8 @@ $start = $time;
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="keywords" content="Blogg Bat">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->

@@ -5,6 +5,8 @@ $title = $_POST['title'];
 $category = $_POST['category'];
 $tags = $_POST['tags'];
 $readTime = $_POST['read'];
+$description = $_POST['description'];
+$keywords = $_POST['keywords'];
 $author = $_POST['author'];
 date_default_timezone_set("Asia/Kolkata");
 $date = date("j F, Y");
@@ -19,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $folder = "./assets/img/cover/".$filename; 
     move_uploaded_file($tempname, $folder);
           
-    $sql = "INSERT INTO `blogs` (`url`, `title`, `content`, `category`, `tags`, `date`, `author`, `read_time`, `image`) VALUES ('$url', '$title', '$content', '$category', '$tags', '$date', '$author', '$readTime', '$filename');";
+    $sql = "INSERT INTO `blogs` (`url`, `title`, `content`, `category`, `tags`, `date`, `description`, `keywords`, `author`, `read_time`, `image`) VALUES ('$url', '$title', '$content', '$category', '$tags', '$date', '$description', '$keywords', '$author', '$readTime', '$filename');";
     $result = mysqli_query($conn, $sql);
 
     if($result){

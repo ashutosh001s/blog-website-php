@@ -174,6 +174,12 @@ echo'<!doctype html>
             <input type="text" class="form-control" id="tags" name="tags" placeholder="Tags">
           </div>
           <div class="mb-3">
+            <input type="text" class="form-control" id="description" name="description" placeholder="Description">
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control" id="keywords" name="keywords" placeholder="Keywords">
+          </div>
+          <div class="mb-3">
             <input type="text" class="form-control" id="author" name="author" placeholder="Author">
           </div>
           <div class="mb-3">
@@ -183,7 +189,7 @@ echo'<!doctype html>
           <input type="file" name="uploadfile" class="form-control" aria-label="file" required>
         </div>
           <div class="d-grid gap-2">
-            <button class="btn btn-primary" type="submit" name="upload">Button</button>
+            <button class="btn btn-primary" type="submit" name="upload">Submit</button>
           </div>
           </div>
 
