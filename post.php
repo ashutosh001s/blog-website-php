@@ -99,6 +99,7 @@ function minifier($code) {
 
     <div class="post" id="post">
       <h1 class="font1">'.$title.'</h1>
+      <img class = "post-image" src="/assets/img/cover/'.$image.'" alt="">
       <div class="blogpost-meta">
           <div class="author-info">
               <div>

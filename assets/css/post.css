@@ -71,3 +71,9 @@
     padding: 20px;
     background-color: white;
 }
+
+.post-image{
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%), 0 12px 90px 0 rgb(103 151 255 / 11%);
+}
