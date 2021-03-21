@@ -4,6 +4,7 @@ $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
 ?>
+  <?php include 'partials/_dbconnect.php'; ?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -54,7 +55,7 @@ $start = $time;
   </head>
   <body>
     <?php include 'partials/_header.php'; ?>
-    <?php include 'partials/_dbconnect.php'; ?>
+  
 
      <?php 
      
