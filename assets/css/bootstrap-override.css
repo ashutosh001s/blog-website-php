@@ -12,7 +12,6 @@
 }
 
 .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
-    color: #fff!important;
     font-weight: bold;
 }
 
@@ -59,7 +58,7 @@
     border: none!important;
 }
 .btn-info {
-    color: white!important;
+    color: black!important;
     background-color: transparent!important;
     border: none!important;
 }
@@ -67,7 +66,7 @@
     list-style: none;
 }
 .btn-danger {
-   
+    color: black!important;
     background-color: transparent!important;
     border: none!important;
 }
