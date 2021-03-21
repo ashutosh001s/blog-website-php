@@ -17,17 +17,19 @@ $start = $time;
       $result = mysqli_query($conn , $sql);
       $row = mysqli_fetch_assoc($result);
 
+      $title = $row['title'];
       $description = $row['description'];
       $keywords = $row['keywords'];
       $author = $row['author'];
       
     
-    echo'<meta name="description" content="'.$description.'">
+    echo'
+    <title>'.$title.'</title>
+    <meta name="description" content="'.$description.'">
     <meta name="keywords" content="'.$keywords.'">
     <meta name="author" content="'.$author.'">
     <meta name="viewport" content="width=device-width, initial-scale=1">';
     ?>
-
     <!-- Bootstrap CSS -->
     <link rel="shortcut icon" href="../assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);" type="image/x-icon"> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -47,10 +49,7 @@ $start = $time;
     }
     </style>
     
-    <?php 
-    $id = $_GET['id'];
-    echo'<title>'.$id.'</title>';
-   ?>
+   
     
   </head>
   <body>
