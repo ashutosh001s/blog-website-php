@@ -7,9 +7,9 @@
 }
 footer{
     height: 50px;
-    background-color: #0D1239;
+    background-color: #fff;
 }
 
 .footerText{
-    color: white;
+    color: black;
 }
