@@ -1,9 +1,9 @@
 #Turn Rewrite Engine On
 RewriteEngine on 
 
-RewriteCond %{HTTP_HOST} ^bloggbat.com/$
+RewriteCond %{HTTP_HOST} ^www.bloggbat.com$
 RewriteCond %{SERVER_PORT} ^443
-RewriteRule ^(.*)$ https://www.bloggbat.com/$1 [R=301]
+RewriteRule ^(.*)$ https://bloggbat.com/$1 [R=301]
 
 #Rewrite for index.php
 RewriteRule ^$ index.php [NC,L]
