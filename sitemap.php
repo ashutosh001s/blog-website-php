@@ -4,7 +4,7 @@ include 'partials/_dbconnect.php';
 $query = "SELECT page_url FROM page";
 $result = mysqli_query($conn, $query);
 
-$base_url = "https://bloggbat/sitemap.php";
+$base_url = "https://bloggbat/";
 
 header("Content-Type: application/xml; charset=utf-8");
 
