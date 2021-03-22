@@ -196,7 +196,7 @@ $start = $time;
 <p>By email: contact@bloggbat.com</p>
 </li>
 <li>
-<p>By visiting this page on our website: <a href="bloggbat.com/contact-us" rel="external nofollow noopener" target="_blank">bloggbat.com/contact-us</a></p>
+<p>By visiting this page on our website: <a href="/contact-us" rel="external nofollow noopener" target="_blank">bloggbat.com/contact-us</a></p>
 </li>
 </ul>
     </div>
