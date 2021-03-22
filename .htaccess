@@ -1,6 +1,10 @@
 #Turn Rewrite Engine On
 RewriteEngine on 
 
+RewriteCond %{HTTP_HOST} ^bloggbat.com/$
+RewriteCond %{SERVER_PORT} ^443
+RewriteRule ^(.*)$ https://www.bloggbat.com/$1 [R=301]
+
 #Rewrite for index.php
 RewriteRule ^$ index.php [NC,L]
 
@@ -19,7 +23,6 @@ RewriteRule ^about-us$ about.php [NC,L]
 
 # Rewrite for user.php?u=xxxxx
  RewriteRule ^blog/([^/\.]+)/?$ post.php?id=$1 [L]
-
 
 Options -Indexes 
 
