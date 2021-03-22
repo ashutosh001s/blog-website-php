@@ -15,7 +15,7 @@ echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="htt
 while($row = mysqli_fetch_assoc($result))
 {
  echo '<url>' . PHP_EOL;
- echo '<loc>'.$base_url. $row["page_url"] .'/</loc>' . PHP_EOL;
+ echo '<loc>'.$base_url. $row["page_url"] .'</loc>' . PHP_EOL;
  echo '<changefreq>daily</changefreq>' . PHP_EOL;
  echo '</url>' . PHP_EOL;
 }
