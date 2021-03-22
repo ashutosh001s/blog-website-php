@@ -32,8 +32,8 @@ function minifier($code) {
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="Blogg Bat">
+    <meta name="description" content="Blogg Bat is a free to used web page provides information about 4d era like genetics , AI , robotics etc.">
+    <meta name="keywords" content="Home , Blogg Bat">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->

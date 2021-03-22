@@ -9,6 +9,8 @@ $start = $time;
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="description" content="We are happy to listen our users if you have any query feel free to contact blogg bat team">
+    <meta name="keywords" content="Contact , Blogg Bat">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php include 'partials/analytics.php'; ?>
     <!-- Bootstrap CSS -->
@@ -41,7 +43,7 @@ $start = $time;
         
     </style>
 
-    <title>Blogg Bat</title>
+    <title>Contact | Blogg Bat</title>
   </head>
   <body>
 

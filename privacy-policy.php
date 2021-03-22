@@ -9,6 +9,8 @@ $start = $time;
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="description" content="Blogg Bat Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information">
+    <meta name="keywords" content="Privacy Policy , Blogg Bat">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
@@ -21,7 +23,7 @@ $start = $time;
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <?php include 'partials/analytics.php'; ?>
 
-    <title>Hello, world!</title>
+    <title>Privacy Policy | Blogg Bat</title>
   </head>
   <body>
   <?php include 'partials/_dbconnect.php'; ?>
