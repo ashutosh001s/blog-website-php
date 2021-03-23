@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action = "https://www.bloggbat.com/partials/_handleSignup.php" method = "POST">
+        <form action = "https://bloggbat.com/partials/_handleSignup.php" method = "POST">
             <div class="mb-3">
              <input type="text" class="form-control" id="signupName" name="signupName" placeholder="Name" autocomplete="off" required>
             </div>

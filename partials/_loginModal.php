@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action = "https://www.bloggbat.com/partials/_handleLogin.php" method = "POST">
+        <form action = "https://bloggbat.com/partials/_handleLogin.php" method = "POST">
             <div class="mb-3">
              <input type="email" class="form-control" id="loginId" name="loginId" placeholder="Email" autocomplete="on" required>
             </div>
