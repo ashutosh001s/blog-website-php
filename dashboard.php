@@ -145,7 +145,7 @@ echo'<!doctype html>
       </div>';
         }
         //closed inspect page in dashboard
-        if($host == "https://$domain/dashboard.php?post=true"){
+        if($host == "$domain/dashboard.php?post=true"){
         //write post opens here
 
       echo'<div>
