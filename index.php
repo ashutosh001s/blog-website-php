@@ -52,7 +52,7 @@ function minifier($code) {
    <?php include 'partials/_header.php'; ?>
    <?php include 'partials/_dbconnect.php'; ?>
 
-    <!-- *********First Section start******* -->
+    <!-- *********First Section start******** -->
 
     <Section id="FirstSection">
         <div class="container newsletterForm">
