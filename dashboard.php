@@ -101,7 +101,8 @@ echo'<!doctype html>
 
     //opens inspect page in dashboard
     $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-    if($host == "bloggbat.com/dashboard.php?inspect=true"){
+    $domain = $_SERVER['SERVER_NAME'];
+    if($host == "$domain/dashboard.php?inspect=true"){
 
      echo' <h2>Section title</h2>
       <div class="table-responsive">
@@ -144,7 +145,7 @@ echo'<!doctype html>
       </div>';
         }
         //closed inspect page in dashboard
-        if($host == "bloggbat.com/dashboard.php?post=true"){
+        if($host == "$domain/dashboard.php?post=true"){
         //write post opens here
 
       echo'<div>

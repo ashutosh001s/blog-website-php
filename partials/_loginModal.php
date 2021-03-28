@@ -1,4 +1,6 @@
-<!-- Modal -->
+<?php
+$host = $_SERVER['SERVER_NAME'];
+echo'<!-- Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -7,7 +9,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action = "https://bloggbat.com/partials/_handleLogin.php" method = "POST">
+        <form action = "'.$host.'/partials/_handleLogin.php" method = "POST">
             <div class="mb-3">
              <input type="email" class="form-control" id="loginId" name="loginId" placeholder="Email" autocomplete="on" required>
             </div>
@@ -23,4 +25,5 @@
       </div>
     </div>
   </div>
-</div>
+</div>';
+?>
