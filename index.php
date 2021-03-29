@@ -1,3 +1,4 @@
+//Site starts here
 <?php
 $time = microtime();
 $time = explode(' ', $time);
