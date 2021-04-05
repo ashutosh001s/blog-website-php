@@ -112,6 +112,10 @@
     width: 70%;
 }
 
+.card:hover{
+    box-shadow: 0 22px 60px 0 rgb(103 151 255), 0 12px 90px 0 rgb(103 151 255);
+}
+
 
 
 
