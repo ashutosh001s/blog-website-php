@@ -72,6 +72,10 @@ function minifier($code) {
         font-family: fantasy;
         color: crimson;
     }
+    
+    .bg-light{
+      position: relative!important;
+    }
     </style>
 
 
