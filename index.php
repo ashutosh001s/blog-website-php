@@ -95,8 +95,8 @@ function minifier($code) {
     while($row = mysqli_fetch_assoc($result)){
       $content = $row['content'];
       
-      $content = preg_replace('~[\r\n]+~', '', $content);
-       $content = str_replace("h1", "p" , $content);
+      $content = str_replace("h1", "p" , $content);
+      $content = preg_replace('/\R+/', " ", $content);
        
       $srno = $row['sr_no'];
       $title = $row['title'];
