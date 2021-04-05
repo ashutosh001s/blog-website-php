@@ -4,8 +4,8 @@ $time = explode(' ', $time);
 $time = $time[1] + $time[0];
 $start = $time;
 ?>
-  <?php include 'partials/_dbconnect.php'; ?>
-  <?php 
+<?php include 'partials/_dbconnect.php'; ?>
+<?php 
 ob_start("minifier"); 
 function minifier($code) { 
     $search = array( 
@@ -26,10 +26,11 @@ function minifier($code) {
     $code = preg_replace($search, $replace, $code); 
     return $code; 
 } 
-?> 
+?>
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
 
@@ -54,31 +55,40 @@ function minifier($code) {
     <meta name="viewport" content="width=device-width, initial-scale=1">';
     ?>
     <!-- Bootstrap CSS -->
-    <link rel="shortcut icon" href="../assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);" type="image/x-icon"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/post.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/bootstrap-override.css">
     <link rel="stylesheet" href="../assets/css/responsive.css">
     <?php include 'partials/analytics.php'; ?>
-    
+
     <style>
-    .commentBy{
-    font-size: 18px;
-    font-family: fantasy;
-    color: crimson;
+    .commentBy {
+        font-size: 18px;
+        font-family: fantasy;
+        color: crimson;
     }
     </style>
-    
-   
-    
-  </head>
-  <body>
-    <?php include 'partials/_header.php'; ?>
-  
 
-     <?php 
+
+
+</head>
+
+<body>
+    <?php include 'partials/_header.php'; ?>
+
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </div>
+
+
+    <?php 
      
      $id = $_GET['id'];
     $sql = "SELECT * FROM `blogs` WHERE url = '$id'";
@@ -124,7 +134,7 @@ function minifier($code) {
 
     ?>
 
-<?php
+    <?php
 include 'partials/_dbconnect.php';
 $url= $_SERVER['REQUEST_URI'];
 session_start();
@@ -193,11 +203,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     <?php include 'partials/_footer.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
     <script src="../assets/js/script.js"></script>
-  </body>
+</body>
+
 </html>
 <?php 
 ob_end_flush(); 
-?> 
-    <?php include 'partials/tracker.php'; ?>
+?>
+<?php include 'partials/tracker.php'; ?>
