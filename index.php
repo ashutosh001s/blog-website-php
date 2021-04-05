@@ -106,7 +106,9 @@ function minifier($code) {
       $content = str_replace("<", "" , $content);
       $content = str_replace(">", "" , $content);
       $content = str_replace("/", "" , $content);
-      $content = str_replace('class = "redheading"', '' , $content);
+      $content = str_replace("redheading", "" , $content);
+      $content = str_replace("class", "" , $content);
+      $content = str_replace("=", "" , $content);
 
 
        
