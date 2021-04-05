@@ -115,7 +115,7 @@ function minifier($code) {
       echo ' <div class="col-md-4">
       <div class="card">
           <span class="badge rounded-pill">'.$cate.'</span>
-          <img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="...">
+          <a href="blog/'.$url.'"><img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="..."></a>
           <div class="card-body">
             <h5 class="card-title">'.substr($title,0,70).'</h5>
             <p class="card-text">'.substr($content,0,250).'</p>
