@@ -96,3 +96,9 @@
     background-color: #008eff!important;
     border: none!important;
 }
+
+.rounded-pill {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}

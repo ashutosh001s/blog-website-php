@@ -107,13 +107,14 @@ function minifier($code) {
 
        
       $srno = $row['sr_no'];
+      $cate = $row['category'];
       $title = $row['title'];
       $image = $row['image'];
       $url = $row['url'];
       
       echo ' <div class="col-md-4">
       <div class="card">
-          <span class="badge rounded-pill bg-primary">Primary</span>
+          <span class="badge rounded-pill bg-primary">'.$cate.'</span>
           <img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">'.substr($title,0,70).'</h5>
