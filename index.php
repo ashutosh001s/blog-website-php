@@ -101,9 +101,14 @@ function minifier($code) {
     while($row = mysqli_fetch_assoc($result)){
       $content = $row['content'];
       
-      $content = str_replace("h1", "p" , $content);
-      $content = str_replace("\r", "", $content);
-      $content = str_replace("\n", "", $content);
+      $content = str_replace("h1", "" , $content);
+      $content = str_replace("p", "" , $content);
+      $content = str_replace("<", "" , $content);
+      $content = str_replace(">", "" , $content);
+      $content = str_replace("/", "" , $content);
+      $content = str_replace("redheading", "" , $content);
+
+
        
       $srno = $row['sr_no'];
       $title = $row['title'];
