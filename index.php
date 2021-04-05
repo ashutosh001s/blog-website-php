@@ -96,7 +96,7 @@ function minifier($code) {
       $content = $row['content'];
       
        $content = str_replace("h1", "p" , $content);
-       $content = str_replace("/\s\s+/", "" , $content);
+       $content = str_replace(array("\n", "\r"), "" , $content);
        
       $srno = $row['sr_no'];
       $title = $row['title'];
