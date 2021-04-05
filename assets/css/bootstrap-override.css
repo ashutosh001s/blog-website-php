@@ -38,6 +38,17 @@
     border-radius: 20px;
     height: 96%;
     border: none;
+    width: 90%;
+}
+
+.card-title {
+    margin-bottom: .5rem;
+    color: #008EFF;
+    font-weight: bold;
+}
+
+.card-text p {
+    font-size: 12px;
 }
 
 .card img{

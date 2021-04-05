@@ -96,6 +96,7 @@ function minifier($code) {
       $content = $row['content'];
       
        $content = str_replace("h1", "p" , $content);
+       $content = str_replace("/\s+/", " " , $content);
        
       $srno = $row['sr_no'];
       $title = $row['title'];
@@ -107,7 +108,7 @@ function minifier($code) {
           <img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">'.substr($title,0,50).'</h5>
-            <p class="card-text">'.substr($content,0,150).'</p>
+            <p class="card-text">'.substr($content,0,250).'</p>
             <a href="blog/'.$url.'" class="btn btn-primary">Read More</a>
           </div>
         </div>
