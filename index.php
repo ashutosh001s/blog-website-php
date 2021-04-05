@@ -46,6 +46,12 @@ function minifier($code) {
     <link type="text/css" rel="stylesheet" href="./assets/css/responsive.css">
     <?php include 'partials/analytics.php'; ?>
 
+    <style>
+      p{
+        margin: 0!important;
+      }
+    </style>
+
     <title>Blogg Bat</title>
   </head>
   <body>
