@@ -61,4 +61,7 @@
     .comments {
         margin: 10px;
     }
+    .card{
+        width: 100%;
+    }
   }
