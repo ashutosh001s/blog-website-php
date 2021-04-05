@@ -46,12 +46,6 @@ function minifier($code) {
     <link type="text/css" rel="stylesheet" href="./assets/css/responsive.css">
     <?php include 'partials/analytics.php'; ?>
 
-    <style>
-      p{
-        margin: 0!important;
-      }
-    </style>
-
     <title>Blogg Bat</title>
   </head>
   <body>
@@ -122,7 +116,7 @@ function minifier($code) {
           <img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">'.substr($title,0,70).'</h5>
-            <p class="card-text">'.substr($content,0,150).'</p>
+            <p class="card-text">'.substr($content,0,250).'</p>
             <a href="blog/'.$url.'" class="btn btn-primary">Read More</a>
           </div>
         </div>
