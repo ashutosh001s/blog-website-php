@@ -117,9 +117,9 @@ function minifier($code) {
           <span class="badge rounded-pill">'.$cate.'</span>
           <a href="blog/'.$url.'"><img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="..."></a>
           <div class="card-body">
-            <h5 class="card-title">'.substr($title,0,70).'</h5>
+          <a href="blog/'.$url.'"><h5 class="card-title">'.substr($title,0,70).'</h5></a>
             <p class="card-text">'.substr($content,0,250).'</p>
-            <a href="blog/'.$url.'" class="btn btn-primary">Read More</a>
+            <!-- <a href="blog/'.$url.'" class="btn btn-primary">Read More</a> -->
           </div>
         </div>
      </div>';
