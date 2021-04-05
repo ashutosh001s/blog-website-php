@@ -113,6 +113,7 @@ function minifier($code) {
       
       echo ' <div class="col-md-4">
       <div class="card">
+          <span class="badge rounded-pill bg-primary">Primary</span>
           <img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">'.substr($title,0,70).'</h5>
