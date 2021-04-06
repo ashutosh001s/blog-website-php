@@ -47,7 +47,7 @@
 .redheading {
     font-size: 25px;
     text-transform: uppercase;
-    color: #00337e;
+    color: #008EFF;
     font-weight: bold;
     margin: 25px 0px;
 }
@@ -105,5 +105,5 @@
 }
 
 b{
-    color: blue;
+    color: #008EFF;
 }
