@@ -96,3 +96,12 @@
     background: #008EFF;
     width: 0%;
   }
+
+  .author-info div {
+    color: orange;
+    font-weight: bold;
+}
+
+b{
+    color: blue;
+}
