@@ -4,6 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body{
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 #FirstSection{
@@ -88,6 +90,7 @@
     border-radius: 35px;
     margin-top: 100px;
     box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%), 0 12px 90px 0 rgb(103 151 255 / 11%);
+    font-family: 'Roboto', sans-serif!important;
 }
 .logo {
     height: 50px;

@@ -78,9 +78,6 @@ function minifier($code) {
     .bg-light{
       position: relative!important;
     }
-    body{
-      font-family: 'Roboto', sans-serif;
-    }
     </style>
 
 
