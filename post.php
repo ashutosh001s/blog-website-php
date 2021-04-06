@@ -72,7 +72,7 @@ function minifier($code) {
     .commentBy {
         font-size: 18px;
         font-family: fantasy;
-        color: crimson;
+        color: #008EFF;
     }
     
     .bg-light{
