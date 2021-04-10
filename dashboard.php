@@ -139,6 +139,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       }
       echo '</table>
       </div>';
+      break;
     }
     //closed inspect page in dashboard
     if ($host == "$domain/dashboard.php?post=true") {
@@ -192,6 +193,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
     </form>
     </div>';
+    break;
       //write post close here
     }
 
