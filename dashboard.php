@@ -140,7 +140,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       echo '</table>
       </div>';
     }else{
-      continue;
+     
     }
     //closed inspect page in dashboard
     if ($host == "$domain/dashboard.php?post=true") {
@@ -196,7 +196,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     </div>';
       //write post close here
     }else{
-      continue;
+    
     }
 
     if ($host == "$domain/dashboard.php?postlist=true") {
