@@ -298,20 +298,17 @@ echo'<!doctype html>
       $image = $row['image'];
       $url = $row['url'];
       
-      echo '<div class="card mb-3" style="max-width: 540px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src="/assets/img/cover/'.$image.'" alt="...">
-        </div>
-        <div class="col-md-8">
+      echo ' <div class="col-md-4">
+      <div class="card">
+          <span class="badge rounded-pill">'.$cate.'</span>
+          <a href="blog/'.$url.'"><img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="..."></a>
           <div class="card-body">
-            <h5 class="card-title">'.substr($title,0,70).'</h5>
-            <p class="card-text">'.$content.'</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+          <a href="blog/'.$url.'" style=" text-decoration: none; "> <h5 class="card-title">'.substr($title,0,70).'</h5> </a>
+            <p class="card-text">'.substr($content,0,250).'</p>
+            <!-- <a href="blog/'.$url.'" class="btn btn-primary">Read More</a> -->
           </div>
         </div>
-      </div>
-    </div>';
+     </div>';
 
     }
 
