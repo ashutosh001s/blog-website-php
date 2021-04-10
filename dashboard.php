@@ -276,7 +276,7 @@ echo'<!doctype html>
         if($host == "$domain/dashboard.php?postlist=true"){
 
 
-          $sql = "SELECT * FROM `blogs` WHERE url = '$id'";
+          $sql = "SELECT * FROM `blogs`";
     $result = mysqli_query($conn , $sql);
     while($row = mysqli_fetch_assoc($result)){
       $content = $row['content'];
