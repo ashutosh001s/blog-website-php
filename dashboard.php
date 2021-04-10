@@ -23,7 +23,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
     echo'<style>
     .postList{
-      width: 100%important!;
+      width: 100%!important;
       margin: 50px;
     }
     </style>';
