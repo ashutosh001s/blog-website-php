@@ -250,9 +250,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
    <div class="formLeft">
    <div class="mb-3">
-          <textarea id="mytextarea" value"' . $content . '" name="content" rows="20">
-   Hello, World!
- </textarea>
+          <textarea id="mytextarea" value"' . $content . '" name="content" rows="20"></textarea>
        </div>
    </div>
 
