@@ -273,6 +273,48 @@ echo'<!doctype html>
 
         }
 
+        if($host == "$domain/dashboard.php?postlist=true"){
+
+
+    $sql = "SELECT * FROM `blogs`";
+    $result = mysqli_query($conn , $sql);
+    while($row = mysqli_fetch_assoc($result)){
+      $content = $row['content'];
+      
+      $content = str_replace("h1", "" , $content);
+      $content = str_replace("p", "" , $content);
+      $content = str_replace("<", "" , $content);
+      $content = str_replace(">", "" , $content);
+      $content = str_replace("/", "" , $content);
+      $content = str_replace("redheading", "" , $content);
+      $content = str_replace("class", "" , $content);
+      $content = str_replace("=", "" , $content);
+
+
+       
+      $srno = $row['sr_no'];
+      $cate = $row['category'];
+      $title = $row['title'];
+      $image = $row['image'];
+      $url = $row['url'];
+      
+      echo ' <div class="col-md-4">
+      <div class="card">
+          <span class="badge rounded-pill">'.$cate.'</span>
+          <a href="blog/'.$url.'"><img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="..."></a>
+          <div class="card-body">
+          <a href="blog/'.$url.'" style=" text-decoration: none; "> <h5 class="card-title">'.substr($title,0,70).'</h5> </a>
+            <p class="card-text">'.substr($content,0,250).'</p>
+            <!-- <a href="blog/'.$url.'" class="btn btn-primary">Read More</a> -->
+          </div>
+        </div>
+     </div>';
+
+    }
+
+
+        }
+
 
     echo'</main>
   </div>
