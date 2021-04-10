@@ -199,13 +199,15 @@ echo'<!doctype html>
 
         }
 
-        if($host == "$domain/dashboard.php?postEdit=true"){
+        if($host == "$domain/dashboard.php?postEdit=$id"){
        
 
- $sql = "SELECT * FROM `blogs`";
+          $id = $_GET['id'];
+          $sql = "SELECT * FROM `blogs` WHERE url = '$id'";
  $result = mysqli_query($conn , $sql);
 
  while($row = mysqli_fetch_assoc($result)){
+
    $url = $row['url'];
    $title = $row['title'];
    $content = $row['content'];
@@ -303,9 +305,9 @@ echo'<!doctype html>
           <span class="badge rounded-pill">'.$cate.'</span>
           <a href="blog/'.$url.'"><img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="..."></a>
           <div class="card-body">
-          <a href="/dashboard.php?post='.$url.'" style=" text-decoration: none; "> <h5 class="card-title">'.substr($title,0,70).'</h5> </a>
+          <a href="/dashboard.php?postEdit='.$url.'" style=" text-decoration: none; "> <h5 class="card-title">'.substr($title,0,70).'</h5> </a>
             <p class="card-text">'.substr($content,0,250).'</p>
-            <!-- <a href="/dashboard.php?post='.$url.'" class="btn btn-primary">Edit</a> -->
+            <!-- <a href="/dashboard.php?postEdit='.$url.'" class="btn btn-primary">Edit</a> -->
           </div>
         </div>
      </div>';
