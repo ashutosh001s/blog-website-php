@@ -92,6 +92,12 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
             Write Post
           </a>
         </li>
+          <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/dashboard.php?postlist=true">
+            <span data-feather="home"></span>
+            Blogs
+          </a>
+        </li>
         </ul>
       </div>
     </nav>
@@ -226,11 +232,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         echo ' <div class="col-md-4">
       <div class="card">
           <span class="badge rounded-pill">' . $cate . '</span>
-          <a href="blog/' . $url . '"><img src="/assets/img/cover/' . $image . '" class="card-img-top" alt="..."></a>
+          <img src="/assets/img/cover/' . $image . '" class="card-img-top" alt="...">
           <div class="card-body">
-          <a href="/dashboard.php?edit=' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' . substr($title, 0, 70) . '</h5> </a>
-            <p class="card-text">' . substr($content, 0, 250) . '</p>
-            <!-- <a href="/dashboard.php?postEdit=' . $url . '" class="btn btn-primary">Edit</a> -->
+          <a href="/dashboard.php?edit=' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' .$title. '</h5> </a>
+            <p class="card-text">' . $content. '</p>
+            <!-- <a href="/dashboard.php?edit=' . $url . '" class="btn btn-primary">Edit</a> -->
           </div>
         </div>
      </div>';
