@@ -201,7 +201,7 @@ echo'<!doctype html>
 
         if($host == "$domain/dashboard.php?edit=test"){
        
-        $id = $_GET['id'];
+        $id = $_GET['edit'];
          echo $id;
 
         }
