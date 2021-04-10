@@ -21,22 +21,12 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     <link href="./assets/css/dashboard.css" rel="stylesheet">
     <script src="https://cdn.tiny.cloud/1/f78fim1rlfmk51mmqwkbubj31o4dwybrbi30kliqoin43ovu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>';
 
-    // <style>
-    // form{
-    //   display: flex;
-    //   width: 100%;
-    // }
-
-    // .formLeft{
-    //     width: 50%;
-    //     margin: 20px;
-    //   }
-
-    //   .formRight{
-    //     width: 50%;
-    //     margin: 20px;
-    //   }
-    // </style>
+    echo'<style>
+    .postList{
+      width: 100%important!;
+      margin: 50px;
+    }
+    </style>';
 
     echo " <script>
     tinymce.init({
@@ -226,13 +216,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         $srno = $row['sr_no'];
         $cate = $row['category'];
         $title = $row['title'];
-        $image = $row['image'];
         $url = $row['url'];
 
-        echo ' <div class="col-md-4">
+        echo ' <div class="col-md-4 postList">
       <div class="card">
           <span class="badge rounded-pill">' . $cate . '</span>
-          <img src="/assets/img/cover/' . $image . '" class="card-img-top" alt="...">
           <div class="card-body">
           <a href="/dashboard.php?edit=' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' .$title. '</h5> </a>
             <p class="card-text">' . $content. '</p>
