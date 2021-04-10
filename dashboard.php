@@ -1,15 +1,15 @@
 <?php
 session_start();
 include 'partials/_dbconnect.php';
- if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
-    $useremail = $_SESSION['useremail'];
-    $sql = "SELECT * FROM `users` WHERE user_roles = 'administrator'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $adminEmail = $row['user_email'];
-    
-    if($useremail == $adminEmail){
-echo'<!doctype html>
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+  $useremail = $_SESSION['useremail'];
+  $sql = "SELECT * FROM `users` WHERE user_roles = 'administrator'";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_assoc($result);
+  $adminEmail = $row['user_email'];
+
+  if ($useremail == $adminEmail) {
+    echo '<!doctype html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -38,7 +38,7 @@ echo'<!doctype html>
     //   }
     // </style>
 
-    echo" <script>
+    echo " <script>
     tinymce.init({
       selector: 'textarea',
  
@@ -58,7 +58,7 @@ echo'<!doctype html>
    });
   </script>";
 
-    echo'<title>Blogg Bat | Dashboard</title>
+    echo '<title>Blogg Bat | Dashboard</title>
   </head>
   <body>
       
@@ -102,9 +102,9 @@ echo'<!doctype html>
     //opens inspect page in dashboard
     $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
     $domain = $_SERVER['SERVER_NAME'];
-    if($host == "$domain/dashboard.php?inspect=true"){
+    if ($host == "$domain/dashboard.php?inspect=true") {
 
-     echo' <h2>Section title</h2>
+      echo ' <h2>Section title</h2>
       <div class="table-responsive">
         <table class="table table-striped table-sm">
           <thead>
@@ -117,38 +117,38 @@ echo'<!doctype html>
               <th>Visit Time</th>
             </tr>
           </thead>';
-          $sr_no = 0;
-          $sql = "SELECT * FROM `visitors` ORDER BY `v_no` DESC";
-          $result = mysqli_query($conn , $sql);
-          while($row = mysqli_fetch_assoc($result)){
-            $sr_no++;
-            $v_ip = $row['v_ip'];
-            $v_email = $row['v_email'];
-            $v_url = $row['v_url'];
-            $v_load_time = $row['load_time'];
-            $v_time = $row['v_time'];
-    
-          echo'
+      $sr_no = 0;
+      $sql = "SELECT * FROM `visitors` ORDER BY `v_no` DESC";
+      $result = mysqli_query($conn, $sql);
+      while ($row = mysqli_fetch_assoc($result)) {
+        $sr_no++;
+        $v_ip = $row['v_ip'];
+        $v_email = $row['v_email'];
+        $v_url = $row['v_url'];
+        $v_load_time = $row['load_time'];
+        $v_time = $row['v_time'];
+
+        echo '
             <tbody>
               <tr>
-                <th scope="row">'.$sr_no.'</th>
-                <td>'.$v_ip.'</td>
-                <td>'.$v_email.'</td>
-                <td>'.$v_url.'</td>
-                <td>'.$v_load_time.'</td>
-                <td>'.$v_time.'</td>
+                <th scope="row">' . $sr_no . '</th>
+                <td>' . $v_ip . '</td>
+                <td>' . $v_email . '</td>
+                <td>' . $v_url . '</td>
+                <td>' . $v_load_time . '</td>
+                <td>' . $v_time . '</td>
                
               </tr>
             </tbody>';
-          }
-        echo'</table>
+      }
+      echo '</table>
       </div>';
-        }
-        //closed inspect page in dashboard
-        if($host == "$domain/dashboard.php?post=true"){
-        //write post opens here
+    }
+    //closed inspect page in dashboard
+    if ($host == "$domain/dashboard.php?post=true") {
+      //write post opens here
 
-      echo'<div>
+      echo '<div>
       <h1 class="m-5" style="text-align: center;">Write Post</h1>
       <form action="/submit-post.php" method="POST" enctype="multipart/form-data">
 
@@ -196,80 +196,63 @@ echo'<!doctype html>
 
     </form>
     </div>';
+    }
 
-        }
-
-        if($host == "$domain/dashboard.php?edit=$url"){
-       
-     
-
-        }
-
-        if($host == "$domain/dashboard.php?postlist=true"){
+    if ($host == "$domain/dashboard.php?postlist=true") {
 
 
-          $sql = "SELECT * FROM `blogs`";
-    $result = mysqli_query($conn , $sql);
-    while($row = mysqli_fetch_assoc($result)){
-      $content = $row['content'];
-      
-      $content = str_replace("h1", "" , $content);
-      $content = str_replace("p", "" , $content);
-      $content = str_replace("<", "" , $content);
-      $content = str_replace(">", "" , $content);
-      $content = str_replace("/", "" , $content);
-      $content = str_replace("redheading", "" , $content);
-      $content = str_replace("class", "" , $content);
-      $content = str_replace("=", "" , $content);
+      $sql = "SELECT * FROM `blogs`";
+      $result = mysqli_query($conn, $sql);
+      while ($row = mysqli_fetch_assoc($result)) {
+        $content = $row['content'];
 
+        $content = str_replace("h1", "", $content);
+        $content = str_replace("p", "", $content);
+        $content = str_replace("<", "", $content);
+        $content = str_replace(">", "", $content);
+        $content = str_replace("/", "", $content);
+        $content = str_replace("redheading", "", $content);
+        $content = str_replace("class", "", $content);
+        $content = str_replace("=", "", $content);
 
-       
-      $srno = $row['sr_no'];
-      $cate = $row['category'];
-      $title = $row['title'];
-      $image = $row['image'];
-      $url = $row['url'];
-      
-      echo ' <div class="col-md-4">
+        $srno = $row['sr_no'];
+        $cate = $row['category'];
+        $title = $row['title'];
+        $image = $row['image'];
+        $url = $row['url'];
+
+        echo ' <div class="col-md-4">
       <div class="card">
-          <span class="badge rounded-pill">'.$cate.'</span>
-          <a href="blog/'.$url.'"><img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="..."></a>
+          <span class="badge rounded-pill">' . $cate . '</span>
+          <a href="blog/' . $url . '"><img src="/assets/img/cover/' . $image . '" class="card-img-top" alt="..."></a>
           <div class="card-body">
-          <a href="/dashboard.php?edit='.$url.'" style=" text-decoration: none; "> <h5 class="card-title">'.substr($title,0,70).'</h5> </a>
-            <p class="card-text">'.substr($content,0,250).'</p>
-            <!-- <a href="/dashboard.php?postEdit='.$url.'" class="btn btn-primary">Edit</a> -->
+          <a href="/dashboard.php?edit=' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' . substr($title, 0, 70) . '</h5> </a>
+            <p class="card-text">' . substr($content, 0, 250) . '</p>
+            <!-- <a href="/dashboard.php?postEdit=' . $url . '" class="btn btn-primary">Edit</a> -->
           </div>
         </div>
      </div>';
+      }
+    } else {
+      $id = $_GET['edit'];
+      $sql = "SELECT * FROM `blogs` WHERE url = '$id'";
+      $result = mysqli_query($conn, $sql);
 
-    }
+      $row = mysqli_fetch_assoc($result);
+      $url = $row['url'];
+      $title = $row['title'];
+      $content = $row['content'];
+      $readMin = $row['read_time'];
+      $description = $row['description'];
+   
 
-
-        }else{
-          $id = $_GET['edit'];
-          $sql = "SELECT * FROM `blogs` WHERE url = '$id'";
- $result = mysqli_query($conn , $sql);
-
- while($row = mysqli_fetch_assoc($result)){
-   $url = $row['url'];
-   $title = $row['title'];
-   $content = $row['content'];
-   $category = $row['category'];
-   $tags = $row['tags'];
-   $date = $row['date'];
-   $author = $row['author'];
-   $readMin= $row['read_time'];
-   $image= $row['image'];
-   $description = $row['description'];
-   $keywords = $row['keywords'];
-
-   echo'<div>
+      echo '<div>
    <h1 class="m-5" style="text-align: center;">Write Post</h1>
-   <form action="/submit-post.php" method="POST" enctype="multipart/form-data">
+   <form action="/update-post.php" method="POST" enctype="multipart/form-data">
 
    <div class="formLeft">
    <div class="mb-3">
-          <textarea id="mytextarea" value"'.$content.'" name="content" rows="20">
+          <textarea id="mytextarea" value"' . $content . '" name="content" rows="20">
    Hello, World!
  </textarea>
        </div>
@@ -278,32 +261,14 @@ echo'<!doctype html>
    <div class="formRight">
      <div class="input-group mb-3">
           <span class="input-group-text" id="basic-addon3">https://www.bloggbat.com/blog/</span>
-     <input type="text" class="form-control" id="url" value="'.$url.'" name="url" placeholder="Permalink">
+     <input type="hidden" class="form-control" id="url" value="' . $url . '" name="url" placeholder="Permalink">
      </div>
      <div class="mb-3">
-         <input type="text" class="form-control" id="title" value="'.$title.'" name="title" placeholder="Title">
-       </div>
-     <div class="mb-3">
-         <input type="text" class="form-control" id="category" value="'.$category.'" name="category" placeholder="Category">
-       </div>
-     <div class="mb-3">
-         <input type="text" class="form-control" id="tags" value="'.$tags.'" name="tags" placeholder="Tags">
+         <input type="text" class="form-control" id="title" value="' . $title . '" name="title" placeholder="Title">
        </div>
        <div class="mb-3">
-         <input type="text" class="form-control" id="description" value="'.$discription.'" name="description" placeholder="Description">
+         <input type="text" class="form-control" id="read" value="' . $readMin . '" name="read" placeholder="Reading Time">
        </div>
-       <div class="mb-3">
-         <input type="text" class="form-control" id="keywords" value="'.$keywords.'" name="keywords" placeholder="Keywords">
-       </div>
-       <div class="mb-3">
-         <input type="text" class="form-control" id="author" value="'.$author.'" name="author" placeholder="Author">
-       </div>
-       <div class="mb-3">
-         <input type="text" class="form-control" id="read" value="'.$readMin.'" name="read" placeholder="Reading Time">
-       </div>
-       <div class="mb-3">
-       <input type="file" name="uploadfile" class="form-control" value="'.$image.'" aria-label="file" required>
-     </div>
        <div class="d-grid gap-2">
          <button class="btn btn-primary" type="submit" name="upload">Submit</button>
        </div>
@@ -311,12 +276,10 @@ echo'<!doctype html>
 
  </form>
  </div>';
- 
- }
-        }
+    }
 
 
-    echo'</main>
+    echo '</main>
   </div>
 </div>
 
@@ -324,12 +287,9 @@ echo'<!doctype html>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
   </body>
 </html>';
+  } else {
+    header("Location: /404");
+  }
+} else {
+  header("Location: /404");
 }
-else{
-     header("Location: /404");
- }
- }else{
-     header("Location: /404");
- }
- 
-?>
