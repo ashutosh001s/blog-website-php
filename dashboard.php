@@ -242,12 +242,12 @@ echo'<!doctype html>
         </div>
      </div>';
 
-    }else{
-      $id = $_GET['edit'];
-      echo $id;
     }
 
 
+        }else{
+          $id = $_GET['edit'];
+          echo $id;
         }
 
 
