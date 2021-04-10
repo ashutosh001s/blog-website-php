@@ -196,9 +196,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
     </form>
     </div>';
+      //write post close here
     }
 
     if ($host == "$domain/dashboard.php?postlist=true") {
+      //list post opens here
 
 
       $sql = "SELECT * FROM `blogs`";
@@ -233,7 +235,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         </div>
      </div>';
       }
+      //list post close here
     } else {
+      //edit post opens here
       $id = $_GET['edit'];
       $sql = "SELECT * FROM `blogs` WHERE url = '$id'";
       $result = mysqli_query($conn, $sql);
@@ -244,11 +248,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       $content = $row['content'];
       $readMin = $row['read_time'];
       $description = $row['description'];
-   
+
 
       echo '<div>
    <h1 class="m-5" style="text-align: center;">Write Post</h1>
-   <form action="/update-post.php" method="POST" enctype="multipart/form-data">
+   <form action="/update-post.php" method="POST">
 
    <div class="formLeft">
    <div class="mb-3">
@@ -259,8 +263,6 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
    </div>
 
    <div class="formRight">
-     <div class="input-group mb-3">
-          <span class="input-group-text" id="basic-addon3">https://www.bloggbat.com/blog/</span>
      <input type="hidden" class="form-control" id="url" value="' . $url . '" name="url" placeholder="Permalink">
      </div>
      <div class="mb-3">
@@ -276,6 +278,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
  </form>
  </div>';
+      //edit post close here
     }
 
 
