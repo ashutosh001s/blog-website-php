@@ -199,7 +199,11 @@ echo'<!doctype html>
 
         }
 
-      
+        if($host == "$domain/dashboard.php?edit=$url"){
+       
+     
+
+        }
 
         if($host == "$domain/dashboard.php?postlist=true"){
 
@@ -238,13 +242,9 @@ echo'<!doctype html>
         </div>
      </div>';
 
-     if($host == "$domain/dashboard.php?edit=$url"){
-       
+    }else{
       $id = $_GET['edit'];
-       echo $id;
-
-      }
-
+      echo $id;
     }
 
 
