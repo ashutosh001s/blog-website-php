@@ -273,7 +273,7 @@ echo'<!doctype html>
 
         }
 
-        if($host == "$domain/dashboard.php?postlist=$url"){
+        if($host == "$domain/dashboard.php?postlist=true"){
 
 
           $sql = "SELECT * FROM `blogs` WHERE url = '$id'";
