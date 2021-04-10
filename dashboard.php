@@ -199,7 +199,7 @@ echo'<!doctype html>
 
         }
 
-        if($host == "$domain/dashboard.php?edit=test"){
+        if($host == "$domain/dashboard.php?edit="){
        
         $id = $_GET['edit'];
          echo $id;
@@ -236,7 +236,7 @@ echo'<!doctype html>
           <span class="badge rounded-pill">'.$cate.'</span>
           <a href="blog/'.$url.'"><img src="/assets/img/cover/'.$image.'" class="card-img-top" alt="..."></a>
           <div class="card-body">
-          <a href="/dashboard.php?postEdit='.$url.'" style=" text-decoration: none; "> <h5 class="card-title">'.substr($title,0,70).'</h5> </a>
+          <a href="/dashboard.php?edit='.$url.'" style=" text-decoration: none; "> <h5 class="card-title">'.substr($title,0,70).'</h5> </a>
             <p class="card-text">'.substr($content,0,250).'</p>
             <!-- <a href="/dashboard.php?postEdit='.$url.'" class="btn btn-primary">Edit</a> -->
           </div>
