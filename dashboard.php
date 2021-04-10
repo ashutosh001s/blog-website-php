@@ -199,7 +199,7 @@ echo'<!doctype html>
 
         }
 
-        if($host == "$domain/dashboard.php?postEdit"){
+        if($host == "$domain/dashboard.php?postEdit="){
        
 
           $id = $_GET['postEdit'];
