@@ -67,4 +67,7 @@
     .animateText {
         white-space: pre-wrap
     }
+    #cardHolder{
+        width: 60%;   
+    }
   }
