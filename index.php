@@ -62,7 +62,7 @@ function minifier($code) {
             </div>
             <div class="spacer"></div>
         <div class="container formBox">
-            <h2 class="formText">Join the Blogg Bat Army!</h2>
+            <h2 class="formText animateText">Join the Blogg Bat Army!</h2>
             <p class="formTextSmall">Signup and receive our exclusive blogging and digital marketing tips right in your inbox.</p>
             <form class = "emailForm" action="/action.php" method="POST">
                 <div class="mb-3">
