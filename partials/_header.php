@@ -23,9 +23,6 @@ echo ' <!-- *********Navigation start******* -->
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/privacy-policy">Privacy Policy</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/todo">Todo</a>
-          </li>
        
       </ul>
       ';
