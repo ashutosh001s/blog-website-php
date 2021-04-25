@@ -33,7 +33,7 @@
     <?php include 'partials/_dbconnect.php'; ?>
     <?php
   $query = $_POST['search'];
-  $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ($query)";
+  $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ('$query')";
   $result = mysqli_query($conn, $sql);
 
   while ($row = mysqli_fetch_assoc($result)) {
