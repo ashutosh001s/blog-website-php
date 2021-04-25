@@ -17,8 +17,11 @@ RewriteRule ^contact-us$ contact.php [NC,L]
 #Rewrite for about.php
 RewriteRule ^about-us$ about.php [NC,L]
 
-#Rewrite for about.php
+#Rewrite for sitemap.php
 RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
+
+#Rewrite for about.php
+RewriteRule ^search$ search.php [NC,L]
 
 # NC makes the rule non case sensitive
 # L makes this the last rule that this specific condition will match
