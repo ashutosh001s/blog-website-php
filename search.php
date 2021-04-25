@@ -32,12 +32,16 @@
     <?php include 'partials/_header.php'; ?>
     <?php
   $query = $_POST['search'];
-  echo $query;
   $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ($query)";
   $result = mysqli_query($conn, $sql);
-  while ($row = mysqli_fetch_assoc($result)) {
-    $content = $row['content'];
+  if ($result) {
+    while ($row = mysqli_fetch_assoc($result)) {
+      $content = $row['content'];
+    }
+  } else {
+    echo "no result find";
   }
+
 
   ?>
 
