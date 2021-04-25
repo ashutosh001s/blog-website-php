@@ -35,13 +35,12 @@
   $query = $_POST['search'];
   $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ($query)";
   $result = mysqli_query($conn, $sql);
-  if ($result) {
-    while ($row = mysqli_fetch_assoc($result)) {
-      $content = $row['content'];
-    }
-  } else {
-    echo "no result find";
+
+  while ($row = mysqli_fetch_assoc($result)) {
+    $content = $row['content'];
+    echo $content;
   }
+
 
 
   ?>
