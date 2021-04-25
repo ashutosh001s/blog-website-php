@@ -25,12 +25,12 @@
     }
     </style>
 
-    <title>Hello, world!</title>
+    <title>Blogg Bat</title>
 </head>
 
 <body>
-    <?php include 'partials/_dbconnect.php'; ?>
     <?php include 'partials/_header.php'; ?>
+    <?php include 'partials/_dbconnect.php'; ?>
     <?php
   $query = $_POST['search'];
   $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ($query)";
