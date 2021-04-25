@@ -1,147 +1,154 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Barlow Semi Condensed', sans-serif;
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
-#FirstSection{
-    /* background-color: whitesmoke; */
-    padding: 50px;
-    height: 60vh;
-    width: 100%;
-}
-
-#cardHolder{
-    /* display: flex; */
-    width: 60%;
-    margin: auto;
+#FirstSection {
+  /* background-color: whitesmoke; */
+  padding: 50px;
+  height: 60vh;
+  width: 100%;
 }
 
-.newsletterForm{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#cardHolder {
+  /* display: flex; */
+  width: 60%;
+  margin: auto;
 }
-.spacer{
-    width: 10%;
+
+.newsletterForm {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.formBox{
-    height: 100%;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
+.spacer {
+  width: 10%;
 }
-.formText{
-    padding: 20px 0px;
-    font-weight: 900;
-    color: cadetblue;
-    font-size: 3rem;
-    
+.formBox {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-.animateText{
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(255, 255, 255); /* The typwriter cursor */
-     white-space: nowrap; /*Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+.formText {
+  padding: 20px 0px;
+  font-weight: 900;
+  color: cadetblue;
+  font-size: 3rem;
+}
+.animateText {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid rgb(255, 255, 255); /* The typwriter cursor */
+  white-space: nowrap; /*Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em; /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
 }
 
 /* The typing effect */
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  from {
+    width: 0;
   }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: white; }
+  to {
+    width: 100%;
   }
-.formTextSmall{
-    color:#00000061;
-    padding: 10px 0px;
-    font-family: "Montserrat",Sans-serif;
-    font-size: 16px;
-    font-weight:bold;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+.formTextSmall {
+  color: #00000061;
+  padding: 10px 0px;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .imageBox {
-    height: 100%;
-    width: 40%;
+  height: 100%;
+  width: 40%;
 }
-.imageBox img{
-    height: 100%;
-    width: 100%;
-}
-
-.BigText{
-    text-align: center;
-    color: cadetblue;
-    font-weight: bold;
-    font-size: 2.6rem;
-    padding-bottom: 50px;
-    font-family: 'Montserrat', sans-serif;
+.imageBox img {
+  height: 100%;
+  width: 100%;
 }
 
-#SecondSection{
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: white;
-    width: 100%;
+.BigText {
+  text-align: center;
+  color: cadetblue;
+  font-weight: bold;
+  font-size: 2.6rem;
+  padding-bottom: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+
+#SecondSection {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: white;
+  width: 100%;
 }
 
 #post {
-    height: 100%;
-    background-color: white;
-    min-height: 80vh;
-    width: 70%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 70px;
-    border-radius: 35px;
-    margin-top: 100px;
-    box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%), 0 12px 90px 0 rgb(103 151 255 / 11%);
-    font-family: 'Roboto', sans-serif!important;
+  height: 100%;
+  background-color: white;
+  min-height: 80vh;
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 70px;
+  border-radius: 35px;
+  margin-top: 100px;
+  box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%),
+    0 12px 90px 0 rgb(103 151 255 / 11%);
+  font-family: "Roboto", sans-serif !important;
 }
 .logo {
-    height: 50px;
-    width: 140px;
-    margin-right: 50px;
-    filter: drop-shadow(2px 4px 6px black);
+  height: 50px;
+  width: 140px;
+  margin-right: 50px;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
-.postImage{
-    height: 404px;
-    overflow: hidden;
+.postImage {
+  height: 404px;
+  overflow: hidden;
 }
-.postImage img{
-    width: 100%;
-}
-
-.commentSection{
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 70%;
+.postImage img {
+  width: 100%;
 }
 
-.card:hover{
-    box-shadow: 0 22px 60px 0 rgb(103 151 255), 0 12px 90px 0 rgb(103 151 255);
+.commentSection {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 70%;
 }
 
+.card:hover {
+  box-shadow: 0 22px 60px 0 rgb(103 151 255), 0 12px 90px 0 rgb(103 151 255);
+}
 
-
-
-
+.search-bar {
+  width: 100%;
+  outline: none;
+  border-radius: 0px;
+}

@@ -11,25 +11,19 @@ echo ' <!-- *********Navigation start******* -->
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <form style="width: 80%;margin: auto;">
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search" style="
-    width: 100%;
-    outline: none;
-    border-radius: 0px;
-      ">
-    </form>
+        <input type="text" class="form-control search-bar" id="search" aria-describedby="Search" placeholder="Search">
+      </form>
     <div class="dropdown">
-  <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Menu
-  </a>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-  <li><a class="dropdown-item" aria-current="page" href="/">Home</a></li>
-  <li><a class="dropdown-item" aria-current="page" href="/about-us">About</a></li>
-  <li><a class="dropdown-item" aria-current="page" href="/contact-us">Contact</a></li>
-  <li><a class="dropdown-item" aria-current="page" href="/privacy-policy">Privacy Policy</a></li>
-  </ul>
-</div>
-  
-      ';
+      <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+          Menu
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <li><a class="dropdown-item" aria-current="page" href="/">Home</a></li>
+        <li><a class="dropdown-item" aria-current="page" href="/about-us">About</a></li>
+        <li><a class="dropdown-item" aria-current="page" href="/contact-us">Contact</a></li>
+        <li><a class="dropdown-item" aria-current="page" href="/privacy-policy">Privacy Policy</a></li>
+      </ul>
+    </div>';
 
       if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
 
