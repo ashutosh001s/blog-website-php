@@ -1,73 +1,75 @@
 @media screen and (max-width: 768px) {
-    .newsletterForm{
-        flex-direction: column;
-    }
-    .formBox {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    .imageBox{
-        height: 100%;
-        width: 100%;
-    }
-    .imageBox img{
-        height: 100%;
-        width: 100%;
-    }
-    .formText {
-        /* padding: 50px 0px; */
-        font-size: 2rem;
-        text-align: center;
-    }
-    #FirstSection{
-        /* background-color: whitesmoke; */
-        padding: 50px;
-        height: 100vh;
-        width: 100%;
-    }
+  .newsletterForm {
+    flex-direction: column;
+  }
+  .formBox {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .imageBox {
+    height: 100%;
+    width: 100%;
+  }
+  .imageBox img {
+    height: 100%;
+    width: 100%;
+  }
+  .formText {
+    /* padding: 50px 0px; */
+    font-size: 2rem;
+    text-align: center;
+  }
+  #FirstSection {
+    /* background-color: whitesmoke; */
+    padding: 50px;
+    height: 100vh;
+    width: 100%;
+  }
 
-    #post {
-        height: 100%;
-        background-color: white;
-        min-height: 80vh;
-        width: 100%;
-        padding: 20px;
-        margin-top: 0px;
-        border-radius: 0px;
-    }
+  #post {
+    height: 100%;
+    background-color: white;
+    min-height: 80vh;
+    width: 100%;
+    padding: 20px;
+    margin-top: 0px;
+    border-radius: 0px;
+  }
 
-    .btn-info {
-        margin-top: 15px;
-    }
-    .btn-danger {
-       
-        margin-top: 20px;
-    }
-    .btn-warning {
-        margin-top: 20px;
-    }
+  .btn-info {
+    margin-top: 15px;
+  }
+  .btn-danger {
+    margin-top: 20px;
+  }
+  .btn-warning {
+    margin-top: 20px;
+  }
 
-    .postImage {
+  .postImage {
     height: 100%;
     overflow: hidden;
-    }
-    .commentSection {
-        margin: auto;
-        width: 100%;
-    }
-    .comments {
-        margin: 10px;
-    }
-    .card{
-        width: 100%;
-    }
-    .animateText {
-        white-space: pre-wrap
-    }
-    #cardHolder{
-        width: 80%;   
-    }
   }
+  .commentSection {
+    margin: auto;
+    width: 100%;
+  }
+  .comments {
+    margin: 10px;
+  }
+  .card {
+    width: 100%;
+  }
+  .animateText {
+    white-space: pre-wrap;
+  }
+  #cardHolder {
+    width: 80%;
+  }
+  #navOnPc {
+    display: none;
+  }
+}

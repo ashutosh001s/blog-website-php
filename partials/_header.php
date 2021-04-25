@@ -10,10 +10,12 @@ echo ' <!-- *********Navigation start******* -->
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <div id="navOnPc">
       <form style="width: 80%;margin: auto;">
         <input type="text" class="form-control search-bar" id="search" aria-describedby="Search" placeholder="Search">
       </form>
-    <div class="dropdown">
+      <div class="dropdown">
       <a class="dropdown-toggle dropMenu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Menu
       </a>
@@ -23,6 +25,24 @@ echo ' <!-- *********Navigation start******* -->
         <li><a class="dropdown-item" aria-current="page" href="/contact-us">Contact</a></li>
         <li><a class="dropdown-item" aria-current="page" href="/privacy-policy">Privacy Policy</a></li>
       </ul>
+    </div>
+    </div>
+    
+    <div id="navOnMobile">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/about-us">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/contact-us">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/privacy-policy">Privacy Policy</a>
+        </li>
+    </ul>
     </div>';
 
       if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
