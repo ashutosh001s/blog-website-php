@@ -159,3 +159,6 @@ body {
 #navOnMobile {
   display: none;
 }
+#navOnPc {
+  display: block;
+}

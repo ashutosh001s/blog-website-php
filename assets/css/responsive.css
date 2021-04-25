@@ -72,4 +72,7 @@
   #navOnPc {
     display: none;
   }
+  #navOnMobile {
+    display: block;
+  }
 }
