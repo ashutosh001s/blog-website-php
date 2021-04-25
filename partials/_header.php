@@ -14,7 +14,7 @@ echo ' <!-- *********Navigation start******* -->
         <input type="text" class="form-control search-bar" id="search" aria-describedby="Search" placeholder="Search">
       </form>
     <div class="dropdown">
-      <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="dropdown-toggle dropMenu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Menu
       </a>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
