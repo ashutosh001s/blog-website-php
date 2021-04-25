@@ -76,10 +76,7 @@
   </div>';
       }
     } else {
-      echo '
-      <div style="margin: auto;>
-      Oops no result found try using a different keyword
-      </div>';
+      echo "no result found";
     }
     ?>
     </div>
