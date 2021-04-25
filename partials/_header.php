@@ -10,21 +10,14 @@ echo ' <!-- *********Navigation start******* -->
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/about-us">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/contact-us">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/privacy-policy">Privacy Policy</a>
-          </li>
-       
-      </ul>
+      <form style="width: 80%;margin: auto;">
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Search" style="
+    width: 100%;
+    outline: none;
+    border-radius: 0px;
+      ">
+    </form>
+  
       ';
 
       if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true){
