@@ -77,9 +77,8 @@
       }
     } else {
       echo '
-      <div class="alert alert-danger" role="alert" style="
-      margin: auto;>
-      Oops No result found try using a different keyword
+      <div style="margin: auto;>
+      Oops no result found try using a different keyword
       </div>';
     }
     ?>
