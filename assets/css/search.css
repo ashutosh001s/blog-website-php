@@ -4,3 +4,11 @@
   align-items: center;
   flex-direction: column;
 }
+.searchImg {
+  height: 250px;
+  width: 100%;
+}
+.searchCard {
+  width: 100%;
+  border-radius: 0px;
+}
