@@ -7,6 +7,7 @@
 .searchImg {
   height: 250px;
   width: 100%;
+  border-radius: 0px;
 }
 .searchCard {
   width: 100%;
