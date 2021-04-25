@@ -18,9 +18,9 @@ echo ' <!-- *********Navigation start******* -->
       ">
     </form>
     <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+  <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
     Menu
-  </button>
+  </a>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
   <li><a class="dropdown-item" aria-current="page" href="/">Home</a></li>
   <li><a class="dropdown-item" aria-current="page" href="/about-us">About</a></li>
