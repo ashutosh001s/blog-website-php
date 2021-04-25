@@ -39,24 +39,24 @@
     $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ('$query')";
     $result = mysqli_query($conn, $sql);
 
-    if ($result) {
+    while ($row = mysqli_fetch_assoc($result)) {
+      $domain = $_SERVER['SERVER_NAME'];
+      $content = $row['content'];
 
-      while ($row = mysqli_fetch_assoc($result)) {
-        $domain = $_SERVER['SERVER_NAME'];
-        $content = $row['content'];
+      $content = str_replace("h1", "", $content);
+      $content = str_replace("p", "", $content);
+      $content = str_replace("<", "", $content);
+      $content = str_replace(">", "", $content);
+      $content = str_replace("/", "", $content);
+      $content = str_replace("redheading", "", $content);
+      $content = str_replace("class", "", $content);
+      $content = str_replace("=", "", $content);
 
-        $content = str_replace("h1", "", $content);
-        $content = str_replace("p", "", $content);
-        $content = str_replace("<", "", $content);
-        $content = str_replace(">", "", $content);
-        $content = str_replace("/", "", $content);
-        $content = str_replace("redheading", "", $content);
-        $content = str_replace("class", "", $content);
-        $content = str_replace("=", "", $content);
+      $title = $row['title'];
+      $image = $row['image'];
+      $url = $row['url'];
 
-        $title = $row['title'];
-        $image = $row['image'];
-        $url = $row['url'];
+      if ($row != 0) {
 
 
         echo '<div class="searchContainer">
@@ -74,10 +74,13 @@
           </div>
       </div>
   </div>';
+      } else {
+        echo "no results found";
       }
-    } else {
-      echo "no results found";
     }
+
+
+
 
 
 
