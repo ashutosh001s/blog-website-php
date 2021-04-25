@@ -77,10 +77,10 @@
       }
     } else {
       echo '
-      <div class="alert alert-danger" role="alert">
-      Oops no result found try a different keyword
-      </div>
-      <img class="searchImg" src="/assets/img/noresult.png" alt="...">';
+      <div class="alert alert-danger" role="alert" style="
+      margin: auto;>
+      Oops No result found try using a different keyword
+      </div>';
     }
     ?>
     </div>
