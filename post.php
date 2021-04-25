@@ -32,13 +32,13 @@ function minifier($code)
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
 
-  <!-- For seo -->
-  <?php
+    <!-- For seo -->
+    <?php
   $id = $_GET['id'];
-  $sql = "SELECT * FROM `blogs` WHERE url = '$id'";
+  $sql = "SELECT * FROM `posts` WHERE url = '$id'";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_assoc($result);
 
@@ -55,48 +55,50 @@ function minifier($code)
     <meta name="author" content="' . $author . '">
     <meta name="viewport" content="width=device-width, initial-scale=1">';
   ?>
-  <!-- Bootstrap CSS -->
-  <link rel="shortcut icon" href="../assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);" type="image/x-icon">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/post.css">
-  <link rel="stylesheet" href="../assets/css/footer.css">
-  <link rel="stylesheet" href="../assets/css/bootstrap-override.css">
-  <link rel="stylesheet" href="../assets/css/responsive.css">
-  <?php include 'partials/analytics.php'; ?>
+    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="../assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);"
+        type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/post.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-override.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <?php include 'partials/analytics.php'; ?>
 
-  <style>
+    <style>
     .commentBy {
-      font-size: 18px;
-      font-family: fantasy;
-      color: #008EFF;
+        font-size: 18px;
+        font-family: fantasy;
+        color: #008EFF;
     }
 
     .bg-light {
-      position: relative !important;
+        position: relative !important;
     }
-  </style>
+    </style>
 
 
 
 </head>
 
 <body>
-  <?php include 'partials/_header.php'; ?>
+    <?php include 'partials/_header.php'; ?>
 
-  <div class="header">
-    <div class="progress-container">
-      <div class="progress-bar" id="myBar"></div>
+    <div class="header">
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
     </div>
-  </div>
 
 
-  <?php
+    <?php
 
   $id = $_GET['id'];
-  $sql = "SELECT * FROM `blogs` WHERE url = '$id'";
+  $sql = "SELECT * FROM `posts` WHERE url = '$id'";
   $result = mysqli_query($conn, $sql);
   $row = mysqli_fetch_assoc($result);
   $title = $row['title'];
@@ -140,7 +142,7 @@ function minifier($code)
 
   ?>
 
-  <?php
+    <?php
   include 'partials/_dbconnect.php';
   $url = $_SERVER['REQUEST_URI'];
   session_start();
@@ -201,28 +203,29 @@ function minifier($code)
       </div>';
   }
   ?>
-  </div>
+    </div>
 
 
-  <?php include 'partials/_footer.php'; ?>
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-  </script>
-  <script src="../assets/js/script.js"></script>
+    <?php include 'partials/_footer.php'; ?>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+    <script src="../assets/js/script.js"></script>
 
-  <script>
+    <script>
     // When the user scrolls the page, execute myFunction 
     window.onscroll = function() {
-      myFunction()
+        myFunction()
     };
 
     function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
+        var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        var scrolled = (winScroll / height) * 100;
+        document.getElementById("myBar").style.width = scrolled + "%";
     }
-  </script>
+    </script>
 </body>
 
 </html>

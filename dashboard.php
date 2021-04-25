@@ -21,7 +21,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     <link href="./assets/css/dashboard.css" rel="stylesheet">
     <script src="https://cdn.tiny.cloud/1/f78fim1rlfmk51mmqwkbubj31o4dwybrbi30kliqoin43ovu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>';
 
-    echo'<style>
+    echo '<style>
     .postList{
       width: 100%!important;
       margin: 50px 0;
@@ -85,7 +85,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
           <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/dashboard.php?postlist=true">
             <span data-feather="home"></span>
-            Blogs
+            Blog
           </a>
         </li>
         </ul>
@@ -139,7 +139,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       }
       echo '</table>
       </div>';
-    return;
+      return;
     }
     //closed inspect page in dashboard
     if ($host == "$domain/dashboard.php?post=true") {
@@ -201,7 +201,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       //list post opens here
 
 
-      $sql = "SELECT * FROM `blogs`";
+      $sql = "SELECT * FROM `posts`";
       $result = mysqli_query($conn, $sql);
       while ($row = mysqli_fetch_assoc($result)) {
         $content = $row['content'];
@@ -224,8 +224,8 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
       <div class="card">
           <span class="badge rounded-pill">' . $cate . '</span>
           <div class="card-body">
-          <a href="/dashboard.php?edit=' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' .$title. '</h5> </a>
-            <p class="card-text">' . $content. '</p>
+          <a href="/dashboard.php?edit=' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' . $title . '</h5> </a>
+            <p class="card-text">' . $content . '</p>
             <!-- <a href="/dashboard.php?edit=' . $url . '" class="btn btn-primary">Edit</a> -->
           </div>
         </div>
@@ -235,7 +235,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     } else {
       //edit post opens here
       $id = $_GET['edit'];
-      $sql = "SELECT * FROM `blogs` WHERE url = '$id'";
+      $sql = "SELECT * FROM `posts` WHERE url = '$id'";
       $result = mysqli_query($conn, $sql);
 
       $row = mysqli_fetch_assoc($result);

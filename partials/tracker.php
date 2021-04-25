@@ -123,5 +123,3 @@ function get_client_ip() {
     $result = mysqli_query($conn, $sql);
     
   }
-
-?>

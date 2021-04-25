@@ -10,7 +10,7 @@ $content = str_replace("'", "	&apos;" , $content);
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    $sql = "UPDATE `blogs` SET `title` = '$title', `content` = '$content', `read_time` = '$readTime' WHERE `blogs`.`url` = '$url'";
+    $sql = "UPDATE `posts` SET `title` = '$title', `content` = '$content', `read_time` = '$readTime' WHERE `posts`.`url` = '$url'";
     $result = mysqli_query($conn, $sql);
 
     if($result){
@@ -19,4 +19,3 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo "insertion failed ".mysqli_error($conn)."";
     }
 }
-?>
