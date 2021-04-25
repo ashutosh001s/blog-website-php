@@ -63,11 +63,11 @@
       <div class="card searchCard  mb-3">
           <div class="row g-0">
               <div class="col-md-4">
-              <a href="' . $domain . '/blog//' . $url . '"><img class="searchImg" src="/assets/img/cover/' . $image . '" alt="..."></a>
+              <a href="blog/' . $url . '"><img class="searchImg" src="/assets/img/cover/' . $image . '" alt="..."></a>
               </div>
               <div class="col-md-8">
                   <div class="card-body">
-                  <a href="' . $domain . '/blog//' . $url . '"><h5 class="card-title">' . $title . '</h5>/a>
+                  <a href="blog/' . $url . '"><h5 class="card-title">' . $title . '</h5></a>
                       <p class="card-text">' . $content . '</p>
                   </div>
               </div>
