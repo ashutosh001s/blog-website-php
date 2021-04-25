@@ -22,9 +22,10 @@ echo ' <!-- *********Navigation start******* -->
     Dropdown button
   </button>
   <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
+  <li><a class="dropdown-item" aria-current="page" href="/">Home</a></li>
+  <li><a class="dropdown-item" aria-current="page" href="/about-us">About</a></li>
+  <li><a class="dropdown-item" aria-current="page" href="/contact-us">Contact</a></li>
+  <li><a class="dropdown-item" aria-current="page" href="/privacy-policy">Privacy Policy</a></li>
   </ul>
 </div>
   
