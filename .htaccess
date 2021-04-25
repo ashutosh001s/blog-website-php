@@ -20,7 +20,7 @@ RewriteRule ^about-us$ about.php [NC,L]
 #Rewrite for sitemap.php
 RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
 
-#Rewrite for about.php
+#Rewrite for search.php
 RewriteRule ^search$ search.php [NC,L]
 
 # NC makes the rule non case sensitive
