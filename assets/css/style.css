@@ -160,5 +160,5 @@ body {
   display: none;
 }
 #navOnPc {
-  display: block;
+  display: contents;
 }
