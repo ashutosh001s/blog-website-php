@@ -30,162 +30,19 @@
 
 <body>
     <?php include 'partials/_header.php'; ?>
+    <?php
+  $query = $_POST['search'];
+  echo $query;
+  $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ($query)";
+  $result = mysqli_query($conn, $sql);
+  while ($row = mysqli_fetch_assoc($result)) {
+    $content = $row['content'];
+  }
+
+  ?>
 
     <div class="searchBox" id="searchBox">
 
-        <div class="searchContainer">
-            <div class="card searchCard  mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="searchImg" src="https://source.unsplash.com/1600x900/?nature,water" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="searchContainer">
-            <div class="card searchCard  mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="searchImg" src="https://source.unsplash.com/1600x900/?nature,water" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="searchContainer">
-            <div class="card searchCard  mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="searchImg" src="https://source.unsplash.com/1600x900/?nature,water" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="searchContainer">
-            <div class="card searchCard  mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="searchImg" src="https://source.unsplash.com/1600x900/?nature,water" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="searchContainer">
-            <div class="card searchCard  mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="searchImg" src="https://source.unsplash.com/1600x900/?nature,water" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="searchContainer">
-            <div class="card searchCard  mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="searchImg" src="https://source.unsplash.com/1600x900/?nature,water" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="searchContainer">
-            <div class="card searchCard  mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="searchImg" src="https://source.unsplash.com/1600x900/?nature,water" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="searchContainer">
-            <div class="card searchCard  mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="searchImg" src="https://source.unsplash.com/1600x900/?nature,water" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="searchContainer">
-            <div class="card searchCard  mb-3">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img class="searchImg" src="https://source.unsplash.com/1600x900/?nature,water" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                                additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="searchContainer">
             <div class="card searchCard  mb-3">
                 <div class="row g-0">
