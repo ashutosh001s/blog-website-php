@@ -42,9 +42,6 @@
     // see if any rows were returned 
     if (mysqli_num_rows($result) > 0) {
 
-
-
-
       while ($row = mysqli_fetch_assoc($result)) {
         $domain = $_SERVER['SERVER_NAME'];
         $content = $row['content'];
@@ -79,21 +76,13 @@
   </div>';
       }
     } else {
-      echo "No results found";
+      echo '
+      <div class="alert alert-danger" role="alert">
+      Oops no result found try a different keyword
+      </div>
+      <img class="searchImg" src="/assets/img/noresult.png" alt="...">';
     }
-
-
-
-
-
-
-
     ?>
-
-
-
-
-
     </div>
 
     <?php include 'partials/_footer.php'; ?>
