@@ -12,7 +12,7 @@ echo ' <!-- *********Navigation start******* -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
       <div id="navOnPc">
-      <form action="../search.php" method="POST" style="width: 80%;margin: auto;">
+      <form action="../search" method="POST" style="width: 80%;margin: auto;">
         <input type="text" class="form-control search-bar" id="search" name="search" aria-describedby="Search" placeholder="Search">
       </form>
       <div class="dropdown">
@@ -138,7 +138,3 @@ else if (isset($_GET['login']) && $_GET['login']=='true'){
   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>';
 }
-    
-
-
-?>
