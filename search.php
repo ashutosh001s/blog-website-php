@@ -42,7 +42,7 @@
     if ($result) {
 
       while ($row = mysqli_fetch_assoc($result)) {
-
+        $domain = $_SERVER['SERVER_NAME'];
         $content = $row['content'];
 
         $content = str_replace("h1", "", $content);
@@ -54,10 +54,6 @@
         $content = str_replace("class", "", $content);
         $content = str_replace("=", "", $content);
 
-
-
-        $srno = $row['sr_no'];
-        $cate = $row['category'];
         $title = $row['title'];
         $image = $row['image'];
         $url = $row['url'];
@@ -67,13 +63,12 @@
       <div class="card searchCard  mb-3">
           <div class="row g-0">
               <div class="col-md-4">
-                  <img class="searchImg" src="/assets/img/cover/' . $image . '" alt="...">
+              <a href="' . $domain . '/blog//' . $url . '"><img class="searchImg" src="/assets/img/cover/' . $image . '" alt="..."></a>
               </div>
               <div class="col-md-8">
                   <div class="card-body">
-                      <h5 class="card-title">' . $title . '</h5>
+                  <a href="' . $domain . '/blog//' . $url . '"><h5 class="card-title">' . $title . '</h5>/a>
                       <p class="card-text">' . $content . '</p>
-                      <p class="card-text"><small class="text-muted">Load</small></p>
                   </div>
               </div>
           </div>
