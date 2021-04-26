@@ -163,7 +163,7 @@ function minifier($code)
                     <p class="sidebarHeading">Recent Posts</p>
                     <?php
           $sno = 0;
-          $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 5";
+          $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 3";
           $result = mysqli_query($conn, $sql);
 
           while ($row = mysqli_fetch_assoc($result)) {
