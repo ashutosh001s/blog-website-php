@@ -16,7 +16,7 @@ echo ' <!-- *********Navigation start******* -->
 
       <div id="navOnPc">
       <div class="dropdown">
-      <a class="dropdown-toggle dropMenu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="dropdown-toggle dropMenu" type="button" id="dropdownMenuButton1" href="#" data-bs-toggle="dropdown" aria-expanded="false">
           Menu
       </a>
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -71,7 +71,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         </div>';
 } else {
   echo '<li class="nav-item">
-        <a class="dropMenu" data-bs-toggle="modal" data-bs-target="#loginModal" style="padding: .375rem .75rem; cursor: pointer;">Login</a>
+        <a class="dropMenu" data-bs-toggle="modal" data-bs-target="#loginModal" href="#" style="padding: .375rem .75rem; cursor: pointer;">Login</a>
       </li>
       <li class="nav-item">
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
