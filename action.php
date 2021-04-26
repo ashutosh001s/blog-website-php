@@ -67,4 +67,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 // redirect to homepage
-header("location: $currentUrl");
+header('location: ' . $currentUrl . '');
