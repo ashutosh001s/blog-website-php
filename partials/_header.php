@@ -71,7 +71,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
         </div>';
 } else {
   echo '<li class="nav-item">
-        <a class="dropMenu" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+        <a class="dropMenu" data-bs-toggle="modal" data-bs-target="#loginModal" style="padding: .375rem .75rem; cursor: pointer;">Login</a>
       </li>
       <li class="nav-item">
         <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
