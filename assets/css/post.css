@@ -156,3 +156,7 @@ b {
   margin: 20px;
   padding: 20px;
 }
+.sidebarHeading {
+  text-align: center;
+  font-size: 30px;
+}

@@ -94,6 +94,7 @@ function minifier($code)
         </div>
     </div>
 
+    <!-- contentBucket start  -->
     <div class="contentBucket">
 
 
@@ -144,17 +145,22 @@ function minifier($code)
     </div>';
 
     ?>
+        <!-- sidebar start  -->
         <div class="sidebarBox sticky-top">
+
             <div class="sidebar ">
+                <!-- search bar start  -->
                 <div class="postSearchbar">
-                    <h2>Search</h2>
                     <form action="../search" method="GET" style="width: 80%;margin: auto;">
                         <input type="text" class="form-control search-bar" id="search" name="query"
                             aria-describedby="Search" placeholder="Search">
                     </form>
                 </div>
+                <!-- search bar start  -->
+
+                <!-- recent post start  -->
                 <div class="recentPosts">
-                    <h2>Recent Posts</h2>
+                    <p class="sidebarHeading">Recent Posts</p>
                     <?php
           $sno = 0;
           $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 5";
@@ -178,9 +184,12 @@ function minifier($code)
           ?>
 
                 </div>
+                <!-- recent post start  -->
+
+                <!-- newsletter start  -->
 
                 <div class="postNewsletter">
-                    <h3>Newsletter</h3>
+                    <p class="sidebarHeading">Newsletter</p>
                     <p class="formTextSmall">Signup and receive our exclusive blogging and digital marketing tips right
                         in
                         your inbox.</p>
@@ -203,10 +212,14 @@ function minifier($code)
             ?>
                     </form>
                 </div>
+                <!-- newsletter end  -->
+
             </div>
         </div>
+        <!-- sidebar end  -->
 
     </div>
+    <!-- contentBucket end  -->
 
     <?php
   include 'partials/_dbconnect.php';
