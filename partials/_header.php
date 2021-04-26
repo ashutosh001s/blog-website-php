@@ -11,7 +11,7 @@ echo ' <!-- *********Navigation start******* -->
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <form action="../search" method="GET" style="width: 80%;margin: auto;">
-        <input type="text" class="form-control search-bar" id="search" name="query" aria-describedby="Search" placeholder="Search">
+        <input type="text" class="form-control search-bar" class="search" name="query" aria-describedby="Search" placeholder="Search">
       </form>
 
       <div id="navOnPc">
