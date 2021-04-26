@@ -102,16 +102,16 @@ function minifier($code)
             $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 9";
             $result = mysqli_query($conn, $sql);
             while ($row = mysqli_fetch_assoc($result)) {
-                $content = $row['content'];
+                // $content = $row['content'];
 
-                $content = str_replace("h1", "", $content);
-                $content = str_replace("p", "", $content);
-                $content = str_replace("<", "", $content);
-                $content = str_replace(">", "", $content);
-                $content = str_replace("/", "", $content);
-                $content = str_replace("redheading", "", $content);
-                $content = str_replace("class", "", $content);
-                $content = str_replace("=", "", $content);
+                // $content = str_replace("h1", "", $content);
+                // $content = str_replace("p", "", $content);
+                // $content = str_replace("<", "", $content);
+                // $content = str_replace(">", "", $content);
+                // $content = str_replace("/", "", $content);
+                // $content = str_replace("redheading", "", $content);
+                // $content = str_replace("class", "", $content);
+                // $content = str_replace("=", "", $content);
 
 
 
@@ -130,8 +130,6 @@ function minifier($code)
           <div class="card-body">
           <a href="blog/' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' . substr($title, 0, 70) . '</h5> </a>
             <p class="card-text">Creator : ' . $creator . ' <b>.</b> ' . $date . '</p>
-            <!--<p class="card-text">' . substr($content, 0, 250) . '</p>-->
-            <!-- <a href="blog/' . $url . '" class="btn btn-primary">Read More</a> -->
           </div>
         </div>
      </div>';

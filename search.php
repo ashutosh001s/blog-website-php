@@ -55,20 +55,22 @@
             echo '<h3 style="margin: 40px 20px;"><strong>Search Results</strong> for <em> &#8220;' . $query . '&#8221; </em>  (' . $numOfResults . ' results in ' . $queryTime . ' seconds)</h3>';
 
             while ($row = mysqli_fetch_assoc($result)) {
-                $domain = $_SERVER['SERVER_NAME'];
-                $content = $row['content'];
 
-                $content = str_replace("h1", "", $content);
-                $content = str_replace("p", "", $content);
-                $content = str_replace("<", "", $content);
-                $content = str_replace(">", "", $content);
-                $content = str_replace("/", "", $content);
-                $content = str_replace("redheading", "", $content);
-                $content = str_replace("class", "", $content);
-                $content = str_replace("=", "", $content);
+                // $content = $row['content'];
+
+                // $content = str_replace("h1", "", $content);
+                // $content = str_replace("p", "", $content);
+                // $content = str_replace("<", "", $content);
+                // $content = str_replace(">", "", $content);
+                // $content = str_replace("/", "", $content);
+                // $content = str_replace("redheading", "", $content);
+                // $content = str_replace("class", "", $content);
+                // $content = str_replace("=", "", $content);
 
                 $title = $row['title'];
                 $image = $row['image'];
+                $date = $row['date'];
+                $creator = $row['author'];
                 $url = $row['url'];
 
                 echo '<div class="searchContainer">
@@ -80,7 +82,7 @@
               <div class="col-md-8">
                   <div class="card-body">
                   <a href="blog/' . $url . '" style=" text-decoration: none; "><h5 class="card-title">' . $title . '</h5></a>
-                      <p class="card-text">' . $content . '</p>
+                  <p class="card-text">Creator : ' . $creator . ' <b>.</b> ' . $date . '</p>
                   </div>
               </div>
           </div>
