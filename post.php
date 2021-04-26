@@ -145,13 +145,15 @@ function minifier($code)
 
     ?>
         <div class="sidebarBox sticky-top">
-
-
-            <div class="sidebar ">this is sidebar</div>
-
-
+            <div class="sidebar ">
+                <div class="postSearchbar">
+                    <form action="../search" method="GET" style="width: 80%;margin: auto;">
+                        <input type="text" class="form-control search-bar" id="search" name="query"
+                            aria-describedby="Search" placeholder="Search">
+                    </form>
+                </div>
+            </div>
         </div>
-
 
     </div>
 
