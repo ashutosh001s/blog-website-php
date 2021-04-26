@@ -147,12 +147,14 @@ function minifier($code)
         <div class="sidebarBox sticky-top">
             <div class="sidebar ">
                 <div class="postSearchbar">
+                    <h2>Search</h2>
                     <form action="../search" method="GET" style="width: 80%;margin: auto;">
                         <input type="text" class="form-control search-bar" id="search" name="query"
                             aria-describedby="Search" placeholder="Search">
                     </form>
                 </div>
                 <div class="recentPosts">
+                    <h2>Recent Posts</h2>
                     <?php
           $sno = 0;
           $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 5";
