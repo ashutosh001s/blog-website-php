@@ -127,7 +127,17 @@ b {
     0 12px 90px 0 rgb(103 151 255 / 11%);
   font-family: "Roboto", sans-serif !important;
 }
+.recentPosts {
+  box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%),
+    0 12px 90px 0 rgb(103 151 255 / 11%);
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+}
 .rphold {
   margin: 20px;
+  box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%),
+    0 12px 90px 0 rgb(103 151 255 / 11%);
+  border-radius: 20px;
   padding: 20px;
 }
