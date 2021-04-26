@@ -94,22 +94,25 @@ function minifier($code)
         </div>
     </div>
 
+    <div class="contentBucket">
 
-    <?php
 
-  $id = $_GET['id'];
-  $sql = "SELECT * FROM `posts` WHERE url = '$id'";
-  $result = mysqli_query($conn, $sql);
-  $row = mysqli_fetch_assoc($result);
-  $title = $row['title'];
-  $content = $row['content'];
-  $author = $row['author'];
-  $date = $row['date'];
-  $readMin = $row['read_time'];
-  $image = $row['image'];
-  $date = $row['date'];
 
-  echo '   
+        <?php
+
+    $id = $_GET['id'];
+    $sql = "SELECT * FROM `posts` WHERE url = '$id'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $title = $row['title'];
+    $content = $row['content'];
+    $author = $row['author'];
+    $date = $row['date'];
+    $readMin = $row['read_time'];
+    $image = $row['image'];
+    $date = $row['date'];
+
+    echo '   
     <div class="post" id="post">
       <h1 class="font1">' . strtoupper($title) . '</h1>
       <img class = "post-image" src="/assets/img/cover/' . $image . '" alt="">
@@ -131,16 +134,24 @@ function minifier($code)
 
               <svg width="29" height="29" class="hk"><path d="M23.2 5H5.8a.8.8 0 0 0-.8.8V23.2c0 .44.35.8.8.8h9.3v-7.13h-2.38V13.9h2.38v-2.38c0-2.45 1.55-3.66 3.74-3.66 1.05 0 1.95.08 2.2.11v2.57h-1.5c-1.2 0-1.48.57-1.48 1.4v1.96h2.97l-.6 2.97h-2.37l.05 7.12h5.1a.8.8 0 0 0 .79-.8V5.8a.8.8 0 0 0-.8-.79" style=" fill: #008EFF;"></path></svg>';
 
-  echo "<img width='29' height='29' src='../assets/img/cover/pdf.svg'  onclick=" . "printDiv('post','Title')" . " alt='pdf'>";
+    echo "<img width='29' height='29' src='../assets/img/cover/pdf.svg'  onclick=" . "printDiv('post','Title')" . " alt='pdf'>";
 
 
-  echo ' </div>
+    echo ' </div>
       </div>
       ' . $content . '
      
     </div>';
 
-  ?>
+    ?>
+        <div class="sidebarBox">
+            <div class="sidebar sticky-top">this is sidebar</div>
+
+
+        </div>
+
+
+    </div>
 
     <?php
   include 'partials/_dbconnect.php';
