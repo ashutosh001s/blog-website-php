@@ -166,21 +166,10 @@ function minifier($code)
             $creator = $row['author'];
             $url = $row['url'];
 
-            echo '<div class="searchContainer">
-      <div class="card searchCard  mb-3">
-          <div class="row g-0">
-              <div class="col-md-4">
-              <h3>' . $sno . '</h3>
-              </div>
-              <div class="col-md-8">
-                  <div class="card-body">
-                  <a href="blog/' . $url . '" style=" text-decoration: none; "><h5 class="card-title">' . $title . '</h5></a>
+            echo '
+                  <a href="' . $url . '" style=" text-decoration: none; "><h5 class="card-title">' . $title . '</h5></a>
                   <p class="card-text">Creator : ' . $creator . ' <b>.</b> ' . $date . '</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>';
+                  ';
           }
 
           ?>
