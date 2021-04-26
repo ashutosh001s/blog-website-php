@@ -75,4 +75,7 @@
   #navOnMobile {
     display: block;
   }
+  .search-bar {
+    margin: 35px 0px 20px 0px;
+  }
 }
