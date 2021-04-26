@@ -192,6 +192,8 @@ function minifier($code)
                         <div class="mb-3">
                             <input type="email" class="form-control" id="email" name="email"
                                 placeholder="Enter your email">
+                            <input type="hidden" class="form-control" id="email" name="currentUrl"
+                                value="<?php $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
                         </div>
                         <div class="d-grid gap-2">
                             <button class="btn btn-primary btn-mail" type="Submit">Sign Up</button>
