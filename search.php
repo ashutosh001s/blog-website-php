@@ -52,7 +52,7 @@
         // see if any rows were returned 
         if ($numOfResults > 0) {
 
-            echo '<h1>Search Results for ' . $query . ' (' . $numOfResults . ' results in ' . $queryTime . ' seconds)</h1>';
+            echo '<h3><strong>Search</strong> Results for <em>' . "$query " . '</em> (' . $numOfResults . ' results in ' . $queryTime . ' seconds)</h3>';
 
             while ($row = mysqli_fetch_assoc($result)) {
                 $domain = $_SERVER['SERVER_NAME'];
