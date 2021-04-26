@@ -10,9 +10,10 @@
   border-radius: 0px !important;
 }
 .searchCard {
-  width: 80%;
+  width: 60%;
   border-radius: 0px;
   margin: 30px auto;
+  background: transparent;
 }
 .searchContainer {
   width: 100%;

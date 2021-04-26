@@ -146,6 +146,9 @@ body {
 .card:hover {
   box-shadow: 0 22px 60px 0 rgb(144 148 158), 0 12px 90px 0 rgb(187 187 187);
 }
+.searchCard:hover {
+  box-shadow: none;
+}
 
 .search-bar {
   width: 100%;
