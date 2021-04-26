@@ -46,7 +46,7 @@
         $end = microtime(true);
         //Calculate the difference in microseconds.
         $difference = $end - $started;
-        //Format the time so that it only shows 10 decimal places.
+        //Format the time so that it only shows 4 decimal places.
         $queryTime = number_format($difference, 4);
 
         // see if any rows were returned 

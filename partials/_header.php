@@ -10,11 +10,11 @@ echo ' <!-- *********Navigation start******* -->
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-      <div id="navOnPc">
       <form action="../search" method="GET" style="width: 80%;margin: auto;">
         <input type="text" class="form-control search-bar" id="search" name="query" aria-describedby="Search" placeholder="Search">
       </form>
+
+      <div id="navOnPc">
       <div class="dropdown">
       <a class="dropdown-toggle dropMenu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Menu
