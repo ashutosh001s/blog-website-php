@@ -144,8 +144,10 @@ function minifier($code)
     </div>';
 
     ?>
-        <div class="sidebarBox">
-            <div class="sidebar sticky-top">this is sidebar</div>
+        <div class="sidebarBox sticky-top">
+
+
+            <div class="sidebar ">this is sidebar</div>
 
 
         </div>
