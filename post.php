@@ -154,12 +154,12 @@ function minifier($code)
                 </div>
                 <div class="recentPosts">
                     <?php
-
+          $sno = 0;
           $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 9";
           $result = mysqli_query($conn, $sql);
 
           while ($row = mysqli_fetch_assoc($result)) {
-
+            $sno++;
             $title = $row['title'];
             $image = $row['image'];
             $date = $row['date'];
@@ -170,7 +170,7 @@ function minifier($code)
       <div class="card searchCard  mb-3">
           <div class="row g-0">
               <div class="col-md-4">
-              <a href="blog/' . $url . '"><img class="searchImg" src="/assets/img/cover/' . $image . '" alt="..."></a>
+              <h3>' . $sno . '</h3>
               </div>
               <div class="col-md-8">
                   <div class="card-body">
