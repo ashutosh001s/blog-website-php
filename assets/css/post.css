@@ -148,3 +148,11 @@ b {
   border-radius: 20px;
   padding: 20px;
 }
+
+.postNewsletter {
+  box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%),
+    0 12px 90px 0 rgb(103 151 255 / 11%);
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+}
