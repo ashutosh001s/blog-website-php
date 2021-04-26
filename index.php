@@ -11,23 +11,23 @@ $start = $time;
 ob_start("minifier");
 function minifier($code)
 {
-  $search = array(
+    $search = array(
 
-    // Remove whitespaces after tags 
-    '/\>[^\S ]+/s',
+        // Remove whitespaces after tags 
+        '/\>[^\S ]+/s',
 
-    // Remove whitespaces before tags 
-    '/[^\S ]+\</s',
+        // Remove whitespaces before tags 
+        '/[^\S ]+\</s',
 
-    // Remove multiple whitespace sequences 
-    '/(\s)+/s',
+        // Remove multiple whitespace sequences 
+        '/(\s)+/s',
 
-    // Removes comments 
-    '/<!--(.|\s)*?-->/'
-  );
-  $replace = array('>', '<', '\\1');
-  $code = preg_replace($search, $replace, $code);
-  return $code;
+        // Removes comments 
+        '/<!--(.|\s)*?-->/'
+    );
+    $replace = array('>', '<', '\\1');
+    $code = preg_replace($search, $replace, $code);
+    return $code;
 }
 ?>
 <!doctype html>
@@ -84,10 +84,10 @@ function minifier($code)
                         <button class="btn btn-primary btn-mail" type="Submit">Sign Up</button>
                     </div>
                     <?php
-          $statusMsg = !empty($_SESSION['msg']) ? $_SESSION['msg'] : '';
-          unset($_SESSION['msg']);
-          echo $statusMsg;
-          ?>
+                    $statusMsg = !empty($_SESSION['msg']) ? $_SESSION['msg'] : '';
+                    unset($_SESSION['msg']);
+                    echo $statusMsg;
+                    ?>
                 </form>
             </div>
         </div>
@@ -99,42 +99,45 @@ function minifier($code)
 
             <!--fetch all the post-->
             <?php
-      $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 9";
-      $result = mysqli_query($conn, $sql);
-      while ($row = mysqli_fetch_assoc($result)) {
-        $content = $row['content'];
+            $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 9";
+            $result = mysqli_query($conn, $sql);
+            while ($row = mysqli_fetch_assoc($result)) {
+                $content = $row['content'];
 
-        $content = str_replace("h1", "", $content);
-        $content = str_replace("p", "", $content);
-        $content = str_replace("<", "", $content);
-        $content = str_replace(">", "", $content);
-        $content = str_replace("/", "", $content);
-        $content = str_replace("redheading", "", $content);
-        $content = str_replace("class", "", $content);
-        $content = str_replace("=", "", $content);
+                $content = str_replace("h1", "", $content);
+                $content = str_replace("p", "", $content);
+                $content = str_replace("<", "", $content);
+                $content = str_replace(">", "", $content);
+                $content = str_replace("/", "", $content);
+                $content = str_replace("redheading", "", $content);
+                $content = str_replace("class", "", $content);
+                $content = str_replace("=", "", $content);
 
 
 
-        $srno = $row['sr_no'];
-        $cate = $row['category'];
-        $title = $row['title'];
-        $image = $row['image'];
-        $url = $row['url'];
+                $srno = $row['sr_no'];
+                $cate = $row['category'];
+                $title = $row['title'];
+                $image = $row['image'];
+                $url = $row['url'];
+                $date = $row['date'];
+                $creator = $row['author'];
 
-        echo ' <div class="col-md-4">
+                echo ' <div class="col-md-4">
       <div class="card">
           <span class="badge rounded-pill">' . $cate . '</span>
           <a href="blog/' . $url . '"><img src="/assets/img/cover/' . $image . '" class="card-img-top" alt="..."></a>
           <div class="card-body">
           <a href="blog/' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' . substr($title, 0, 70) . '</h5> </a>
-            <p class="card-text">' . substr($content, 0, 250) . '</p>
+            <p class="card-text">Creator : ' . $creator . ' <b>.</b> ' . $date . '</p>
+            <!--<p class="card-text">' . substr($content, 0, 250) . '</p>-->
             <!-- <a href="blog/' . $url . '" class="btn btn-primary">Read More</a> -->
           </div>
         </div>
      </div>';
-      }
+            }
 
-      ?>
+            ?>
         </div>
 
     </Section>
