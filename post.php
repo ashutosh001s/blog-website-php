@@ -155,11 +155,10 @@ function minifier($code)
                 <div class="recentPosts">
                     <?php
           $sno = 0;
-          $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 9";
+          $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 5";
           $result = mysqli_query($conn, $sql);
 
           while ($row = mysqli_fetch_assoc($result)) {
-            $sno++;
             $title = $row['title'];
             $image = $row['image'];
             $date = $row['date'];
@@ -167,12 +166,15 @@ function minifier($code)
             $url = $row['url'];
 
             echo '
+                  <div class="rphold">
                   <a href="' . $url . '" style=" text-decoration: none; "><h5 class="card-title">' . $title . '</h5></a>
                   <p class="card-text">Creator : ' . $creator . ' <b>.</b> ' . $date . '</p>
+                  </div>
                   ';
           }
 
           ?>
+
                 </div>
             </div>
         </div>
