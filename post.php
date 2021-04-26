@@ -180,6 +180,10 @@ function minifier($code)
                 </div>
 
                 <div class="postNewsletter">
+                    <h3>Newsletter</h3>
+                    <p class="formTextSmall">Signup and receive our exclusive blogging and digital marketing tips right
+                        in
+                        your inbox.</p>
                     <form class="emailForm" action="/action.php" method="POST">
                         <div class="mb-3">
                             <input type="text" class="form-control" id="name" name="fname"
