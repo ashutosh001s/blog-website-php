@@ -47,12 +47,12 @@
         //Calculate the difference in microseconds.
         $difference = $end - $started;
         //Format the time so that it only shows 10 decimal places.
-        $queryTime = number_format($difference, 10);
+        $queryTime = number_format($difference, 4);
 
         // see if any rows were returned 
         if ($numOfResults > 0) {
 
-            echo '<h3><strong>Search Results</strong> for <em>&#8220;' . $query . '&#8221;</em> (' . $numOfResults . ' results in ' . $queryTime . ' seconds)</h3>';
+            echo '<h3 style="margin: 40px 20px;"><strong>Search Results</strong> for <em> &#8220;' . $query . '&#8221; </em>  (' . $numOfResults . ' results in ' . $queryTime . ' seconds)</h3>';
 
             while ($row = mysqli_fetch_assoc($result)) {
                 $domain = $_SERVER['SERVER_NAME'];
