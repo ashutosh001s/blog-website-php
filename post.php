@@ -114,7 +114,7 @@ function minifier($code)
     $date = $row['date'];
 
     echo '   
-    <div class="post" id="post">
+    <article class="post" id="post">
       <h1 class="font1">' . strtoupper($title) . '</h1>
       <img class = "post-image" src="/assets/img/cover/' . $image . '" alt="">
       <div class="blogpost-meta">
@@ -142,11 +142,11 @@ function minifier($code)
       </div>
       ' . $content . '
      
-    </div>';
+    </article>';
 
     ?>
         <!-- sidebar start  -->
-        <div class="sidebarBox sticky-top">
+        <aside class="sidebarBox sticky-top">
 
             <div class="sidebar ">
                 <!-- search bar start  -->
@@ -215,7 +215,7 @@ function minifier($code)
                 <!-- newsletter end  -->
 
             </div>
-        </div>
+        </aside>
         <!-- sidebar end  -->
 
     </div>
