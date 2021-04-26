@@ -152,6 +152,39 @@ function minifier($code)
                             aria-describedby="Search" placeholder="Search">
                     </form>
                 </div>
+                <div class="recentPosts">
+                    <?php
+
+          $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 9";
+          $result = mysqli_query($conn, $sql);
+
+          while ($row = mysqli_fetch_assoc($result)) {
+
+            $title = $row['title'];
+            $image = $row['image'];
+            $date = $row['date'];
+            $creator = $row['author'];
+            $url = $row['url'];
+
+            echo '<div class="searchContainer">
+      <div class="card searchCard  mb-3">
+          <div class="row g-0">
+              <div class="col-md-4">
+              <a href="blog/' . $url . '"><img class="searchImg" src="/assets/img/cover/' . $image . '" alt="..."></a>
+              </div>
+              <div class="col-md-8">
+                  <div class="card-body">
+                  <a href="blog/' . $url . '" style=" text-decoration: none; "><h5 class="card-title">' . $title . '</h5></a>
+                  <p class="card-text">Creator : ' . $creator . ' <b>.</b> ' . $date . '</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>';
+          }
+
+          ?>
+                </div>
             </div>
         </div>
 
