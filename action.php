@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['msg'] = '<p><div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>OOps</strong> Please Enter a valid email address.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>.</p>';
+      </div></p>';
     }
 }
 // redirect to homepage
