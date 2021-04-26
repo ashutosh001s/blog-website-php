@@ -35,7 +35,7 @@
     <div class="searchBox" id="searchBox">
 
         <?php
-    $query = $_POST['search'];
+    $query = $_GET['search'];
     $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ('$query')";
     $result = mysqli_query($conn, $sql);
 
