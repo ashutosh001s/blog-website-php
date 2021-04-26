@@ -13,7 +13,7 @@ echo ' <!-- *********Navigation start******* -->
 
       <div id="navOnPc">
       <form action="../search" method="GET" style="width: 80%;margin: auto;">
-        <input type="text" class="form-control search-bar" id="search" name="search" aria-describedby="Search" placeholder="Search">
+        <input type="text" class="form-control search-bar" id="search" name="query" aria-describedby="Search" placeholder="Search">
       </form>
       <div class="dropdown">
       <a class="dropdown-toggle dropMenu" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">

@@ -35,31 +35,31 @@
     <div class="searchBox" id="searchBox">
 
         <?php
-    $query = $_GET['search'];
-    $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ('$query')";
-    $result = mysqli_query($conn, $sql);
+        $query = $_GET['query'];
+        $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ('$query')";
+        $result = mysqli_query($conn, $sql);
 
-    // see if any rows were returned 
-    if (mysqli_num_rows($result) > 0) {
+        // see if any rows were returned 
+        if (mysqli_num_rows($result) > 0) {
 
-      while ($row = mysqli_fetch_assoc($result)) {
-        $domain = $_SERVER['SERVER_NAME'];
-        $content = $row['content'];
+            while ($row = mysqli_fetch_assoc($result)) {
+                $domain = $_SERVER['SERVER_NAME'];
+                $content = $row['content'];
 
-        $content = str_replace("h1", "", $content);
-        $content = str_replace("p", "", $content);
-        $content = str_replace("<", "", $content);
-        $content = str_replace(">", "", $content);
-        $content = str_replace("/", "", $content);
-        $content = str_replace("redheading", "", $content);
-        $content = str_replace("class", "", $content);
-        $content = str_replace("=", "", $content);
+                $content = str_replace("h1", "", $content);
+                $content = str_replace("p", "", $content);
+                $content = str_replace("<", "", $content);
+                $content = str_replace(">", "", $content);
+                $content = str_replace("/", "", $content);
+                $content = str_replace("redheading", "", $content);
+                $content = str_replace("class", "", $content);
+                $content = str_replace("=", "", $content);
 
-        $title = $row['title'];
-        $image = $row['image'];
-        $url = $row['url'];
+                $title = $row['title'];
+                $image = $row['image'];
+                $url = $row['url'];
 
-        echo '<div class="searchContainer">
+                echo '<div class="searchContainer">
       <div class="card searchCard  mb-3">
           <div class="row g-0">
               <div class="col-md-4">
@@ -74,11 +74,11 @@
           </div>
       </div>
   </div>';
-      }
-    } else {
-      echo "<div style='margin: auto;'>no result found</div>";
-    }
-    ?>
+            }
+        } else {
+            echo "<div style='margin: auto;'>no result found</div>";
+        }
+        ?>
     </div>
 
     <?php include 'partials/_footer.php'; ?>
