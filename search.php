@@ -79,7 +79,7 @@
               </div>
               <div class="col-md-8">
                   <div class="card-body">
-                  <a href="blog/' . $url . '"><h5 class="card-title">' . $title . '</h5></a>
+                  <a href="blog/' . $url . '" style=" text-decoration: none; "><h5 class="card-title">' . $title . '</h5></a>
                       <p class="card-text">' . $content . '</p>
                   </div>
               </div>
