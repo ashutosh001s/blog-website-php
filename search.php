@@ -36,11 +36,23 @@
 
         <?php
         $query = $_GET['query'];
+
+        //Record the start time before the query is executed.
+        $started = microtime(true);
         $sql = "SELECT * FROM `posts` WHERE MATCH (title, content, keywords, tags) against ('$query')";
         $result = mysqli_query($conn, $sql);
+        $numOfResults = mysqli_num_rows($result);
+        //Record the end time after the query has finished running.
+        $end = microtime(true);
+        //Calculate the difference in microseconds.
+        $difference = $end - $started;
+        //Format the time so that it only shows 10 decimal places.
+        $queryTime = number_format($difference, 10);
 
         // see if any rows were returned 
-        if (mysqli_num_rows($result) > 0) {
+        if ($numOfResults > 0) {
+
+            echo '<h1>Search Results for ' . $query . ' (' . $numOfResults . ' results in ' . $queryTime . ' seconds)</h1>';
 
             while ($row = mysqli_fetch_assoc($result)) {
                 $domain = $_SERVER['SERVER_NAME'];
