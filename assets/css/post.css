@@ -1,109 +1,119 @@
-.post-img{
-    height: 404px;
-    overflow: hidden; 
+.post-img {
+  height: 404px;
+  overflow: hidden;
 }
-.post-img img{
-    width: 100%;
-}
-
-.blog-post-content h1{
-    text-align: center;
-}
-.blog-post-content p{
-    font-size: 18px; 
+.post-img img {
+  width: 100%;
 }
 
-.row{
-    display: flex;
+.blog-post-content h1 {
+  text-align: center;
 }
-.more-post{
-    flex-direction: column; 
-    align-items: center;
-}
-.blogpost-meta{ 
-    display: flex;
-    justify-content: space-between;
+.blog-post-content p {
+  font-size: 18px;
 }
 
-.author-info{
-    margin: 12px 0;
+.row {
+  display: flex;
 }
-.author-info div{
-    padding: 4px 0px;
-    font-family: var(--font2);
+.more-post {
+  flex-direction: column;
+  align-items: center;
 }
-.social{
-    padding-right: 53px;
-    align-self: center;
-    cursor: pointer;
+.blogpost-meta {
+  display: flex;
+  justify-content: space-between;
 }
-.font1{
-    text-align: center;
-    padding-bottom: 60px;
-    color: #008DFE;
-    font-weight: bold;
+
+.author-info {
+  margin: 12px 0;
+}
+.author-info div {
+  padding: 4px 0px;
+  font-family: var(--font2);
+}
+.social {
+  padding-right: 53px;
+  align-self: center;
+  cursor: pointer;
+}
+.font1 {
+  text-align: center;
+  padding-bottom: 60px;
+  color: #008dfe;
+  font-weight: bold;
 }
 
 .redheading {
-    font-size: 25px;
-    text-transform: uppercase;
-    color: #008EFF;
-    font-weight: bold;
-    margin: 25px 0px;
+  font-size: 25px;
+  text-transform: uppercase;
+  color: #008eff;
+  font-weight: bold;
+  margin: 25px 0px;
 }
 
-.imageCenterPost{
-    display: block;
+.imageCenterPost {
+  display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
 
-.userImage{
-    height: 50px;
-    width: 50px;
+.userImage {
+  height: 50px;
+  width: 50px;
 }
-.comments{
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
+.comments {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
 }
 
-.post-image{
-    width: 100%;
-    border-radius: 20px;
-    margin-bottom: 50px;
-    box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%), 0 12px 90px 0 rgb(103 151 255 / 11%);
+.post-image {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%),
+    0 12px 90px 0 rgb(103 151 255 / 11%);
 }
 
 /* Style the header: fixed position (always stay at the top) */
 .header {
-    position: fixed;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-    background-color: #fff;
-  }
-  
-  /* The progress container (grey background) */
-  .progress-container {
-    width: 100%;
-    height: 2px;
-    background: #fff;
-  }
-  
-  /* The progress bar (scroll indicator) */
-  .progress-bar {
-    height: 2px;
-    background: #008EFF;
-    width: 0%;
-  }
-
-  .author-info div {
-    color: orange;
-    font-weight: bold;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
 }
 
-b{
-    color: #008EFF;
+/* The progress container (grey background) */
+.progress-container {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 2px;
+  background: #008eff;
+  width: 0%;
+}
+
+.author-info div {
+  color: orange;
+  font-weight: bold;
+}
+
+b {
+  color: #008eff;
+}
+.contentBucket {
+  display: flex;
+  width: 100%;
+}
+
+.sidebarBox {
+  margin-top: 100px;
+  width: 30%;
 }
