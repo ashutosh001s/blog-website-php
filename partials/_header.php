@@ -21,7 +21,7 @@ echo ' <!-- *********Navigation start******* -->
         <img src="/assets/img/icons/widgets_black_24dp.svg" data-bs-toggle="tooltip" data-bs-placement="bottom"  alt="Menu" title="Menu">
        
       </a>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-start" aria-labelledby="dropdownMenuButton1">
         <li><a class="dropdown-item" aria-current="page" href="/">Home</a></li>
         <li><a class="dropdown-item" aria-current="page" href="/about-us">About</a></li>
         <li><a class="dropdown-item" aria-current="page" href="/contact-us">Contact</a></li>
