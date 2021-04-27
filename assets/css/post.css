@@ -140,6 +140,7 @@ b {
     0 12px 90px 0 rgb(103 151 255 / 11%);
   border-radius: 20px;
   padding: 20px;
+  background: #0000ff08;
 }
 .postSearchbar {
   margin: 20px;
