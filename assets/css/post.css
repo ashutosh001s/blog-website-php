@@ -159,6 +159,11 @@ b {
   padding: 20px;
   background: linear-gradient(45deg, #ff8008, #ffc837);
 }
+.popNewsletter {
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+}
 .sidebarHeading {
   text-align: center;
   font-size: 30px;

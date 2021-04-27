@@ -7,7 +7,7 @@
                 <div class="modal-body">
                     <!-- newsletter start  -->
 
-                    <div class="postNewsletter">
+                    <div class="popNewsletter">
                         <p class="sidebarHeading">Newsletter</p>
                         <p class="formTextSmall">Signup and receive our exclusive blogging and digital marketing tips
                             right
