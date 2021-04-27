@@ -117,7 +117,7 @@ function minifier($code)
     $date = $row['date'];
 
     if ($content == "") {
-      header('Location: 404.php');
+      header('Location: /404.php');
     }
 
     echo '   
