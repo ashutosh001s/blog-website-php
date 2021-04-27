@@ -86,7 +86,10 @@ function minifier($code)
 </head>
 
 <body>
-    <?php include 'partials/_header.php'; ?>
+    <?php
+  include 'partials/_header.php';
+  include 'partials/_mailpop.php';
+  ?>
 
     <div class="header">
         <div class="progress-container">
