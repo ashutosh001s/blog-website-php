@@ -151,9 +151,13 @@ body {
 }
 
 .search-bar {
-  width: 100%;
+  width: 70%;
+  margin: auto;
   outline: none;
-  border-radius: 0px;
+  border: none;
+  border-radius: 10px;
+  padding: 13px;
+  background: #f5f5f5;
 }
 .dropMenu {
   text-decoration: none;
@@ -164,8 +168,4 @@ body {
 }
 #navOnPc {
   display: contents;
-}
-.dropdown-menu[data-bs-popper] {
-  right: 0px !important;
-  left: auto;
 }
