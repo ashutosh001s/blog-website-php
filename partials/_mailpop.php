@@ -16,11 +16,11 @@
                         <form class="emailForm" action="/action.php" method="POST">
                             <div class="mb-3">
                                 <input type="text" class="form-control newsletterInput" name="fname"
-                                    placeholder="Enter your first name">
+                                    placeholder="Enter your first name" required>
                             </div>
                             <div class="mb-3">
                                 <input type="email" class="form-control newsletterInput" name="email"
-                                    placeholder="Enter your email">
+                                    placeholder="Enter your email" required>
                             </div>
                             <div class="d-grid gap-2">
                                 <button class="btn btn-news" type="Submit">Sign Up</button>
