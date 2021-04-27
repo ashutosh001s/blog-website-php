@@ -167,4 +167,5 @@ body {
 }
 .dropdown-menu[data-bs-popper] {
   right: 0px !important;
+  left: auto;
 }
