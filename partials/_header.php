@@ -11,7 +11,6 @@ echo ' <!-- *********Navigation start******* -->
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <form action="../search" method="GET" style="width: 80%;margin: auto;">
-        <img src="/assets/img/icons/search_black_24dp.svg" alt="">
         <input type="text" class="form-control search-bar" name="query" aria-describedby="Search" placeholder="Search" required>
       </form>
 
