@@ -1,4 +1,4 @@
-var newsModal = new bootstrap.Modal(document.getElementById('newsletterModal'));
+let newsModal = new bootstrap.Modal(document.getElementById('newsletterModal'));
 window.onload = function () {
   setTimeout(function () {
     newsModal.show()
