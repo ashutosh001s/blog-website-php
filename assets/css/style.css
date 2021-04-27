@@ -165,6 +165,10 @@ body {
 #navOnPc {
   display: contents;
 }
+.sidebarHeading {
+  text-align: center;
+  font-size: 30px;
+}
 .newsletterInput {
   background: transparent;
   border: none;

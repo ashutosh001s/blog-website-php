@@ -2,7 +2,7 @@ let newsModal = new bootstrap.Modal(document.getElementById('newsletterModal'));
 window.onload = function () {
   setTimeout(function () {
     newsModal.show()
-  }, 5000);
+  }, 3000);
 }
 var doc = new jsPDF();
 
