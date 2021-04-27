@@ -18,3 +18,10 @@ function printDiv(divId,
 
   return true;
 }
+var newsModal = new bootstrap.Modal(document.getElementById('newsletterModal'))
+
+window.onload = function () {
+  setTimeout(function () {
+    newsModal.show()
+  }, 10000);
+}

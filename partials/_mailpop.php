@@ -8,7 +8,7 @@
     <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel"
         aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content">
+            <div class="modal-content newsModalContent">
                 <div class="modal-body">
                     <!-- newsletter start  -->
 
