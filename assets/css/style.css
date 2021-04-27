@@ -165,6 +165,6 @@ body {
 #navOnPc {
   display: contents;
 }
-.dropdown-toggle::after {
-  border: none !important;
+.dropdown-menu[data-bs-popper] {
+  right: 0px !important;
 }

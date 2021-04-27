@@ -109,7 +109,3 @@
   background: linear-gradient(45deg, #ff8008, #ffc837);
   transition: all 1s ease-in-out;
 }
-
-.dropdown-menu[data-bs-popper] {
-  right: 0px !important;
-}
