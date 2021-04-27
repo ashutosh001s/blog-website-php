@@ -148,6 +148,12 @@ $start = $time;
             opacity: 0;
         }
     }
+
+    @media screen and (max-width: 525px) {
+        svg {
+            width: 310px;
+        }
+    }
     </style>
     <title>404 pages</title>
 </head>
