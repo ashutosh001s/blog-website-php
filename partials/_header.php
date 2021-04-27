@@ -17,7 +17,7 @@ echo ' <!-- *********Navigation start******* -->
       <div id="navOnPc">
       <div class="dropdown">
       
-      <a class="dropdown-toggle dropMenu" type="button" id="dropdownMenuButton1" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+      <a class="dropdown-toggle dropMenu" id="dropdownMenuButton1" href="#" data-bs-toggle="dropdown" aria-expanded="false">
         <img src="/assets/img/icons/widgets_black_24dp.svg" data-bs-toggle="tooltip" data-bs-placement="bottom"  alt="Menu" title="Menu">
        
       </a>
