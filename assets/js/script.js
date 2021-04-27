@@ -18,10 +18,9 @@ function printDiv(divId,
 
   return true;
 }
-var newsModal = new bootstrap.Modal(document.getElementById('newsletterModal'))
-
-window.onload = function () {
+$(document).ready(function () {
   setTimeout(function () {
+    let newsModal = new bootstrap.Modal(document.getElementById('newsletterModal'))
     newsModal.show()
-  }, 10000);
-}
+  }, 5000);
+});
