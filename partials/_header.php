@@ -88,6 +88,7 @@ echo '
 
 include 'partials/_loginModal.php';
 include 'partials/_signupModal.php';
+include 'partials/_mailpop.php';
 
 if (isset($_GET['signup']) && $_GET['signup'] == 'true') {
 
