@@ -155,8 +155,19 @@ b {
   border-radius: 20px;
   margin: 20px;
   padding: 20px;
+  background: linear-gradient(45deg, #ff8008, #ffc837);
 }
 .sidebarHeading {
   text-align: center;
   font-size: 30px;
+}
+.newsletterInput {
+  background: transparent;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #ffffff3d;
+}
+.btn-news {
+  background-color: #064f6f !important;
+  color: white;
 }

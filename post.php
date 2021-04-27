@@ -195,15 +195,15 @@ function minifier($code)
                         your inbox.</p>
                     <form class="emailForm" action="/action.php" method="POST">
                         <div class="mb-3">
-                            <input type="text" class="form-control" id="name" name="fname"
+                            <input type="text" class="form-control newsletterInput" id="name" name="fname"
                                 placeholder="Enter your first name">
                         </div>
                         <div class="mb-3">
-                            <input type="email" class="form-control" id="email" name="email"
+                            <input type="email" class="form-control newsletterInput" id="email" name="email"
                                 placeholder="Enter your email">
                         </div>
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary btn-mail" type="Submit">Sign Up</button>
+                            <button class="btn btn-primary btn-news" type="Submit">Sign Up</button>
                         </div>
                         <?php
             $statusMsg = !empty($_SESSION['msg']) ? $_SESSION['msg'] : '';
