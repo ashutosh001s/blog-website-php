@@ -66,6 +66,7 @@ $start = $time;
 
     #container {
         text-align: center;
+        min-height: 90vh;
     }
 
     .message {
