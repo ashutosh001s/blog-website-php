@@ -1,7 +1,7 @@
 <div class="newsletterModal">
     <!-- Modal -->
-    <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel"
-        aria-hidden="true">
+    <div class="modal fade" id="newsletterModal" tabindex="-1" style="backdrop-filter: blur(5px);"
+        aria-labelledby="newsletterModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content newsModalContent">
                 <div class="modal-body">
