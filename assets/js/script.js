@@ -5,6 +5,7 @@ window.onload = function () {
   }, 5000);
 }
 
+window.jsPDF = require('jspdf');
 var doc = new jsPDF();
 
 function printDiv(divId,
