@@ -16,6 +16,7 @@ echo ' <!-- *********Navigation start******* -->
 
       <div id="navOnPc">
       <div class="dropdown">
+        <img src="/assets/img/icons/widgets_black_24dp.svg" alt="">
       <a class="dropdown-toggle dropMenu" type="button" id="dropdownMenuButton1" href="#" data-bs-toggle="dropdown" aria-expanded="false">
           Menu
       </a>
