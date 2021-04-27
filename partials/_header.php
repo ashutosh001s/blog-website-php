@@ -14,7 +14,7 @@ echo ' <!-- *********Navigation start******* -->
         <input type="text" class="form-control search-bar" name="query" aria-describedby="Search" placeholder="Search" required>
       </form>
 
-      <div id="navOnPc">
+      <div class="navOnPc">
       <div class="dropdown">
       
       <a class="dropdown-toggle dropMenu" id="dropdownMenuButton1" href="#" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,7 +30,7 @@ echo ' <!-- *********Navigation start******* -->
     </div>
     </div>
     
-    <div id="navOnMobile">
+    <div class="navOnMobile">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
@@ -49,7 +49,7 @@ echo ' <!-- *********Navigation start******* -->
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
-  echo ' <div class="dropdown">
+  echo ' <div class="dropdown navOnPc">
 
          <div class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="margin: 0px 11px 0px 20px;">
           <img src="/assets/img/icons/account_circle_black_24dp.svg" data-bs-toggle="tooltip" data-bs-placement="bottom"  alt="Menu" title="' . $_SESSION['username'] . '">
@@ -70,6 +70,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
   echo ' <li><a class="nav-link active" aria-current="page" href="/partials/_logout.php">Logout</a></li>
          </ul>
 
+        </div>
+        <div class="navOnMobile">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/partials/_logout.php">Logout</a>
+          </li>
         </div>';
 } else {
   echo '<li class="nav-item">

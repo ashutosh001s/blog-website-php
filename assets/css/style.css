@@ -163,9 +163,9 @@ body {
   text-decoration: none;
   color: black;
 }
-#navOnMobile {
+.navOnMobile {
   display: none;
 }
-#navOnPc {
+.navOnPc {
   display: contents;
 }

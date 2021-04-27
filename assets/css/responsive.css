@@ -70,10 +70,10 @@
   #cardHolder {
     width: 80%;
   }
-  #navOnPc {
+  .navOnPc {
     display: none;
   }
-  #navOnMobile {
+  .navOnMobile {
     display: block;
   }
   .search-bar {
