@@ -4,7 +4,7 @@ window.onload = function () {
     newsModal.show()
   }, 5000);
 }
-
+import jsPDF from 'jspdf';
 window.jsPDF = require('jspdf');
 var doc = new jsPDF();
 
