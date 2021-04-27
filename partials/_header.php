@@ -52,7 +52,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
   echo ' <div class="dropdown">
 
          <button class="btn btn-info dropdown-toggle" type="button" id="dropdownMenuButton1"       data-bs-toggle="dropdown" aria-expanded="false">
-          ' . $_SESSION['username'] . '
+          <img src="/assets/img/icons/account_circle_black_24dp.svg" data-bs-toggle="tooltip" data-bs-placement="bottom"  alt="Menu" title="' . $_SESSION['username'] . '">
          </button>
 
          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">';

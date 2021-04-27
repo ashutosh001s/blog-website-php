@@ -165,3 +165,6 @@ body {
 #navOnPc {
   display: contents;
 }
+.dropdown-toggle::after {
+  border: none !important;
+}
