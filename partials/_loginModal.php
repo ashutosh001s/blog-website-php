@@ -26,4 +26,3 @@ echo'<!-- Modal -->
     </div>
   </div>
 </div>';
-?>
