@@ -18,9 +18,8 @@ function printDiv(divId,
 
   return true;
 }
-$(document).ready(function () {
+window.onload = function () {
   setTimeout(function () {
-    let newsModal = new bootstrap.Modal(document.getElementById('newsletterModal'))
-    newsModal.show()
-  }, 5000);
-});
+    console.log('work')
+  }, 2000);
+}
