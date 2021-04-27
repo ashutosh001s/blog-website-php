@@ -203,7 +203,7 @@ function minifier($code)
                                 placeholder="Enter your email">
                         </div>
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary btn-news" type="Submit">Sign Up</button>
+                            <button class="btn btn-news" type="Submit">Sign Up</button>
                         </div>
                         <?php
             $statusMsg = !empty($_SESSION['msg']) ? $_SESSION['msg'] : '';
