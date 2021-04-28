@@ -208,7 +208,9 @@ function minifier($code)
     </div>
     <!-- sidebar start  -->
     <aside class=" sidebarBox sticky-top">
-        <div class="sideHeading">Course Content</div>
+        <div class="sideHeading">
+            <p>Course Content</p>
+        </div>
         <div class="card">
             <div class="card-body">
                 This is some text within a card body.

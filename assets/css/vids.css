@@ -43,6 +43,10 @@
 .sideHeading {
   position: static;
   padding: 10px;
+  background-color: #21262a;
+}
+.sideHeading p {
+  color: white;
   font-weight: bold;
   text-align: center;
   font-size: 22px;
