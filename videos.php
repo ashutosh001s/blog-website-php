@@ -136,6 +136,8 @@ function minifier($code)
                 ?>
         </div>
 
+        <hr>
+
         <?php
         include 'partials/_dbconnect.php';
         $url = $_SERVER['REQUEST_URI'];
@@ -172,7 +174,7 @@ function minifier($code)
         } else {
             echo '<div class="alert alert-success commentLog" role="alert">
   <h4 class="alert-heading">questions</h4>
-  <p>Please login to question</p>
+  <p>Please login to start discussion.</p>
   <hr>
   <p class="mb-0">You can <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">create account</a> or <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">login</a> to post a question.</p>
 </div>';
