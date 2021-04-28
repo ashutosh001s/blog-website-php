@@ -39,6 +39,8 @@
   border-bottom: 1px solid #0000001f;
   border-radius: 0px;
   width: 100%;
+  z-index: +1;
+  overflow-y: scroll;
 }
 .sideHeading {
   position: static;
