@@ -212,24 +212,7 @@ function minifier($code)
                     aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
-                <div class="sideHeading">
-                    <p>Course Content</p>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        This is some text within a card body.
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        This is some text within a card body.
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                        This is some text within a card body.
-                    </div>
-                </div>
+                ...
             </div>
         </div>
 
