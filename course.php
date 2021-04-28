@@ -116,9 +116,7 @@ function minifier($code)
         $image = $row['image'];
         $date = $row['date'];
 
-        if ($content == "") {
-            header('Location: /404');
-        }
+
 
         echo '   
     <article class="post" id="post">
