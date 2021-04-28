@@ -160,7 +160,7 @@ function minifier($code)
                 <div class="postSearchbar">
                     <form action="../search" method="GET">
                         <input type="text" class="form-control search-bar" name="query" aria-describedby="Search"
-                            placeholder="Search" style="border: none; background:white; width:100%" required>
+                            placeholder="Search" required>
                     </form>
                 </div>
                 <!-- search bar start  -->

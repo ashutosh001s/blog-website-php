@@ -22,8 +22,8 @@
   top: 0px;
   position: sticky;
   z-index: +1;
-  box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%),
-    0 12px 90px 0 rgb(103 151 255 / 11%);
+  /* box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%),
+    0 12px 90px 0 rgb(103 151 255 / 11%); */
 }
 
 .btn-primary {

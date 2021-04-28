@@ -148,6 +148,12 @@ b {
   border-radius: 20px;
   padding: 20px;
 }
+.postSearchbar form input {
+  border: none;
+  background: white;
+  width: 100%;
+  box-shadow: none;
+}
 
 .postNewsletter {
   box-shadow: 0 8px 60px 0 rgb(103 151 255 / 11%),
