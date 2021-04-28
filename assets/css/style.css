@@ -182,6 +182,8 @@ body {
   margin-left: 8px;
 }
 .dark {
-  background-color: #222;
-  color: #e6e6e6;
+  filter: invert(1);
+}
+.dark img {
+  filter: invert(1);
 }
