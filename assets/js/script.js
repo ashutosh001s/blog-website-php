@@ -16,7 +16,7 @@ window.onload = function () {
     newsModal.show()
   }, 3000);
 }
-var doc = new jsPDF();
+
 
 function printDiv(divId,
   title) {
