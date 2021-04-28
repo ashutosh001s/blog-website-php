@@ -105,7 +105,7 @@ function minifier($code)
         <?php
 
         $id = $_GET['id'];
-        $sql = "SELECT * FROM `posts` WHERE url = '$id'";
+        $sql = "SELECT * FROM `videos` WHERE url = '$id'";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
         $title = $row['title'];
@@ -115,6 +115,8 @@ function minifier($code)
         $readMin = $row['read_time'];
         $image = $row['image'];
         $date = $row['date'];
+
+        echo $content;
 
 
 
