@@ -153,11 +153,11 @@ function minifier($code)
     </script>
     <script>
     $(".change").on("click", function() {
-        if ($("body").hasClass("dark")) {
-            $("body").removeClass("dark");
+        if ($("html").hasClass("dark")) {
+            $("html").removeClass("dark");
             $(".change").text("OFF");
         } else {
-            $("body").addClass("dark");
+            $("html").addClass("dark");
             $(".change").text("ON");
         }
     });
