@@ -9,8 +9,8 @@
   margin-top: 0px;
   min-height: 100vh;
   background-color: whitesmoke;
-  z-index: -1;
   padding: 0px;
+  overflow-y: scroll;
 }
 
 .videoSection {
@@ -39,8 +39,6 @@
   border-bottom: 1px solid #0000001f;
   border-radius: 0px;
   width: 100%;
-  z-index: +1;
-  overflow-y: scroll;
 }
 .sideHeading {
   position: static;
