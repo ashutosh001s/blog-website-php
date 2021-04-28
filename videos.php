@@ -130,7 +130,8 @@ function minifier($code)
 
                 echo '<div class="container">
                         <div class="content">
-                            ' . $content . '
+                        <h4 class="alert-heading">Resources</h4>
+                            <p>' . $content . '</p>
                         </div>
                         </div>';
                 ?>
