@@ -155,7 +155,7 @@ function minifier($code)
             $(".change").text("OFF");
         } else {
             $("html").addClass("dark");
-            $(".change").text('<img src="/assets/img/icons/light_mode_black_24dp.svg">');
+            $(".change").html('<img src="/assets/img/icons/light_mode_black_24dp.svg">');
         }
     });
     </script>

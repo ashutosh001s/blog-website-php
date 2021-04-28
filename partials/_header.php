@@ -15,10 +15,10 @@ echo ' <!-- *********Navigation start******* -->
       </form>
         <div>
           <img src="/assets/img/icons/dark_mode_black_24dp.svg">
+          <img src="/assets/img/icons/light_mode_black_24dp.svg">
           <div class="mode">
             Dark mode:
             <span class="change"><img src="/assets/img/icons/dark_mode_black_24dp.svg"></span>
-            <img src="/assets/img/icons/light_mode_black_24dp.svg">
         </div>
         </div>
 
