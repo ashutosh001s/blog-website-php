@@ -13,11 +13,6 @@ echo ' <!-- *********Navigation start******* -->
       <form action="../search" method="GET" style="width: 80%;margin: auto;">
         <input type="text" class="form-control search-bar" name="query" aria-describedby="Search" placeholder="Search" required>
       </form>
-        <div>
-          <div class="mode">
-            <span class="change"><img src="/assets/img/icons/dark_mode_black_24dp.svg"></span>
-        </div>
-        </div>
 
       <div class="navOnPc">
       <div class="dropdown">

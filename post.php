@@ -55,8 +55,6 @@ function minifier($code)
     <meta name="author" content="' . $author . '">
     <meta name="viewport" content="width=device-width, initial-scale=1">';
   ?>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
-    </script>
     <!-- Bootstrap CSS -->
     <link rel="shortcut icon" href="../assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);"
         type="image/x-icon">

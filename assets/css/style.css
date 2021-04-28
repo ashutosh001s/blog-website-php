@@ -169,17 +169,3 @@ body {
 .navOnPc {
   display: contents;
 }
-.mode {
-  float: right;
-}
-.change {
-  cursor: pointer;
-  padding: 5px;
-  margin-left: 8px;
-}
-.dark {
-  filter: invert(1);
-}
-.dark img {
-  filter: invert(1);
-}
