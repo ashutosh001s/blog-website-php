@@ -62,6 +62,8 @@
 .userImage {
   height: 50px;
   width: 50px;
+  border-radius: 25px;
+  padding: 8px;
 }
 .comments {
   margin: 20px;

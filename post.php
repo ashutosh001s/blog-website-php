@@ -282,10 +282,11 @@ function minifier($code)
     echo '<div class="media comments">
         
         <div class="media-body">
-          <div style="display: flex;">
+          <div style="display: flex; align-items: center;">
             <img  src="/assets/img/cover/user.png" class="mr-3 userImage" alt="...">
-          <h5 class="mt-0 commentBy">Asked by ' . $commentBy . '  On ' . $commentDate . '</h5>
-        </div>
+            <h5 class="mt-0 commentBy">Asked by ' . $commentBy . '  On ' . $commentDate . '</h5>
+          </div>
+          
           <p>' . $comment . '</p>
         </div>
       
