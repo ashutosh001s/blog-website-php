@@ -129,72 +129,52 @@ function minifier($code)
         <!-- sidebar start  -->
         <aside class="sidebarBox sticky-top">
 
-            <div class="sidebar ">
-                <!-- search bar start  -->
-                <div class="postSearchbar">
-                    <form action="../search" method="GET">
-                        <input type="text" class="form-control search-bar" name="query" aria-describedby="Search"
-                            placeholder="Search" required>
-                    </form>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                            body.</div>
+                    </div>
                 </div>
-                <!-- search bar start  -->
-
-                <!-- recent post start  -->
-                <div class="recentPosts">
-                    <p class="sidebarHeading">Recent Posts</p>
-                    <?php
-                    $sno = 0;
-                    $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 3";
-                    $result = mysqli_query($conn, $sql);
-
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $title = $row['title'];
-                        $image = $row['image'];
-                        $date = $row['date'];
-                        $creator = $row['author'];
-                        $url = $row['url'];
-
-                        echo '
-                  <div class="rphold">
-                  <a href="' . $url . '" style=" text-decoration: none; "><h5 class="card-title">' . $title . '</h5></a>
-                  <p class="card-text">Creator : ' . $creator . ' <b>.</b> ' . $date . '</p>
-                  </div>
-                  ';
-                    }
-
-                    ?>
-
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                            body. Let's imagine this being filled with some actual content.</div>
+                    </div>
                 </div>
-                <!-- recent post start  -->
-
-                <!-- newsletter start  -->
-
-                <div class="postNewsletter">
-                    <p class="sidebarHeading">Newsletter</p>
-                    <p class="formTextSmall">Signup and receive our exclusive blogging and digital marketing tips right
-                        in
-                        your inbox.</p>
-                    <form class="emailForm" action="/action.php" method="POST">
-                        <div class="mb-3">
-                            <input type="text" class="form-control newsletterInput" id="name" name="fname"
-                                placeholder="Enter your first name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control newsletterInput" id="email" name="email"
-                                placeholder="Enter your email" required>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-news" type="Submit">Sign Up</button>
-                        </div>
-                        <?php
-                        $statusMsg = !empty($_SESSION['msg']) ? $_SESSION['msg'] : '';
-                        unset($_SESSION['msg']);
-                        echo $statusMsg;
-                        ?>
-                    </form>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseThree" aria-expanded="false"
+                            aria-controls="flush-collapseThree">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                            demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                            body. Nothing more exciting happening here in terms of content, but just filling up the
+                            space to make it look, at least at first glance, a bit more representative of how this would
+                            look in a real-world application.</div>
+                    </div>
                 </div>
-                <!-- newsletter end  -->
-
             </div>
         </aside>
         <!-- sidebar end  -->
