@@ -287,7 +287,7 @@ function minifier($code)
             <h5 class="mt-0 commentBy">Asked by ' . $commentBy . '  On ' . $commentDate . '</h5>
           </div>
           
-          <p>' . $comment . '</p>
+          <p style="margin-left: 50px;">' . $comment . '</p>
         </div>
       
       </div>';

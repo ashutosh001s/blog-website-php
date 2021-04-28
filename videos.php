@@ -184,14 +184,18 @@ function minifier($code)
             $questionDate = $row['question_date'];
 
 
-            echo '<div class="media questions">
-        <img  src="/assets/img/cover/user.png" class="mr-3 userImage" alt="...">
-        <div class="media-body">
-          <h5 class="mt-0 questionBy">Asked by ' . $questionBy . '  On ' . $questionDate . '</h5>
-          <p>' . $question . '</p>
-        </div>
-      
-      </div>';
+            echo '<div class="media question">
+        
+            <div class="media-body">
+              <div style="display: flex; align-items: center;">
+                <img  src="/assets/img/cover/user.png" class="mr-3 userImage" alt="...">
+                <h5 class="mt-0 questionBy">Asked by ' . $questionBy . '  On ' . $questionDate . '</h5>
+              </div>
+              
+              <p style="margin-left: 50px;">' . $question . '</p>
+            </div>
+          
+          </div>';
         }
         ?>
     </div>
