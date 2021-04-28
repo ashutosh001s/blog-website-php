@@ -36,6 +36,7 @@
   margin: 0px;
   padding: 20px;
   height: 100%;
-  border: 0px solid grey;
+  border-bottom: 1px solid #0000001f;
+  border-radius: 0px;
   width: 100%;
 }
