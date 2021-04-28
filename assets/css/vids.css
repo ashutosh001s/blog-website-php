@@ -27,3 +27,7 @@
 .descSection {
   width: 100%;
 }
+.content {
+  margin: 50px;
+  padding: 20px;
+}

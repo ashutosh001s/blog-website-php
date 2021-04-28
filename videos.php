@@ -157,7 +157,7 @@ function minifier($code)
 
 
 
-        echo '<div class="questionSection">';
+        echo '<div class="commentSection">';
 
 
 
@@ -187,7 +187,7 @@ function minifier($code)
             $questionDate = $row['question_date'];
 
 
-            echo '<div class="media question">
+            echo '<div class="media comments">
         
             <div class="media-body">
               <div style="display: flex; align-items: center;">
