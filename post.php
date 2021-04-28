@@ -32,11 +32,11 @@ function minifier($code)
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
 
-    <!-- For seo -->
-    <?php
+  <!-- For seo -->
+  <?php
   $id = $_GET['id'];
   $sql = "SELECT * FROM `posts` WHERE url = '$id'";
   $result = mysqli_query($conn, $sql);
@@ -55,54 +55,54 @@ function minifier($code)
     <meta name="author" content="' . $author . '">
     <meta name="viewport" content="width=device-width, initial-scale=1">';
   ?>
-    <!-- Bootstrap CSS -->
-    <link rel="shortcut icon" href="../assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);"
-        type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="../assets/css/post.css">
-    <link rel="stylesheet" href="../assets/css/footer.css">
-    <link rel="stylesheet" href="../assets/css/bootstrap-override.css">
-    <link rel="stylesheet" href="../assets/css/responsive.css">
-    <?php include 'partials/analytics.php'; ?>
+  <!-- Bootstrap CSS -->
+  <link rel="shortcut icon" href="../assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);"
+    type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/post.css">
+  <link rel="stylesheet" href="../assets/css/footer.css">
+  <link rel="stylesheet" href="../assets/css/bootstrap-override.css">
+  <link rel="stylesheet" href="../assets/css/responsive.css">
+  <?php include 'partials/analytics.php'; ?>
 
-    <style>
+  <style>
     .commentBy {
-        font-size: 18px;
-        font-family: fantasy;
-        color: #008EFF;
+      font-size: 18px;
+      font-family: fantasy;
+      color: #008EFF;
     }
 
     .bg-light {
-        position: relative !important;
+      position: relative !important;
     }
-    </style>
+  </style>
 
 
 
 </head>
 
 <body>
-    <?php
+  <?php
   include 'partials/_header.php';
   include 'partials/_mailpop.php';
   ?>
 
-    <div class="header">
-        <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
-        </div>
+  <div class="header">
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
     </div>
+  </div>
 
-    <!-- contentBucket start  -->
-    <div class="contentBucket">
+  <!-- contentBucket start  -->
+  <div class="contentBucket">
 
 
 
-        <?php
+    <?php
 
     $id = $_GET['id'];
     $sql = "SELECT * FROM `posts` WHERE url = '$id'";
@@ -152,23 +152,23 @@ function minifier($code)
     </article>';
 
     ?>
-        <!-- sidebar start  -->
-        <aside class="sidebarBox sticky-top">
+    <!-- sidebar start  -->
+    <aside class="sidebarBox sticky-top">
 
-            <div class="sidebar ">
-                <!-- search bar start  -->
-                <div class="postSearchbar">
-                    <form action="../search" method="GET">
-                        <input type="text" class="form-control search-bar" name="query" aria-describedby="Search"
-                            placeholder="Search" required>
-                    </form>
-                </div>
-                <!-- search bar start  -->
+      <div class="sidebar ">
+        <!-- search bar start  -->
+        <div class="postSearchbar">
+          <form action="../search" method="GET">
+            <input type="text" class="form-control search-bar" name="query" aria-describedby="Search"
+              placeholder="Search" required>
+          </form>
+        </div>
+        <!-- search bar start  -->
 
-                <!-- recent post start  -->
-                <div class="recentPosts">
-                    <p class="sidebarHeading">Recent Posts</p>
-                    <?php
+        <!-- recent post start  -->
+        <div class="recentPosts">
+          <p class="sidebarHeading">Recent Posts</p>
+          <?php
           $sno = 0;
           $sql = "SELECT * FROM `posts` ORDER BY `sr_no` DESC LIMIT 3";
           $result = mysqli_query($conn, $sql);
@@ -190,45 +190,45 @@ function minifier($code)
 
           ?>
 
-                </div>
-                <!-- recent post start  -->
+        </div>
+        <!-- recent post start  -->
 
-                <!-- newsletter start  -->
+        <!-- newsletter start  -->
 
-                <div class="postNewsletter">
-                    <p class="sidebarHeading">Newsletter</p>
-                    <p class="formTextSmall">Signup and receive our exclusive blogging and digital marketing tips right
-                        in
-                        your inbox.</p>
-                    <form class="emailForm" action="/action.php" method="POST">
-                        <div class="mb-3">
-                            <input type="text" class="form-control newsletterInput" id="name" name="fname"
-                                placeholder="Enter your first name" required>
-                        </div>
-                        <div class="mb-3">
-                            <input type="email" class="form-control newsletterInput" id="email" name="email"
-                                placeholder="Enter your email" required>
-                        </div>
-                        <div class="d-grid gap-2">
-                            <button class="btn btn-news" type="Submit">Sign Up</button>
-                        </div>
-                        <?php
+        <div class="postNewsletter">
+          <p class="sidebarHeading">Newsletter</p>
+          <p class="formTextSmall">Signup and receive our exclusive blogging and digital marketing tips right
+            in
+            your inbox.</p>
+          <form class="emailForm" action="/action.php" method="POST">
+            <div class="mb-3">
+              <input type="text" class="form-control newsletterInput" id="name" name="fname"
+                placeholder="Enter your first name" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control newsletterInput" id="email" name="email"
+                placeholder="Enter your email" required>
+            </div>
+            <div class="d-grid gap-2">
+              <button class="btn btn-news" type="Submit">Sign Up</button>
+            </div>
+            <?php
             $statusMsg = !empty($_SESSION['msg']) ? $_SESSION['msg'] : '';
             unset($_SESSION['msg']);
             echo $statusMsg;
             ?>
-                    </form>
-                </div>
-                <!-- newsletter end  -->
+          </form>
+        </div>
+        <!-- newsletter end  -->
 
-            </div>
-        </aside>
-        <!-- sidebar end  -->
+      </div>
+    </aside>
+    <!-- sidebar end  -->
 
-    </div>
-    <!-- contentBucket end  -->
+  </div>
+  <!-- contentBucket end  -->
 
-    <?php
+  <?php
   include 'partials/_dbconnect.php';
   $url = $_SERVER['REQUEST_URI'];
   session_start();
@@ -280,24 +280,27 @@ function minifier($code)
 
 
     echo '<div class="media comments">
-        <img  src="/assets/img/cover/user.png" class="mr-3 userImage" alt="...">
+        
         <div class="media-body">
+          <div style="display: flex;">
+            <img  src="/assets/img/cover/user.png" class="mr-3 userImage" alt="...">
           <h5 class="mt-0 commentBy">Asked by ' . $commentBy . '  On ' . $commentDate . '</h5>
+        </div>
           <p>' . $comment . '</p>
         </div>
       
       </div>';
   }
   ?>
-    </div>
+  </div>
 
 
-    <?php include 'partials/_footer.php'; ?>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+  <?php include 'partials/_footer.php'; ?>
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
-    <script src="../assets/js/script.js"></script>
+  <script src="../assets/js/script.js"></script>
 
 </body>
 
