@@ -164,13 +164,13 @@ function minifier($code)
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
             echo '<form action="' . $url . '" method = "POST">
         <div class="form-floating">
-          <label for="questionSection">question</label>
+          <label for="commentSection">question</label>
           <textarea class="form-control" placeholder="Leave a question here" name= "question" id="questionSection" style="height: 100px" required></textarea>
         </div>
         <button type="submit" class="btn btn-light">Submit</button>
       </form>';
         } else {
-            echo '<div class="alert alert-success questionLog" role="alert">
+            echo '<div class="alert alert-success commentLog" role="alert">
   <h4 class="alert-heading">questions</h4>
   <p>Please login to question</p>
   <hr>
