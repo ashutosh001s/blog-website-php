@@ -173,7 +173,7 @@ function minifier($code)
       </form>';
         } else {
             echo '<div class="alert alert-success commentLog" role="alert">
-  <h4 class="alert-heading">questions</h4>
+  <h4 class="alert-heading">Discussion</h4>
   <p>Please login to start discussion.</p>
   <hr>
   <p class="mb-0">You can <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">create account</a> or <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">login</a> to post a question.</p>
