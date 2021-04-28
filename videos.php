@@ -128,8 +128,11 @@ function minifier($code)
                 $image = $row['image'];
                 $date = $row['date'];
 
-                echo $content;
-
+                echo '<div class="container">
+                        <div class="content">
+                            ' . $content . '
+                        </div>
+                        </div>';
                 ?>
         </div>
 
