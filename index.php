@@ -152,7 +152,7 @@ function minifier($code)
     $(".change").on("click", function() {
         if ($("html").hasClass("dark")) {
             $("html").removeClass("dark");
-            $(".change").text("OFF");
+            $(".change").html('<img src="/assets/img/icons/dark_mode_black_24dp.svg">');
         } else {
             $("html").addClass("dark");
             $(".change").html('<img src="/assets/img/icons/light_mode_black_24dp.svg">');

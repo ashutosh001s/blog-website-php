@@ -14,8 +14,6 @@ echo ' <!-- *********Navigation start******* -->
         <input type="text" class="form-control search-bar" name="query" aria-describedby="Search" placeholder="Search" required>
       </form>
         <div>
-          <img src="/assets/img/icons/dark_mode_black_24dp.svg">
-          <img src="/assets/img/icons/light_mode_black_24dp.svg">
           <div class="mode">
             Dark mode:
             <span class="change"><img src="/assets/img/icons/dark_mode_black_24dp.svg"></span>
