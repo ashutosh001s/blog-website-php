@@ -20,7 +20,7 @@ function minifier($code)
         // Remove multiple whitespace sequences 
         '/(\s)+/s',
 
-        // Removes comments 
+        // Removes comments
         '/<!--(.|\s)*?-->/'
     );
     $replace = array('>', '<', '\\1');
@@ -143,55 +143,55 @@ function minifier($code)
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $id = $_GET['id'];
-            $comment = $_POST['comment'];
-            $comment = str_replace("<", "&lt;", $comment);
-            $comment = str_replace(">", "&gt;", $comment);
+            $question = $_POST['question'];
+            $question = str_replace("<", "&lt;", $question);
+            $question = str_replace(">", "&gt;", $question);
             date_default_timezone_set("Asia/Kolkata");
             $today = date("j F, Y");
             $username = $_SESSION['username'];
             $useremail = $_SESSION['useremail'];
-            $sql = "INSERT INTO `comments` (`page_no`, `comment`, `comment_date`) VALUES ('$id', '$comment', '$today')";
-            $sql = "INSERT INTO `comments` (`page_no`, `comment_by`, `comment_user_email`, `comment`, `comment_date`) VALUES ('$id', '$username', '$useremail', '$comment', '$today')";
+            // $sql = "INSERT INTO `questions` (`page_no`, `question`, `question_date`) VALUES ('$id', '$question', '$today')";
+            $sql = "INSERT INTO `discussion` (`page_no`, `question_by`, `question_user_email`, `question`, `question_date`) VALUES ('$id', '$username', '$useremail', '$question', '$today')";
             $result = mysqli_query($conn, $sql);
         }
 
 
 
-        echo '<div class="commentSection">';
+        echo '<div class="questionSection">';
 
 
 
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
             echo '<form action="' . $url . '" method = "POST">
         <div class="form-floating">
-          <label for="commentSection">Comment</label>
-          <textarea class="form-control" placeholder="Leave a comment here" name= "comment" id="commentSection" style="height: 100px" required></textarea>
+          <label for="questionSection">question</label>
+          <textarea class="form-control" placeholder="Leave a question here" name= "question" id="questionSection" style="height: 100px" required></textarea>
         </div>
         <button type="submit" class="btn btn-light">Submit</button>
       </form>';
         } else {
-            echo '<div class="alert alert-success commentLog" role="alert">
-  <h4 class="alert-heading">Comments</h4>
-  <p>Please login to comment</p>
+            echo '<div class="alert alert-success questionLog" role="alert">
+  <h4 class="alert-heading">questions</h4>
+  <p>Please login to question</p>
   <hr>
-  <p class="mb-0">You can <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">create account</a> or <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">login</a> to post a comment.</p>
+  <p class="mb-0">You can <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">create account</a> or <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">login</a> to post a question.</p>
 </div>';
         }
 
 
-        $sql = "SELECT * FROM `comments` WHERE page_no = '$id' ORDER BY `comment_no` DESC";
+        $sql = "SELECT * FROM `discussion` WHERE page_no = '$id' ORDER BY `question_no` DESC";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
-            $comment = $row['comment'];
-            $commentBy = $row['comment_by'];
-            $commentDate = $row['comment_date'];
+            $question = $row['question'];
+            $questionBy = $row['question_by'];
+            $questionDate = $row['question_date'];
 
 
-            echo '<div class="media comments">
+            echo '<div class="media questions">
         <img  src="/assets/img/cover/user.png" class="mr-3 userImage" alt="...">
         <div class="media-body">
-          <h5 class="mt-0 commentBy">Asked by ' . $commentBy . '  On ' . $commentDate . '</h5>
-          <p>' . $comment . '</p>
+          <h5 class="mt-0 questionBy">Asked by ' . $questionBy . '  On ' . $questionDate . '</h5>
+          <p>' . $question . '</p>
         </div>
       
       </div>';

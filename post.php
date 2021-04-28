@@ -242,7 +242,7 @@ function minifier($code)
     $today = date("j F, Y");
     $username = $_SESSION['username'];
     $useremail = $_SESSION['useremail'];
-    $sql = "INSERT INTO `comments` (`page_no`, `comment`, `comment_date`) VALUES ('$id', '$comment', '$today')";
+    // $sql = "INSERT INTO `comments` (`page_no`, `comment`, `comment_date`) VALUES ('$id', '$comment', '$today')";
     $sql = "INSERT INTO `comments` (`page_no`, `comment_by`, `comment_user_email`, `comment`, `comment_date`) VALUES ('$id', '$username', '$useremail', '$comment', '$today')";
     $result = mysqli_query($conn, $sql);
   }
