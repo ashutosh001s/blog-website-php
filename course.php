@@ -123,7 +123,14 @@ function minifier($code)
 
         ?>
         <div class="mainSection">
-            <section style="height: 500px; width:500px">this is video section</section>
+            <section style="height: 500px; width:500px">
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AKJfakEsgy0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </section>
             <section style="height: 500px; width:500px">this is discuss section</section>
         </div>
         <!-- sidebar start  -->
