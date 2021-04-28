@@ -27,8 +27,11 @@ RewriteRule ^search$ search.php [NC,L]
 # L makes this the last rule that this specific condition will match
 # $ in the regular expression makes the matching stop so that "customblah" will not work
 
-# Rewrite for user.php?u=xxxxx
+# Rewrite for post.php?u=xxxxx
  RewriteRule ^blog/([^/\.]+)/?$ post.php?id=$1 [L]
+
+# Rewrite for videos.php?u=xxxxx
+ RewriteRule ^videos/([^/\.]+)/?$ videos.php?id=$1 [L]
 
 Options -Indexes 
 

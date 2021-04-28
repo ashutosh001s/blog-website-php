@@ -100,29 +100,6 @@ function minifier($code)
     <!-- contentBucket start  -->
     <div class="contentBucket">
 
-
-
-        <?php
-
-        $id = $_GET['id'];
-        $sql = "SELECT * FROM `videos` WHERE url = '$id'";
-        $result = mysqli_query($conn, $sql);
-        $row = mysqli_fetch_assoc($result);
-        $title = $row['title'];
-        $content = $row['content'];
-        $author = $row['author'];
-        $date = $row['date'];
-        $readMin = $row['read_time'];
-        $image = $row['image'];
-        $date = $row['date'];
-
-        echo $content;
-
-
-
-
-
-        ?>
         <div class="mainSection">
             <section class="videoSection">
                 <div class="videoBox">
@@ -132,12 +109,30 @@ function minifier($code)
                         allowfullscreen></iframe>
                 </div>
             </section>
+
             <section class="descSection"">
 
             <div class=" resourses">
 
-                <p>no resources linked</p>
+                <?php
+
+                $id = $_GET['id'];
+                $sql = "SELECT * FROM `videos` WHERE url = '$id'";
+                $result = mysqli_query($conn, $sql);
+                $row = mysqli_fetch_assoc($result);
+                $title = $row['title'];
+                $content = $row['content'];
+                $author = $row['author'];
+                $date = $row['date'];
+                $readMin = $row['read_time'];
+                $image = $row['image'];
+                $date = $row['date'];
+
+                echo $content;
+
+                ?>
         </div>
+
         <?php
         include 'partials/_dbconnect.php';
         $url = $_SERVER['REQUEST_URI'];
