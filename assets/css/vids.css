@@ -10,6 +10,7 @@
   min-height: 100vh;
   background-color: whitesmoke;
   z-index: -1;
+  padding: 0px;
 }
 
 .videoSection {
@@ -29,5 +30,9 @@
 }
 .content {
   margin: 50px;
+  padding: 20px;
+}
+.card {
+  margin: 0px;
   padding: 20px;
 }
