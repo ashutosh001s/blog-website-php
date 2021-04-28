@@ -40,3 +40,10 @@
   border-radius: 0px;
   width: 100%;
 }
+.sideHeading {
+  position: static;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-size: 22px;
+}
