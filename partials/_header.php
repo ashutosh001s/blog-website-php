@@ -15,7 +15,6 @@ echo ' <!-- *********Navigation start******* -->
       </form>
         <div>
           <div class="mode">
-            Dark mode:
             <span class="change"><img src="/assets/img/icons/dark_mode_black_24dp.svg"></span>
         </div>
         </div>
