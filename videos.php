@@ -164,7 +164,7 @@ function minifier($code)
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
             echo '<form action="' . $url . '" method = "POST">
         <div class="form-floating">
-          <label for="commentSection">question</label>
+          <label for="commentSection">Discussion</label>
           <textarea class="form-control" placeholder="Leave a question here" name= "question" id="questionSection" style="height: 100px" required></textarea>
         </div>
         <button type="submit" class="btn btn-light">Submit</button>
