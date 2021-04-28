@@ -131,58 +131,63 @@ function minifier($code)
                 </div>
             </section>
             <section class="descSection"">
-            <?php
-            include 'partials/_dbconnect.php';
-            $url = $_SERVER['REQUEST_URI'];
-            session_start();
 
-            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $id = $_GET['id'];
-                $comment = $_POST['comment'];
-                $comment = str_replace("<", "&lt;", $comment);
-                $comment = str_replace(">", "&gt;", $comment);
-                date_default_timezone_set("Asia/Kolkata");
-                $today = date("j F, Y");
-                $username = $_SESSION['username'];
-                $useremail = $_SESSION['useremail'];
-                $sql = "INSERT INTO `comments` (`page_no`, `comment`, `comment_date`) VALUES ('$id', '$comment', '$today')";
-                $sql = "INSERT INTO `comments` (`page_no`, `comment_by`, `comment_user_email`, `comment`, `comment_date`) VALUES ('$id', '$username', '$useremail', '$comment', '$today')";
-                $result = mysqli_query($conn, $sql);
-            }
+            <div class=" resourses">
+
+                <p>no resources linked</p>
+        </div>
+        <?php
+        include 'partials/_dbconnect.php';
+        $url = $_SERVER['REQUEST_URI'];
+        session_start();
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $id = $_GET['id'];
+            $comment = $_POST['comment'];
+            $comment = str_replace("<", "&lt;", $comment);
+            $comment = str_replace(">", "&gt;", $comment);
+            date_default_timezone_set("Asia/Kolkata");
+            $today = date("j F, Y");
+            $username = $_SESSION['username'];
+            $useremail = $_SESSION['useremail'];
+            $sql = "INSERT INTO `comments` (`page_no`, `comment`, `comment_date`) VALUES ('$id', '$comment', '$today')";
+            $sql = "INSERT INTO `comments` (`page_no`, `comment_by`, `comment_user_email`, `comment`, `comment_date`) VALUES ('$id', '$username', '$useremail', '$comment', '$today')";
+            $result = mysqli_query($conn, $sql);
+        }
 
 
 
-            echo '<div class="commentSection">';
+        echo '<div class="commentSection">';
 
 
 
-            if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-                echo '<form action="' . $url . '" method = "POST">
+        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+            echo '<form action="' . $url . '" method = "POST">
         <div class="form-floating">
           <label for="commentSection">Comment</label>
           <textarea class="form-control" placeholder="Leave a comment here" name= "comment" id="commentSection" style="height: 100px" required></textarea>
         </div>
         <button type="submit" class="btn btn-light">Submit</button>
       </form>';
-            } else {
-                echo '<div class="alert alert-success commentLog" role="alert">
+        } else {
+            echo '<div class="alert alert-success commentLog" role="alert">
   <h4 class="alert-heading">Comments</h4>
   <p>Please login to comment</p>
   <hr>
   <p class="mb-0">You can <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal">create account</a> or <a href="#" data-bs-toggle="modal" data-bs-target="#loginModal">login</a> to post a comment.</p>
 </div>';
-            }
+        }
 
 
-            $sql = "SELECT * FROM `comments` WHERE page_no = '$id' ORDER BY `comment_no` DESC";
-            $result = mysqli_query($conn, $sql);
-            while ($row = mysqli_fetch_assoc($result)) {
-                $comment = $row['comment'];
-                $commentBy = $row['comment_by'];
-                $commentDate = $row['comment_date'];
+        $sql = "SELECT * FROM `comments` WHERE page_no = '$id' ORDER BY `comment_no` DESC";
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+            $comment = $row['comment'];
+            $commentBy = $row['comment_by'];
+            $commentDate = $row['comment_date'];
 
 
-                echo '<div class="media comments">
+            echo '<div class="media comments">
         <img  src="/assets/img/cover/user.png" class="mr-3 userImage" alt="...">
         <div class="media-body">
           <h5 class="mt-0 commentBy">Asked by ' . $commentBy . '  On ' . $commentDate . '</h5>
@@ -190,78 +195,75 @@ function minifier($code)
         </div>
       
       </div>';
-            }
-            ?>
+        }
+        ?>
     </div>
-            </section>
-        </div>
-        <!-- sidebar start  -->
-        <aside class=" sidebarBox sticky-top">
+    </section>
+    </div>
+    <!-- sidebar start  -->
+    <aside class=" sidebarBox sticky-top">
 
-                <div class="accordion accordion-flush" id="accordionFlushExample">
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingOne">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseOne" aria-expanded="false"
-                                aria-controls="flush-collapseOne">
-                                Accordion Item #1
-                            </button>
-                        </h2>
-                        <div id="flush-collapseOne" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
-                                body.</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingTwo">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
-                                aria-controls="flush-collapseTwo">
-                                Accordion Item #2
-                            </button>
-                        </h2>
-                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
-                                body. Let's imagine this being filled with some actual content.</div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <h2 class="accordion-header" id="flush-headingThree">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#flush-collapseThree" aria-expanded="false"
-                                aria-controls="flush-collapseThree">
-                                Accordion Item #3
-                            </button>
-                        </h2>
-                        <div id="flush-collapseThree" class="accordion-collapse collapse"
-                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Placeholder content for this accordion, which is intended to
-                                demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
-                                body. Nothing more exciting happening here in terms of content, but just filling up the
-                                space to make it look, at least at first glance, a bit more representative of how this
-                                would
-                                look in a real-world application.</div>
-                        </div>
-                    </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Accordion Item #1
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion
+                        body.</div>
                 </div>
-                </aside>
-                <!-- sidebar end  -->
-
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        Accordion Item #2
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion
+                        body. Let's imagine this being filled with some actual content.</div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        Accordion Item #3
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                        demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion
+                        body. Nothing more exciting happening here in terms of content, but just filling up the
+                        space to make it look, at least at first glance, a bit more representative of how this
+                        would
+                        look in a real-world application.</div>
+                </div>
+            </div>
         </div>
-        <!-- contentBucket end  -->
+    </aside>
+    <!-- sidebar end  -->
+
+    </div>
+    <!-- contentBucket end  -->
 
 
 
 
-        <?php include 'partials/_footer.php'; ?>
-        <!-- Option 1: Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-        </script>
+    <?php include 'partials/_footer.php'; ?>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
 
 </body>
 
