@@ -35,4 +35,7 @@
 .card {
   margin: 0px;
   padding: 20px;
+  height: 100%;
+  border: 0px solid grey;
+  width: 100%;
 }
