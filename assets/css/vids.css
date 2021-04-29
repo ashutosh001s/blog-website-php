@@ -40,6 +40,10 @@
   border-radius: 0px;
   width: 100%;
 }
+.card:hover {
+  box-shadow: none;
+  background-color: whitesmoke;
+}
 
 .sideHeading {
   position: static;
