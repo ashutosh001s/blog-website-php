@@ -254,7 +254,7 @@ function minifier($code)
     $(function() {
         $("a").each(function() {
             if ($(this).attr("href") == window.location.pathname) {
-                $(this).find('.card').html().addClass("selected");
+                $(this).parent().addClass("selected");
             }
         });
     });
