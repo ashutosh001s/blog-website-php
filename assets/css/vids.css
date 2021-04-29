@@ -10,7 +10,6 @@
   max-height: 85vh;
   min-height: 55vh;
   background-color: whitesmoke;
-  width: 100%;
   padding: 0px;
   overflow-y: scroll;
 }
@@ -71,10 +70,4 @@
 }
 .vAnchor {
   color: black;
-}
-.sideContentTableHolder {
-  width: 30%;
-}
-.contentTableHolder {
-  width: 100%;
 }
