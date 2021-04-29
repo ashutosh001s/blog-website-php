@@ -8,17 +8,19 @@ $(function () {
 $("#hidePlayer").click(function () {
     $("#videoSection").toggle();
 });
-$('.resourses').show()
+$('.resourses').show().css("border-bottom", "2px solid black");
 $('.commentSection').hide()
 
 $('#btn1').click(function () {
-    $(this).css("border", "1px solid black");
+    $('.showContent button').css("border", "none");
+    $(this).css("border-bottom", "2px solid black");
     $('.resourses').show();
     $('.commentSection').hide();
 });
 
 $('#btn2').click(function () {
-    $(this).css("border", "1px solid black");
+    $('.showContent button').css("border", "none");
+    $(this).css("border-bottom", "2px solid black");
     $('.commentSection').show();
     $('.resourses').hide();
 });
