@@ -10,10 +10,10 @@ $("#hidePlayer").click(function () {
 });
 
 $('#btn1').click(function () {
-    $('commentSection').show();
+    $('.commentSection').show();
     $('.resourses').hide();
 });
 $('#btn2').click(function () {
     $('.resourses').show();
-    $('commentSection').hide();
+    $('.commentSection').hide();
 });
