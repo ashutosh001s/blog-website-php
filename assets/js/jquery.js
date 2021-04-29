@@ -16,13 +16,13 @@ $('.commentSection').hide()
 $('#btn1').click(function () {
     $('.showContent button').css("border", "none");
     $(this).css("border-bottom", "2px solid black");
-    $('.resourses').show("slow");
-    $('.commentSection').hide("slow");
+    $('.resourses').show();
+    $('.commentSection').hide();
 });
 
 $('#btn2').click(function () {
     $('.showContent button').css("border", "none");
     $(this).css("border-bottom", "2px solid black");
-    $('.commentSection').show("slow");
-    $('.resourses').hide("slow");
+    $('.commentSection').show();
+    $('.resourses').hide();
 });
