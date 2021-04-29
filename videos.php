@@ -203,8 +203,8 @@ function minifier($code)
     </section>
     </div>
     <!-- sidebar start  -->
-    <div class="sideContentTableHolder sticky-top">
-        <div class="accordion accordion-flush contentTableHolder" id="accordionFlushExample">
+    <div class="sideContentTableHolder">
+        <div class="accordion accordion-flush contentTableHolder sticky-top" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
