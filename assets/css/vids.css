@@ -45,7 +45,7 @@
   background-color: red;
 }
 .active {
-  background-color: antiquewhite;
+  color: red;
 }
 .card:active {
   box-shadow: none;

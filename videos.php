@@ -56,6 +56,8 @@ function minifier($code)
     <meta name="viewport" content="width=device-width, initial-scale=1">';
     ?>
     <!-- Bootstrap CSS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
     <link rel="shortcut icon" href="/assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);"
         type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -243,11 +245,10 @@ function minifier($code)
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
     <script>
-    function SetActiveDiv(el) {
-
-        var element = $(el).closest('.card');
-        element.toggleClass("active");
-    }
+    $(".card a").on("click", function() {
+        $(".card a").removeClass("active");
+        $(this).addClass("active");
+    });
     </script>
 
 </body>
