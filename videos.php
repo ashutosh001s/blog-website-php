@@ -56,7 +56,8 @@ function minifier($code)
     <meta name="viewport" content="width=device-width, initial-scale=1">';
     ?>
     <!-- Bootstrap CSS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script defer src="/assets/js/jquery.js"> </script>
 
     <link rel="shortcut icon" href="/assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);"
         type="image/x-icon">
@@ -246,19 +247,7 @@ function minifier($code)
                     crossorigin="anonymous">
                     </script>
 
-                    <script>
-                    $(function() {
-                        $("a").each(function() {
-                            if ($(this).attr("href") == window.location.pathname) {
-                                $(this).children().addClass("selected");
-                            }
-                        });
-                    });
-                    $("#hidePlayer").click(function() {
-                        // assumes element with id='button'
-                        $("#videoSection").toggle();
-                    });
-                    </script>
+
 
 </body>
 
