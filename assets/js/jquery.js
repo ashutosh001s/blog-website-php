@@ -5,7 +5,9 @@ $(function () {
         }
     });
 });
-$("#hidePlayer").click(function () {
-    // assumes element with id='button'
+
+
+$('#hidePlayer').click(function () {
     $("#videoSection").toggle();
+    $(this).val($(this).val() == 'Hide Player' ? 'Show Player' : 'Hide Player');
 });
