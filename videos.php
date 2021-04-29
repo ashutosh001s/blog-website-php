@@ -122,9 +122,9 @@ function minifier($code)
             </section>
         
             <div class="showContent">
-                    <button id="btn1">Overview</button>
-                    <button id="btn2">Q&amp;A</button>
-                    <button id="btn3">Content</button>
+                    <button id="btn1">Content</button>
+                    <button id="btn2">Overview</button>
+                    <button id="btn3">Q&amp;A</button>
             </div>
             <hr>
             <section class="descSection"">

@@ -10,14 +10,15 @@ $("#hidePlayer").click(function () {
 });
 
 $('#btn1').css("border-bottom", "2px solid #ffc107");
-$('.resourses').show()
+$('#contentBar').show();
+$('.resourses').hide()
 $('.commentSection').hide()
 
 $('#btn1').click(function () {
     $('.showContent button').css("border", "none");
     $(this).css("border-bottom", "2px solid #ffc107");
-    $('.resourses').show();
-    $('#contentBar').hide();
+    $('#contentBar').show();
+    $('.resourses').hide();
     $('.commentSection').hide();
 });
 
@@ -32,7 +33,8 @@ $('#btn2').click(function () {
 $('#btn3').click(function () {
     $('.showContent button').css("border", "none");
     $(this).css("border-bottom", "2px solid #ffc107");
-    $('#contentBar').show();
-    $('.resourses').hide();
+    $('.resourses').show();
+    $('#contentBar').hide();
     $('.commentSection').hide();
 });
+
