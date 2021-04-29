@@ -245,8 +245,8 @@ function minifier($code)
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
     <script>
-    $(".card card-body a").on("click", function() {
-        $(".card card-body a").removeClass("active");
+    $(".card .card-body a").on("click", function() {
+        $(".card .card-body a").removeClass("active");
         $(this).addClass("active");
     });
     </script>

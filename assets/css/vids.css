@@ -47,9 +47,10 @@
 .active {
   color: red;
 }
-.card:active {
+.card .card-body a:active {
   box-shadow: none;
   background-color: blue;
+  color: blueviolet;
 }
 .sideHeading {
   position: static;
