@@ -40,18 +40,7 @@
   border-radius: 0px;
   width: 100%;
 }
-.card:hover {
-  box-shadow: none;
-  background-color: red;
-}
-.active {
-  color: red;
-}
-.card .card-body a:active {
-  box-shadow: none;
-  background-color: blue;
-  color: blueviolet;
-}
+
 .sideHeading {
   position: static;
   padding: 10px;

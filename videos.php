@@ -224,7 +224,7 @@ function minifier($code)
 
             echo '<div class="card">
                         <div class="card-body">
-                        <a href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; " onclick="SetActiveDiv(this);"> <h5 class="card-title">' . substr($title, 0, 70) . '</h5> </a>
+                        <a href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' . substr($title, 0, 70) . '</h5> </a>
                         </div>
                     </div>';
         }
