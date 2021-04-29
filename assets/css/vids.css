@@ -67,3 +67,12 @@
 .vAnchor {
   color: black;
 }
+.showContent button {
+  padding: 8px;
+  margin: 8px;
+  border: none;
+  background: transparent;
+  width: 80px;
+  font-size: 25px;
+  color: grey;
+}
