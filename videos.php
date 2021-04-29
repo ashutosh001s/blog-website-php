@@ -125,8 +125,7 @@ function minifier($code)
                     <button id="btn1">Content</button>
                     <button id="btn2">Overview</button>
                     <button id="btn3">Q&amp;A</button>
-                    <img src="/assets/img/icons/hide_image_black_24dp.svg" id="hidePlayer"
-                    style="margin-left: 18px;">
+                    
             </div>
             <hr>
             <section class="descSection"">
@@ -214,7 +213,8 @@ function minifier($code)
     <!-- sidebar start  -->
     <aside id="contentBar" class=" contentCarryBox sticky-top">
         <div class="sideHeading">
-            <p>Course Content</p>
+            <p><img src="/assets/img/icons/hide_image_black_24dp.svg" id="hidePlayer" style="margin-left: 18px;">Course
+                Content</p>
         </div>
 
         <?php
