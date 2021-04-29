@@ -52,6 +52,6 @@
   text-align: center;
   font-size: 22px;
 }
-.active {
+.selected {
   background-color: aquamarine;
 }
