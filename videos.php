@@ -272,11 +272,10 @@ function minifier($code)
     });
 
     if ($(window).width() > 990) {
-        var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-        var collapseList = collapseElementList.map(function(collapseEl) {
+        let collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+        let collapseList = collapseElementList.map(function(collapseEl) {
             return new bootstrap.Collapse(collapseEl)
         })
-        return
     }
     </script>
 
