@@ -263,6 +263,12 @@ function minifier($code)
     </script>
 
     <script>
+    if ($(window).width() > 990) {
+        let collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+        let collapseList = collapseElementList.map(function(collapseEl) {
+            return new bootstrap.Collapse(collapseEl)
+        })
+    }
     $(function() {
         $("a").each(function() {
             if ($(this).attr("href") == window.location.pathname) {
@@ -270,13 +276,6 @@ function minifier($code)
             }
         });
     });
-
-    if ($(window).width() > 990) {
-        let collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-        let collapseList = collapseElementList.map(function(collapseEl) {
-            return new bootstrap.Collapse(collapseEl)
-        })
-    }
     </script>
 
 </body>
