@@ -235,6 +235,11 @@ function minifier($code)
                     </div>';
             } else {
                 $color = "black;";
+                echo '<div class="card">
+                        <div class="card-body">
+                        <a href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> <h5 class="card-title" style = "color:' . $color . '">' . substr($title, 0, 70) . '</h5> </a>
+                        </div>
+                    </div>';
             }
         }
         ?>
