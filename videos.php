@@ -233,6 +233,8 @@ function minifier($code)
                         <a href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> <h5 class="card-title" style = "color:' . $color . '">' . substr($title, 0, 70) . '</h5> </a>
                         </div>
                     </div>';
+            } else {
+                $color = "black;";
             }
         }
         ?>
