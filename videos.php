@@ -205,7 +205,7 @@ function minifier($code)
     <!-- sidebar start  -->
     <aside class=" sidebarBox sticky-top">
         <div class="sideHeading">
-            <p>Course Content<button onclick="myFunction()">hide player</button></p>
+            <p>Course Content<button onclick="hidePlayer()">hide player</button></p>
         </div>
 
         <?php
