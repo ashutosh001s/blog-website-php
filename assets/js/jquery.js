@@ -8,12 +8,15 @@ $(function () {
 $("#hidePlayer").click(function () {
     $("#videoSection").toggle();
 });
+$('.resourses').show()
+$('.commentSection').hide()
 
 $('#btn1').click(function () {
-    $('.commentSection').show();
-    $('.resourses').hide();
-});
-$('#btn2').click(function () {
     $('.resourses').show();
     $('.commentSection').hide();
+});
+
+$('#btn2').click(function () {
+    $('.commentSection').show();
+    $('.resourses').hide();
 });
