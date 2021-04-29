@@ -209,8 +209,6 @@ function minifier($code)
         }
         ?>
     </div>
-    </section>
-    </div>
     <!-- sidebar start  -->
     <aside id="contentBar" class=" sidebarBox sticky-top">
         <div class="sideHeading">
@@ -245,6 +243,9 @@ function minifier($code)
 
     </aside>
     <!-- sidebar end  -->
+    </section>
+    </div>
+
 
     </div>
     <!-- contentBucket end  -->
