@@ -112,7 +112,7 @@ function minifier($code)
 
                 $id = $_GET['id'];
                 $play = $_GET['play'];
-                $sql = "SELECT * FROM `videos` WHERE category = '$play' AND url = '$id'";
+                $sql = "SELECT * FROM `videos` WHERE playlist = '$play' AND url = '$id'";
                 $result = mysqli_query($conn, $sql);
                 $row = mysqli_fetch_assoc($result);
                 $title = $row['title'];
@@ -208,7 +208,7 @@ function minifier($code)
         </div>
 
         <?php
-        $sql = "SELECT * FROM `videos` WHERE category = '$play'";
+        $sql = "SELECT * FROM `videos` WHERE playlist = '$play'";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
 
