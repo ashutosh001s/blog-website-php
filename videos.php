@@ -71,15 +71,15 @@ function minifier($code)
     <?php include 'partials/analytics.php'; ?>
 
     <style>
-        .commentBy {
-            font-size: 18px;
-            font-family: fantasy;
-            color: #008EFF;
-        }
+    .commentBy {
+        font-size: 18px;
+        font-family: fantasy;
+        color: #008EFF;
+    }
 
-        .bg-light {
-            position: relative !important;
-        }
+    .bg-light {
+        position: relative !important;
+    }
     </style>
 
 
@@ -206,21 +206,24 @@ function minifier($code)
         <div class="sideHeading">
             <p>Course Content</p>
         </div>
-        <div class="card">
-            <div class="card-body">
-                This is some text within a card body.
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                This is some text within a card body.
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                This is some text within a card body.
-            </div>
-        </div>
+
+        <?php
+        $sql = "SELECT * FROM `videos` WHERE category = '$play'";
+        $result = mysqli_query($conn, $sql);
+        while ($row = mysqli_fetch_assoc($result)) {
+
+            $title = $row['title'];
+            $url = $row['url'];
+            $playlsit = $row['playlist'];
+
+            echo '<div class="card">
+                        <div class="card-body">
+                        <a href="videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' . substr($title, 0, 70) . '</h5> </a>
+                        </div>
+                    </div>';
+        }
+        ?>
+
     </aside>
     <!-- sidebar end  -->
 
@@ -234,7 +237,7 @@ function minifier($code)
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-        </script>
+    </script>
 
 </body>
 
