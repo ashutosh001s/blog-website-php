@@ -36,16 +36,11 @@
 }
 .card {
   margin: 0px;
-  padding: 10px;
   height: 100%;
-  border-bottom: 1px solid #0000001f;
   border-radius: 0px;
   width: 100%;
-  font-weight: bold;
 }
-.card-title {
-  font-weight: bold;
-}
+
 .card:hover {
   box-shadow: none;
   background-color: whitesmoke;
