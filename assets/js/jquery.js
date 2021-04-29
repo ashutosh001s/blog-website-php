@@ -5,9 +5,6 @@ $(function () {
         }
     });
 });
-
-
-$('#hidePlayer').click(function () {
+$("#hidePlayer").click(function () {
     $("#videoSection").toggle();
-    $(this).val($(this).val() == 'Hide Player' ? 'Show Player' : 'Hide Player');
 });
