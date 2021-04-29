@@ -221,10 +221,16 @@ function minifier($code)
             $title = $row['title'];
             $url = $row['url'];
             $playlsit = $row['playlist'];
+            $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+            $domain = $_SERVER['SERVER_NAME'];
+
+            if ($host = "$domain/videos/' . $playlsit . '/' . $url . '") {
+                $color = "red;";
+            }
 
             echo '<div class="card">
                         <div class="card-body">
-                        <a href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' . substr($title, 0, 70) . '</h5> </a>
+                        <a href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> <h5 class="card-title" style = "color:' . $color . '">' . substr($title, 0, 70) . '</h5> </a>
                         </div>
                     </div>';
         }
@@ -244,12 +250,7 @@ function minifier($code)
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
     </script>
-    <script>
-    $(".card .card-body a .card-title").on("click", function() {
-        $(".card .card-body a .card-title").removeClass("active");
-        $(this).addClass("active");
-    });
-    </script>
+
 
 </body>
 
