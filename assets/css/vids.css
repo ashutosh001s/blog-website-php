@@ -55,3 +55,9 @@
 .active {
   color: red;
 }
+.card .card-body a .card-title:active {
+  color: aqua;
+}
+.card .card-body a:active .card-title {
+  color: aqua;
+}
