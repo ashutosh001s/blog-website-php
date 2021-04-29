@@ -232,7 +232,7 @@ function minifier($code)
             echo '<a href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> 
                     <div class="card">
                         <div class="card-body">
-                        <h5 class="card-title"><span style="margin-right: 7px;">' . $no . ')</span>' . $title . '</h5> 
+                        <h5 class="card-title"><span style="margin-right: 7px;">' . $no . '.</span>' . $title . '</h5> 
                         <p><img src="/assets/img/icons/play_circle_filled_black_24dp.svg">Watch Free Video</p> 
                         </div>
                     </div>
