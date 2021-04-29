@@ -112,7 +112,7 @@ function minifier($code)
 
                 $id = $_GET['id'];
                 $play = $_GET['play'];
-                $sql = "SELECT * FROM `videos` WHERE category = '$fun' AND url = '$id'";
+                $sql = "SELECT * FROM `videos` WHERE category = '$play' AND url = '$id'";
                 $result = mysqli_query($conn, $sql);
                 $row = mysqli_fetch_assoc($result);
                 $title = $row['title'];
