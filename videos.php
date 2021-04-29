@@ -226,13 +226,14 @@ function minifier($code)
 
             if ($host = "$domain/videos/' . $playlsit . '/' . $url . '") {
                 $color = "red;";
-            }
 
-            echo '<div class="card">
+
+                echo '<div class="card">
                         <div class="card-body">
                         <a href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> <h5 class="card-title" style = "color:' . $color . '">' . substr($title, 0, 70) . '</h5> </a>
                         </div>
                     </div>';
+            }
         }
         ?>
 
