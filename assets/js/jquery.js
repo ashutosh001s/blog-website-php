@@ -12,13 +12,13 @@ $('.resourses').show()
 $('.commentSection').hide()
 
 $('#btn1').click(function () {
-    $('#btn1').css("border-bottom", "2px solid black !important");
+    $(this).css("border", "1px solid black");
     $('.resourses').show();
     $('.commentSection').hide();
 });
 
 $('#btn2').click(function () {
-    $('#btn2').css("border-bottom", "2px solid black !important");
+    $(this).css("border", "1px solid black");
     $('.commentSection').show();
     $('.resourses').hide();
 });
