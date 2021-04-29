@@ -8,7 +8,9 @@ $(function () {
 $("#hidePlayer").click(function () {
     $("#videoSection").toggle();
 });
-$('.resourses').show().css("border-bottom", "2px solid black");
+
+$('#btn1').css("border-bottom", "2px solid black");
+$('.resourses').show()
 $('.commentSection').hide()
 
 $('#btn1').click(function () {
