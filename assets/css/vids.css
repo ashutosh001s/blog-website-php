@@ -60,6 +60,15 @@
 .selected {
   background-color: rgb(27 127 204 / 80%);
 }
+.selected h5 {
+  color: white;
+}
+.selected p {
+  color: white;
+}
+.selected img {
+  filter: invert(1);
+}
 .card img {
   height: 24px;
   margin-right: 10px;
