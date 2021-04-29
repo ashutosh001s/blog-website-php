@@ -135,6 +135,8 @@ function minifier($code)
         ?>
 
         <hr>
+        <button id="btn1">btn1</button>
+        <button id="btn2">btn2</button>
 
         <?php
         include 'partials/_dbconnect.php';
