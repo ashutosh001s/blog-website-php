@@ -110,6 +110,7 @@ function minifier($code)
             header('Location: /404');
         }
 
+
         echo ' <div class="mainSection">
             <section id="videoSection" class="videoSection">
                 <div class="videoBox">
@@ -119,7 +120,11 @@ function minifier($code)
                         allowfullscreen></iframe>
                 </div>
             </section>
-
+        
+            <div class="showContent">
+                    <button id="btn1">btn1</button>
+                    <button id="btn2">btn2</button>
+            </div>
             <section class="descSection"">
 
             <div class=" resourses">
@@ -135,8 +140,7 @@ function minifier($code)
         ?>
 
         <hr>
-        <button id="btn1">btn1</button>
-        <button id="btn2">btn2</button>
+
 
         <?php
         include 'partials/_dbconnect.php';
