@@ -56,7 +56,7 @@ function minifier($code)
     <meta name="viewport" content="width=device-width, initial-scale=1">';
     ?>
     <!-- Bootstrap CSS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <link rel="shortcut icon" href="/assets/img/cover/favicon.png" style="filter: drop-shadow(2px 4px 6px black);"
         type="image/x-icon">
@@ -257,6 +257,16 @@ function minifier($code)
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+
+    <script>
+    $(function() {
+        $("a").each(function() {
+            if ($(this).attr("href") == window.location.pathname) {
+                $(this).addClass("active");
+            }
+        });
+    });
     </script>
 
 
