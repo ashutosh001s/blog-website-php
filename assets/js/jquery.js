@@ -9,20 +9,20 @@ $("#hidePlayer").click(function () {
     $("#videoSection").toggle();
 });
 
-$('#btn1').css("border-bottom", "2px solid black");
+$('#btn1').css("border-bottom", "2px solid #ffc107");
 $('.resourses').show()
 $('.commentSection').hide()
 
 $('#btn1').click(function () {
     $('.showContent button').css("border", "none");
-    $(this).css("border-bottom", "2px solid black");
+    $(this).css("border-bottom", "2px solid #ffc107");
     $('.resourses').show();
     $('.commentSection').hide();
 });
 
 $('#btn2').click(function () {
     $('.showContent button').css("border", "none");
-    $(this).css("border-bottom", "2px solid black");
+    $(this).css("border-bottom", "2px solid #ffc107");
     $('.commentSection').show();
     $('.resourses').hide();
 });
