@@ -203,38 +203,39 @@ function minifier($code)
     </section>
     </div>
     <!-- sidebar start  -->
-    <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
-            <h2 class="accordion-header" id="flush-headingOne">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                    Content
-                </button>
-            </h2>
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-                data-bs-parent="#accordionFlushExample">
-                <aside class=" sidebarBox sticky-top">
-                    <div class="sideHeading">
-                        <p>Course Content</p>
-                    </div>
+    <div class="sideContentTableHolder">
+        <div class="accordion accordion-flush contentTableHolder" id="accordionFlushExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        Content
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample">
+                    <aside class=" sidebarBox sticky-top">
+                        <div class="sideHeading">
+                            <p>Course Content</p>
+                        </div>
 
-                    <?php
-                    $no = 0;
-                    $sql = "SELECT * FROM `videos` WHERE playlist = '$play'";
-                    $result = mysqli_query($conn, $sql);
-                    while ($row = mysqli_fetch_assoc($result)) {
+                        <?php
+                        $no = 0;
+                        $sql = "SELECT * FROM `videos` WHERE playlist = '$play'";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_assoc($result)) {
 
-                        $no++;
-                        $title = $row['title'];
-                        $url = $row['url'];
-                        $playlsit = $row['playlist'];
-                        $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-                        $domain = $_SERVER['SERVER_NAME'];
-
-
+                            $no++;
+                            $title = $row['title'];
+                            $url = $row['url'];
+                            $playlsit = $row['playlist'];
+                            $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+                            $domain = $_SERVER['SERVER_NAME'];
 
 
-                        echo '<a class = "vAnchor" href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> 
+
+
+                            echo '<a class = "vAnchor" href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> 
                     <div class="card">
                         <div class="card-body">
                         <h5 class="card-title"><span style="margin-right: 7px;">' . $no . '.</span>' . $title . '</h5> 
@@ -242,10 +243,11 @@ function minifier($code)
                         </div>
                     </div>
                     </a>';
-                    }
-                    ?>
+                        }
+                        ?>
 
-                </aside>
+                    </aside>
+                </div>
             </div>
         </div>
     </div>
