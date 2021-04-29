@@ -203,7 +203,7 @@ function minifier($code)
     </section>
     </div>
     <!-- sidebar start  -->
-    <div class="accordion accordion-flush sidebarBox sticky-top" id="accordionFlushExample">
+    <div class="accordion accordion-flush" id="accordionFlushExample">
         <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -213,7 +213,7 @@ function minifier($code)
             </h2>
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
                 data-bs-parent="#accordionFlushExample">
-                <aside class=" sticky-top">
+                <aside class=" sidebarBox sticky-top">
                     <div class="sideHeading">
                         <p>Course Content</p>
                     </div>
