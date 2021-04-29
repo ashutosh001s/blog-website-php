@@ -206,7 +206,8 @@ function minifier($code)
     <!-- sidebar start  -->
     <aside class=" sidebarBox sticky-top">
         <div class="sideHeading">
-            <p><img src="/assets/img/icons/hide_image_black_24dp.svg" id="hidePlayer">Course Content</p>
+            <p><img src="/assets/img/icons/hide_image_black_24dp.svg" id="hidePlayer"
+                    style="margin-right: 18px; filter:invert(1)">Course Content</p>
         </div>
 
         <?php
