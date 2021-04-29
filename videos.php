@@ -73,15 +73,15 @@ function minifier($code)
     <?php include 'partials/analytics.php'; ?>
 
     <style>
-        .commentBy {
-            font-size: 18px;
-            font-family: fantasy;
-            color: #008EFF;
-        }
+    .commentBy {
+        font-size: 18px;
+        font-family: fantasy;
+        color: #008EFF;
+    }
 
-        .bg-light {
-            position: relative !important;
-        }
+    .bg-light {
+        position: relative !important;
+    }
     </style>
 
 
@@ -214,10 +214,12 @@ function minifier($code)
         </div>
 
         <?php
+        $no = 0;
         $sql = "SELECT * FROM `videos` WHERE playlist = '$play'";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
 
+            $no++;
             $title = $row['title'];
             $url = $row['url'];
             $playlsit = $row['playlist'];
@@ -230,8 +232,8 @@ function minifier($code)
             echo '<a href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> 
                     <div class="card">
                         <div class="card-body">
-                        <h5 class="card-title"><img src="/assets/img/icons/play_circle_filled_black_24dp.svg">' . substr($title, 0, 70) . '</h5> 
-                        <p>Watch Free Video</p> 
+                        <h5 class="card-title">' . $no . '' . substr($title, 0, 70) . '</h5> 
+                        <p><img src="/assets/img/icons/play_circle_filled_black_24dp.svg">Watch Free Video</p> 
                         </div>
                     </div>
                     </a>';
@@ -248,16 +250,16 @@ function minifier($code)
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-        </script>
+    </script>
 
     <script>
-        $(function () {
-            $("a").each(function () {
-                if ($(this).attr("href") == window.location.pathname) {
-                    $(this).children().addClass("selected");
-                }
-            });
+    $(function() {
+        $("a").each(function() {
+            if ($(this).attr("href") == window.location.pathname) {
+                $(this).children().addClass("selected");
+            }
         });
+    });
     </script>
 
 </body>
