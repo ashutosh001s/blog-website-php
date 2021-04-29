@@ -62,9 +62,12 @@
   font-size: 22px;
 }
 .selected {
-  background-color: aquamarine;
+  background-color: rgb(27 127 204 / 80%);
 }
 .card img {
   height: 24px;
   margin-right: 10px;
+}
+.vAnchor {
+  color: black;
 }
