@@ -95,11 +95,24 @@ function minifier($code)
 
     <!-- contentBucket start  -->
     <div class="contentBucket">
+        <?php
 
-        <div class="mainSection">
+        $id = $_GET['id'];
+        $play = $_GET['play'];
+        $sql = "SELECT * FROM `videos` WHERE playlist = '$play' AND url = '$id'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $title = $row['title'];
+        $content = $row['content'];
+        $videoId = $row['video_id'];
+        if ($content == "") {
+            header('Location: /404');
+        }
+
+        echo ' <div class="mainSection">
             <section class="videoSection">
                 <div class="videoBox">
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/AKJfakEsgy0"
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' . $videoId . '"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
@@ -110,33 +123,15 @@ function minifier($code)
 
             <div class=" resourses">
 
-                <?php
 
-                $id = $_GET['id'];
-                $play = $_GET['play'];
-                $sql = "SELECT * FROM `videos` WHERE playlist = '$play' AND url = '$id'";
-                $result = mysqli_query($conn, $sql);
-                $row = mysqli_fetch_assoc($result);
-                $title = $row['title'];
-                $content = $row['content'];
-                $author = $row['author'];
-                $date = $row['date'];
-                $readMin = $row['read_time'];
-                $image = $row['image'];
-                $date = $row['date'];
-
-                if ($content == "") {
-                    header('Location: /404');
-                }
-
-                echo '<div class="container">
-                        <div class="content">
+               <div class="container">
+                    <div class="content">
                         <h4 class="alert-heading">Resources</h4>
                             <p>' . $content . '</p>
-                        </div>
-                        </div>';
-                ?>
-        </div>
+                    </div>
+                </div>
+            </div>';
+        ?>
 
         <hr>
 
