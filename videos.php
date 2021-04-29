@@ -206,7 +206,7 @@ function minifier($code)
     <!-- sidebar start  -->
     <aside class=" sidebarBox sticky-top">
         <div class="sideHeading">
-            <p>Course Content<button id="hidePlayer"">hide player</button></p>
+            <p><img src="/assets/img/icons/hide_image_black_24dp.svg" id="hidePlayer">Course Content</p>
         </div>
 
         <?php
@@ -243,9 +243,8 @@ function minifier($code)
     <?php include 'partials/_footer.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-                    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-                    crossorigin="anonymous">
-                    </script>
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
 
 
 
