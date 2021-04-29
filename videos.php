@@ -110,7 +110,7 @@ function minifier($code)
         }
 
         echo ' <div class="mainSection">
-            <section class="videoSection">
+            <section id="videoSection" class="videoSection">
                 <div class="videoBox">
                     <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/' . $videoId . '"
                         title="YouTube video player" frameborder="0"
@@ -205,7 +205,7 @@ function minifier($code)
     <!-- sidebar start  -->
     <aside class=" sidebarBox sticky-top">
         <div class="sideHeading">
-            <p>Course Content<button onclick="hidePlayer()">hide player</button></p>
+            <p>Course Content<button id="hidePlayer"">hide player</button></p>
         </div>
 
         <?php
@@ -241,27 +241,24 @@ function minifier($code)
 
     <?php include 'partials/_footer.php'; ?>
     <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-    </script>
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+                    crossorigin="anonymous">
+                    </script>
 
-    <script>
-    function hidePlayer() {
-        let hidePlay = document.getElementsByClassName('videoSection')
-        if (hidePlay.style.display === "none") {
-            hidePlay.style.display = "block";
-        } else {
-            hidePlay.style.display = "none";
-        }
-    }
-    $(function() {
-        $("a").each(function() {
-            if ($(this).attr("href") == window.location.pathname) {
-                $(this).children().addClass("selected");
-            }
-        });
-    });
-    </script>
+                    <script>
+                    $(function() {
+                        $("a").each(function() {
+                            if ($(this).attr("href") == window.location.pathname) {
+                                $(this).children().addClass("selected");
+                            }
+                        });
+                    });
+                    $("#hidePlayer").click(function() {
+                        // assumes element with id='button'
+                        $("#videoSection").toggle();
+                    });
+                    </script>
 
 </body>
 
