@@ -203,7 +203,7 @@ function minifier($code)
     </section>
     </div>
     <!-- sidebar start  -->
-    <div class="sideContentTableHolder">
+    <div class="sideContentTableHolder sticky-top">
         <div class="accordion accordion-flush contentTableHolder" id="accordionFlushExample">
             <div class="accordion-item">
                 <h2 class="accordion-header" id="flush-headingOne">
