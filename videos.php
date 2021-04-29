@@ -205,7 +205,7 @@ function minifier($code)
     <!-- sidebar start  -->
     <aside class=" sidebarBox sticky-top">
         <div class="sideHeading">
-            <p>Course Content</p>
+            <p>Course Content<button onclick="myFunction()">hide player</button></p>
         </div>
 
         <?php
@@ -220,8 +220,6 @@ function minifier($code)
             $playlsit = $row['playlist'];
             $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
             $domain = $_SERVER['SERVER_NAME'];
-
-
 
 
             echo '<a class = "vAnchor" href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> 
@@ -248,6 +246,14 @@ function minifier($code)
     </script>
 
     <script>
+    function hidePlayer() {
+        let hidePlay = document.getElementsByClassName('videoSection')
+        if (hidePlay.style.display === "none") {
+            hidePlay.style.display = "block";
+        } else {
+            hidePlay.style.display = "none";
+        }
+    }
     $(function() {
         $("a").each(function() {
             if ($(this).attr("href") == window.location.pathname) {
