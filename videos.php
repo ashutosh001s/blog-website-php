@@ -62,7 +62,7 @@ function minifier($code)
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="~/assets/css/style.css">
+    <link rel="stylesheet" href="....../assets/css/style.css">
     <link rel="stylesheet" href=".../assets/css/post.css">
     <link rel="stylesheet" href=".../assets/css/footer.css">
     <link rel="stylesheet" href=".../assets/css/bootstrap-override.css">
