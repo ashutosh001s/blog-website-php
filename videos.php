@@ -123,6 +123,10 @@ function minifier($code)
                 $image = $row['image'];
                 $date = $row['date'];
 
+                if ($content == "") {
+                    header('Location: /404');
+                }
+
                 echo '<div class="container">
                         <div class="content">
                         <h4 class="alert-heading">Resources</h4>
