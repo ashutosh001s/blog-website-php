@@ -125,6 +125,7 @@ function minifier($code)
                     <button id="btn1">btn1</button>
                     <button id="btn2">btn2</button>
             </div>
+            <hr>
             <section class="descSection"">
 
             <div class=" resourses">
@@ -139,7 +140,7 @@ function minifier($code)
             </div>';
         ?>
 
-        <hr>
+
 
 
         <?php
