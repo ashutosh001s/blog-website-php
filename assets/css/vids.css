@@ -34,11 +34,19 @@
 }
 .card {
   margin: 0px;
-  padding: 20px;
+  padding: 10px;
   height: 100%;
   border-bottom: 1px solid #0000001f;
   border-radius: 0px;
   width: 100%;
+}
+.card:hover {
+  box-shadow: none;
+  background-color: red;
+}
+.card:active {
+  box-shadow: none;
+  background-color: blue;
 }
 .sideHeading {
   position: static;
