@@ -213,7 +213,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     <!-- sidebar start  -->
     <aside id="contentBar" class=" contentCarryBox sticky-top">
         <div class="sideHeading">
-            <p><img src="/assets/img/icons/hide_image_black_24dp.svg" id="hidePlayer" style="margin-right: 18px;">Course
+            <p><img src="/assets/img/icons/hide_image_black_24dp.svg" class="hidePlayer" style="margin-right: 18px;">Course
                 Content</p>
         </div>';
 
@@ -252,7 +252,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 <!-- sidebar start  -->
     <aside id="contentBar" class=" contentCarryBox sticky-top">
         <div class="sideHeading">
-            <p><img src="/assets/img/icons/hide_image_black_24dp.svg" id="hidePlayer" style="margin-right: 18px;">Course
+            <p><img src="/assets/img/icons/hide_image_black_24dp.svg" class="hidePlayer" style="margin-right: 18px;">Course
                 Content</p>
         </div>';
 

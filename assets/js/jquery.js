@@ -5,7 +5,7 @@ $(function () {
         }
     });
 });
-$("#hidePlayer").click(function () {
+$(".hidePlayer").click(function () {
     $("#videoSection").toggle();
 });
 
