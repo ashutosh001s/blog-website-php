@@ -110,9 +110,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $videoId = $row['video_id'];
     $isValid = $row['is_valid'];
 
-    if ($isValid != true) {
-        header('Location: 404');
-    }
+   
 
 
     echo ' <div class="mainSection">
@@ -308,5 +306,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 }
 else{
     echo 'please login to watch videos';
+}
+if ($isValid != true) {
+    header('Location: 404');
+    echo 'url is not valid';
 }
 ?>
