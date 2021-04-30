@@ -1,11 +1,12 @@
 <?php
+session_start();
+include 'partials/_dbconnect.php';
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $time = microtime();
     $time = explode(' ', $time);
     $time = $time[1] + $time[0];
     $start = $time;
 
-    include 'partials/_dbconnect.php';
 
     ob_start("minifier");
     function minifier($code)
@@ -146,9 +147,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 
 
-    include 'partials/_dbconnect.php';
     $url = $_SERVER['REQUEST_URI'];
-    session_start();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $id = $_GET['id'];
