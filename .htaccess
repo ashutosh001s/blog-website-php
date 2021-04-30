@@ -34,7 +34,7 @@ RewriteRule ^search$ search.php [NC,L]
 # RewriteRule ^videos/([^/\.]+)/?$ videos.php?id=$1 [L]
 
 # Rewrite for videos.php?u=xxxxx&v=xxx
- RewriteRule ^([^/]+)/([^/]+)$ videos.php?play=$1&id=$2 [L]
+ RewriteRule ^([^/]+)$ videos.php?play=$1&id=$2 [L]
 
 Options -Indexes 
 
