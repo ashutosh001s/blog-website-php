@@ -1,4 +1,5 @@
 <?php
+include 'partials/_dbconnect.php';
  $id = $_GET['id'];
  $play = $_GET['play'];
  $sql = "SELECT * FROM `videos` WHERE playlist = '$play' AND url = '$id'";
@@ -11,12 +12,12 @@
 
  if ($isValid != true) {
      header('Location: /404');
-     
+
  }else{
 
  
 session_start();
-include 'partials/_dbconnect.php';
+
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $time = microtime();
     $time = explode(' ', $time);
