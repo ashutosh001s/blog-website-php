@@ -209,6 +209,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     }
 
     echo '</div>
+    <div class="onMobile">
     <!-- sidebar start  -->
     <aside id="contentBar" class=" contentCarryBox sticky-top">
         <div class="sideHeading">
@@ -242,11 +243,48 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
 
     echo ' </aside>
+    </div>
     <!-- sidebar end  -->
     </section>
     </div>
 
+<div class="onPc">
+<!-- sidebar start  -->
+    <aside id="contentBar" class=" contentCarryBox sticky-top">
+        <div class="sideHeading">
+            <p><img src="/assets/img/icons/hide_image_black_24dp.svg" id="hidePlayer" style="margin-right: 18px;">Course
+                Content</p>
+        </div>';
 
+
+    $no = 0;
+    $sql = "SELECT * FROM `videos` WHERE playlist = '$play'";
+    $result = mysqli_query($conn, $sql);
+    while ($row = mysqli_fetch_assoc($result)) {
+
+        $no++;
+        $title = $row['title'];
+        $url = $row['url'];
+        $playlsit = $row['playlist'];
+        $host = $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+        $domain = $_SERVER['SERVER_NAME'];
+
+
+        echo '<a class = "vAnchor" href="/videos/' . $playlsit . '/' . $url . '" style=" text-decoration: none; "> 
+                    <div class="card">
+                        <div class="card-body">
+                        <h5 class="card-title"><span style="margin-right: 7px;">' . $no . '.</span>' . $title . '</h5> 
+                        <p><img src="/assets/img/icons/play_circle_filled_black_24dp.svg">Watch Free Video</p> 
+                        </div>
+                    </div>
+                    </a>';
+    }
+
+
+    echo ' </aside>
+    </div>
+    <!-- sidebar end  -->
+</div>
     </div>
     <!-- contentBucket end  -->';
 
