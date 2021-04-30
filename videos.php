@@ -108,6 +108,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $title = $row['title'];
     $content = $row['content'];
     $videoId = $row['video_id'];
+
     if ($content == "") {
         header('Location: /404');
     }
