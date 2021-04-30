@@ -9,6 +9,19 @@ $(".hidePlayer").click(function () {
     $("#videoSection").toggle();
 });
 
+$(document).ready(function () {
+
+    if (screen.width < 990) {
+        $("#content").show();
+    }
+    else {
+
+        
+        $("#content").hide();
+    }
+
+});
+
 $('#overview').css("border-bottom", "2px solid #ffc107");
 $('.resourses').show();
 $('#contentBar').hide();
