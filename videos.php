@@ -1,7 +1,21 @@
 <?php
+ $id = $_GET['id'];
+ $play = $_GET['play'];
+ $sql = "SELECT * FROM `videos` WHERE playlist = '$play' AND url = '$id'";
+ $result = mysqli_query($conn, $sql);
+ $row = mysqli_fetch_assoc($result);
+ $title = $row['title'];
+ $content = $row['content'];
+ $videoId = $row['video_id'];
+ $isValid = $row['is_valid'];
+
+ if ($isValid != true) {
+     header('Location: /404');
+     echo 'url is not valid';
+ }
 session_start();
 include 'partials/_dbconnect.php';
-// if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $time = microtime();
     $time = explode(' ', $time);
     $time = $time[1] + $time[0];
@@ -98,22 +112,6 @@ include 'partials/_dbconnect.php';
 
     echo '<!-- contentBucket start  -->
     <div class="contentBucket">';
-
-
-    $id = $_GET['id'];
-    $play = $_GET['play'];
-    $sql = "SELECT * FROM `videos` WHERE playlist = '$play' AND url = '$id'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
-    $title = $row['title'];
-    $content = $row['content'];
-    $videoId = $row['video_id'];
-    $isValid = $row['is_valid'];
-
-    if ($isValid != true) {
-        header('Location: 404');
-        echo 'url is not valid';
-    }
 
 
     echo ' <div class="mainSection">
@@ -306,8 +304,8 @@ include 'partials/_dbconnect.php';
     ob_end_flush();
 
     include 'partials/tracker.php';
-// }
-// else{
-//     echo 'please login to watch videos';
-// }
+}
+else{
+    echo 'please login to watch videos';
+}
 ?>
