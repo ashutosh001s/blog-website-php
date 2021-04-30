@@ -28,13 +28,13 @@ RewriteRule ^search$ search.php [NC,L]
 # $ in the regular expression makes the matching stop so that "customblah" will not work
 
 # Rewrite for post.php?u=xxxxx
- RewriteRule ^([^/\.]+)/?$ post.php?id=$1 [L]
+ RewriteRule ^blog/([^/\.]+)/?$ post.php?id=$1 [L]
 
 # Rewrite for videos.php?u=xxxxx
 # RewriteRule ^videos/([^/\.]+)/?$ videos.php?id=$1 [L]
 
 # Rewrite for videos.php?u=xxxxx&v=xxx
- RewriteRule ^([^/]+)$ videos.php?play=$1&id=$2 [L]
+ RewriteRule ^lms/([^/]+)/([^/]+)$ videos.php?play=$1&id=$2 [L]
 
 Options -Indexes 
 
