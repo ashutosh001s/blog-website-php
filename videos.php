@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'partials/_dbconnect.php';
-if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+// if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $time = microtime();
     $time = explode(' ', $time);
     $time = $time[1] + $time[0];
@@ -110,7 +110,10 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $videoId = $row['video_id'];
     $isValid = $row['is_valid'];
 
-   
+    if ($isValid != true) {
+        header('Location: 404');
+        echo 'url is not valid';
+    }
 
 
     echo ' <div class="mainSection">
@@ -303,12 +306,8 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     ob_end_flush();
 
     include 'partials/tracker.php';
-}
-else{
-    echo 'please login to watch videos';
-}
-if ($isValid != true) {
-    header('Location: 404');
-    echo 'url is not valid';
-}
+// }
+// else{
+//     echo 'please login to watch videos';
+// }
 ?>
