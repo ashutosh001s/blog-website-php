@@ -11,7 +11,7 @@
 
  if ($isValid != true) {
      header('Location: /404');
-     echo 'url is not valid';
+     return;
  }
 session_start();
 include 'partials/_dbconnect.php';
