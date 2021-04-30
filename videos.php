@@ -11,8 +11,10 @@
 
  if ($isValid != true) {
      header('Location: /404');
-     return;
- }
+     
+ }else{
+
+ 
 session_start();
 include 'partials/_dbconnect.php';
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
@@ -307,5 +309,6 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 }
 else{
     echo 'please login to watch videos';
+}
 }
 ?>
