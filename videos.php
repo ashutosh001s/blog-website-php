@@ -111,7 +111,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $isValid = $row['is_valid'];
 
     if ($isValid != true) {
-        header('Location: /404');
+        header('Location: 404');
     }
 
 
