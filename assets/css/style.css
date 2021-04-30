@@ -170,3 +170,9 @@ body {
 .navOnPc {
   display: contents;
 }
+.onMobile {
+  display: none;
+}
+.onPc {
+  width: 25%;
+}
