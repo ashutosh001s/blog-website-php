@@ -267,4 +267,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 
     include 'partials/tracker.php';
 }
+else{
+    echo 'please login to watch videos';
+}
 ?>
