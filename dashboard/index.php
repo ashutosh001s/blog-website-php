@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'partials/_dbconnect.php';
+include '../partials/_dbconnect.php';
 if (!isset($_SESSION['loggedin'])  && $_SESSION['loggedin'] == false) {
   $useremail = $_SESSION['useremail'];
   $sql = "SELECT * FROM `users` WHERE user_roles = 'administrator'";
