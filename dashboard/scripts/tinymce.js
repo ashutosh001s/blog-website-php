@@ -2,7 +2,6 @@
 tinymce.init({
 
     selector: '#texteditor',
-    width: 800,
     height: 500,
     plugins: [
       'advlist autolink link image lists charmap print preview hr anchor pagebreak',
@@ -16,6 +15,6 @@ tinymce.init({
       favs: {title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons'}
     },
     menubar: 'favs file edit view insert format tools table help',
-    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px width:100%; }'
+    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
   });
   
