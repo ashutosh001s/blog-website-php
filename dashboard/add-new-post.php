@@ -40,8 +40,8 @@
                 <div class="card card-small mb-3">
                   <div class="card-body">
                     <div class="add-new-post">
-                      <input class="form-control form-control-lg mb-3" type="text" placeholder="Your Post Title">
-                      <div id="editor-container" class="add-new-post__editor mb-1"></div>
+                      <input class="form-control form-control-lg mb-3" type="text" name="title" placeholder="Your Post Title" required>
+                      <textarea id="editor-container" class="add-new-post__editor mb-1"></textarea>
                     </div>
                   </div>
                 </div>
@@ -55,62 +55,13 @@
                   </div>
                   <div class='card-body p-0'>
                   <div class="card-input-box">
-                  <input type="text" class="form-control card-input" placeholder="Post Url"> 
-                  <input type="text" class="form-control card-input" placeholder="Discription"> 
+                  <input type="text" class="form-control card-input" name="url" placeholder="Post Url" required> 
+                  <input type="text" class="form-control card-input" name="discription" placeholder="Discription"> 
                   </div>
                   </div>
                 </div>
                 <!-- / Post Overview -->
-                <!-- Post Overview -->
-                <div class='card card-small mb-3'>
-                  <div class="card-header border-bottom">
-                    <h6 class="m-0">Categories</h6>
-                  </div>
-                  <div class='card-body p-0'>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item px-3 pb-2">
-                        <div class="custom-control custom-checkbox mb-1">
-                          <input type="checkbox" class="custom-control-input" id="category1" checked>
-                          <label class="custom-control-label" for="category1">Uncategorized</label>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-1">
-                          <input type="checkbox" class="custom-control-input" id="category2" checked>
-                          <label class="custom-control-label" for="category2">Design</label>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-1">
-                          <input type="checkbox" class="custom-control-input" id="category3">
-                          <label class="custom-control-label" for="category3">Development</label>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-1">
-                          <input type="checkbox" class="custom-control-input" id="category4">
-                          <label class="custom-control-label" for="category4">Writing</label>
-                        </div>
-                        <div class="custom-control custom-checkbox mb-1">
-                          <input type="checkbox" class="custom-control-input" id="category5">
-                          <label class="custom-control-label" for="category5">Books</label>
-                        </div>
-                      </li>
-                      <li class="list-group-item d-flex px-3">
-                        <div class="input-group">
-                          <input type="text" class="form-control" placeholder="New category" aria-label="Add new category" aria-describedby="basic-addon2">
-                          <div class="input-group-append">
-                            <button class="btn btn-white px-2" type="button">
-                              <i class="material-icons">add</i>
-                            </button>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                    <hr>
-                  <div class="card-input-box">
-                        <input type="text" class="form-control card-input" placeholder="Tags">
-                        <input type="text" class="form-control card-input" placeholder="Keywords">
-                        <input type="text" class="form-control card-input" placeholder="Author">
-                        <input type="text" class="form-control card-input" placeholder="Read Time"> 
-                  </div>
-                  </div>
-                </div>
-                <!-- / Post Overview -->
+                
                 <!-- Post Overview -->
                 <div class='card card-small mb-3'>
                   <div class="card-header border-bottom">
@@ -118,7 +69,12 @@
                   </div>
                   <div class='card-body p-0'>
                   <div class="card-input-box">
-                  <input type="text" class="form-control card-input"> 
+                        <input type="text" class="form-control card-input" name="category" placeholder="Category" required>
+                        <input type="text" class="form-control card-input" name="tags" placeholder="Tags" required>
+                        <input type="text" class="form-control card-input" name="Keywords" placeholder="Keywords" required>
+                        <input type="text" class="form-control card-input" name="author" placeholder="Author" required>
+                        <input type="text" class="form-control card-input" name="read" placeholder="Read Time" required> 
+                        <input type="file" name="uploadfile" class="form-control card-input" aria-label="file" required>
                   </div>
                   </div>
                 </div>
