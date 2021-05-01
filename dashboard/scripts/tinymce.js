@@ -1,6 +1,6 @@
 
 tinymce.init({
-    selector: '#basic-conf',
+    selector: '#texteditor',
     width: 600,
     height: 300,
     plugins: [

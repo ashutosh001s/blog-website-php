@@ -16,7 +16,6 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <script src="https://cdn.tiny.cloud/1/f78fim1rlfmk51mmqwkbubj31o4dwybrbi30kliqoin43ovu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="scripts/tinymce.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.6/quill.snow.css"> 
   </head>
   <body class="h-100">
     <div class="container-fluid">
@@ -45,8 +44,8 @@
                     <div class="add-new-post">
                       <input class="form-control form-control-lg mb-3" type="text" name="title" placeholder="Your Post Title" required>
                       
-                      <textarea id="basic-conf">
-                      This editor uses the Basic configuration example.
+                      <textarea id="texteditor">
+                      
                       </textarea>
 
                     </div>
@@ -103,7 +102,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Sharrre/2.0.1/jquery.sharrre.min.js"></script>
     <script src="scripts/extras.1.1.0.min.js"></script>
     <script src="scripts/shards-dashboards.1.1.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.6/quill.min.js"></script>
     <script src="scripts/app/app-blog-new-post.1.1.0.js"></script>
   </body>
 </html>
