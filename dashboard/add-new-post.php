@@ -77,7 +77,7 @@
                   <div class="card-input-box">
                         <input type="text" class="form-control card-input" name="category" placeholder="Category" required>
                         <input type="text" class="form-control card-input" name="tags" placeholder="Tags" required>
-                        <input type="text" class="form-control card-input" name="Keywords" placeholder="keywords" required>
+                        <input type="text" class="form-control card-input" name="keywords" placeholder="Keywords" required>
                         <input type="text" class="form-control card-input" name="author" placeholder="Author" required>
                         <input type="text" class="form-control card-input" name="read" placeholder="Read Time" required> 
                         <input type="file" class="btn btn-info btn-sm" name="uploadfile" class="form-control card-input" aria-label="file" required>
