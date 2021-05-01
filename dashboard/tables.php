@@ -240,7 +240,7 @@
                         </tr>
                       </thead>
                       <?php
-                      include 'partials/_dbconnect.php';
+                      include '../partials/_dbconnect.php';
                       $sr_no = 0;
                       $sql = "SELECT * FROM `visitors` ORDER BY `v_no` DESC";
                       $result = mysqli_query($conn, $sql);
