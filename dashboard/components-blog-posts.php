@@ -1,3 +1,4 @@
+<?php require './impfiles/adminAuth.php'; ?>
 <!doctype html>
 <html class="no-js h-100" lang="en">
   <head>
