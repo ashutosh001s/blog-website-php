@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="styles/shards-dashboards.1.1.0.min.css">
     <link rel="stylesheet" href="styles/extras.1.1.0.min.css">
+    <link rel="stylesheet" href="styles/style.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
   </head>
   <body class="h-100">
@@ -55,7 +56,7 @@
                       <?php
                       include '../partials/_dbconnect.php';
                       $sr_no = 0;
-                      $sql = "SELECT * FROM `visitors` ORDER BY `v_no` DESC LIMIT 100";
+                      $sql = "SELECT * FROM `visitors` ORDER BY `v_no` DESC";
                       $result = mysqli_query($conn, $sql);
                       while ($row = mysqli_fetch_assoc($result)) {
                         $sr_no++;
