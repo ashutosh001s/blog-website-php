@@ -62,7 +62,7 @@
                   <div class='card-body p-0'>
                   <div class="card-input-box">
                   <input type="text" class="form-control card-input" name="url" placeholder="Post Url" required> 
-                  <input type="text" class="form-control card-input" name="discription" placeholder="Discription"> 
+                  <input type="text" class="form-control card-input" name="discription" placeholder="Discription" required> 
                   </div>
                   </div>
                 </div>
