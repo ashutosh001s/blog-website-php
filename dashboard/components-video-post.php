@@ -58,7 +58,6 @@
                    <div class="card card-small card-post mb-4">
                      <div class="card-body">
                        <h5 class="card-title">'.$title.'</h5>
-                       <p class="card-text text-muted">'.$content.'</p>
                      </div>
                      <div class="card-footer border-top d-flex">
                        <div class="card-post__author d-flex">
