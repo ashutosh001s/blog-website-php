@@ -63,8 +63,8 @@
                      <p class="card-text">' . substr($content, 0, 70) . '</p>
                    </div>
                    <div class="card-footer text-muted border-top py-3">
-                     <span class="d-inline-block">By
-                       <a class="text-fiord-blue" href="#">'.$cate.'/a>
+                     <span class="d-inline-block">Category
+                       <a class="text-fiord-blue" href="#">'.$cate.'</a>
                      </span>
                    </div>
                  </div>
