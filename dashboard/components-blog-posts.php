@@ -56,7 +56,7 @@
                 
                  echo '<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                  <div class="card card-small card-post h-100">
-                   <img class="card-post__image" src="/assets/img/cover/' . $image . '"></img>
+                   <img class="card-post__image" src="/assets/img/cover/' . $image . '" style="height: 250px;"></img>
                    <div class="card-body">
                      <h5 class="card-title">
                        <a class="text-fiord-blue" href="'.$url.'">' . $title . '</a>
