@@ -58,14 +58,13 @@
                    <div class="card-post__image" style="background-image: url();"></div>
                    <div class="card-body">
                      <h5 class="card-title">
-                       <a class="text-fiord-blue" href="#">Extremity so attending objection as engrossed</a>
+                       <a class="text-fiord-blue" href="'.$url.'">' . $title . '</a>
                      </h5>
-                     <p class="card-text">Morning prudent removal an letters by. On could my in order never it. Or excited certain sixteen it to parties colonel not seeing...</p>
+                     <p class="card-text">' . substr($content, 0, 70) . '</p>
                    </div>
                    <div class="card-footer text-muted border-top py-3">
                      <span class="d-inline-block">By
-                       <a class="text-fiord-blue" href="#">Alene Trenton</a> in
-                       <a class="text-fiord-blue" href="#">News</a>
+                       <a class="text-fiord-blue" href="#">'.$cate.'/a>
                      </span>
                    </div>
                  </div>
