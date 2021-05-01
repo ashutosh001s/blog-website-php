@@ -35,12 +35,13 @@
             <div class="row">
               <div class="col-lg-9 col-md-12">
                 <!-- Add New Post Form -->
+                <form action="/submit-post.php" method="POST" enctype="multipart/form-data">
                 <div class="card card-small mb-3">
                   <div class="card-body">
-                    <form class="add-new-post">
+                    <div class="add-new-post">
                       <input class="form-control form-control-lg mb-3" type="text" placeholder="Your Post Title">
                       <div id="editor-container" class="add-new-post__editor mb-1"></div>
-                    </form>
+                    </div>
                   </div>
                 </div>
                 <!-- / Add New Post Form -->
@@ -52,37 +53,8 @@
                     <h6 class="m-0">Actions</h6>
                   </div>
                   <div class='card-body p-0'>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item p-3">
-                        <span class="d-flex mb-2">
-                          <i class="material-icons mr-1">flag</i>
-                          <strong class="mr-1">Status:</strong> Draft
-                          <a class="ml-auto" href="#">Edit</a>
-                        </span>
-                        <span class="d-flex mb-2">
-                          <i class="material-icons mr-1">visibility</i>
-                          <strong class="mr-1">Visibility:</strong>
-                          <strong class="text-success">Public</strong>
-                          <a class="ml-auto" href="#">Edit</a>
-                        </span>
-                        <span class="d-flex mb-2">
-                          <i class="material-icons mr-1">calendar_today</i>
-                          <strong class="mr-1">Schedule:</strong> Now
-                          <a class="ml-auto" href="#">Edit</a>
-                        </span>
-                        <span class="d-flex">
-                          <i class="material-icons mr-1">score</i>
-                          <strong class="mr-1">Readability:</strong>
-                          <strong class="text-warning">Ok</strong>
-                        </span>
-                      </li>
-                      <li class="list-group-item d-flex px-3">
-                        <button class="btn btn-sm btn-outline-accent">
-                          <i class="material-icons">save</i> Save Draft</button>
-                        <button class="btn btn-sm btn-accent ml-auto">
-                          <i class="material-icons">file_copy</i> Publish</button>
-                      </li>
-                    </ul>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
                   </div>
                 </div>
                 <!-- / Post Overview -->
@@ -142,6 +114,7 @@
                   </div>
                 </div>
                 <!-- / Post Overview -->
+              </form>
               </div>
             </div>
           </div>
