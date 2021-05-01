@@ -55,8 +55,8 @@
                   </div>
                   <div class='card-body p-0'>
                   <div class="card-input-box">
-                  <input type="text" class="form-control card-input"> 
-                  <input type="text" class="form-control card-input"> 
+                  <input type="text" class="form-control card-input" placeholder="Post Url"> 
+                  <input type="text" class="form-control card-input" placeholder="Discription"> 
                   </div>
                   </div>
                 </div>
@@ -103,10 +103,10 @@
                     </ul>
                     <hr>
                   <div class="card-input-box">
-                        <input type="text" class="form-control card-input">
-                        <input type="text" class="form-control card-input">
-                        <input type="text" class="form-control card-input">
-                        <input type="text" class="form-control card-input"> 
+                        <input type="text" class="form-control card-input" placeholder="Tags">
+                        <input type="text" class="form-control card-input" placeholder="Keywords">
+                        <input type="text" class="form-control card-input" placeholder="Author">
+                        <input type="text" class="form-control card-input" placeholder="Read Time"> 
                   </div>
                   </div>
                 </div>
