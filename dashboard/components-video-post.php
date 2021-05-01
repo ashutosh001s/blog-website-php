@@ -66,7 +66,7 @@
                          </div>
                        </div>
                        <div class="my-auto ml-auto">
-                         <a class="btn btn-sm btn-white" href="#">
+                         <a class="btn btn-sm btn-white" href="update-video.php?post='.$url.'">
                            <i class="far mode_edit_outline mr-1"></i> Edit </a>
                        </div>
                      </div>
