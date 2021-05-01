@@ -56,7 +56,6 @@
                         $author= $row['author'];
                         $description = $row['description'];
                         $date = $row['$date'];
-                        $image = $row['image'];
                 
                 echo'<form action="../update-post.php" method="POST" enctype="multipart/form-data">
                 <div class="card card-small mb-3">
@@ -100,7 +99,6 @@
                         <input type="text" class="form-control card-input" value="'.$keywords.'" name="keywords" placeholder="Keywords" required>
                         <input type="text" class="form-control card-input" value="'.$author.'" name="author" placeholder="Author" required>
                         <input type="text" class="form-control card-input" value="'.$readMin.'" name="read" placeholder="Read Time" required> 
-                        <input type="file" class="btn btn-info btn-sm" value="'.$image.'" name="uploadfile" class="form-control card-input" aria-label="file" required>
                         <button class="btn btn-primary btn-sm" type="submit">submit</button>
                   </div>
                   </div>

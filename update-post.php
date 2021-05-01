@@ -17,7 +17,7 @@ $content = str_replace("'", "	&apos;" , $content);
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    $sql = "UPDATE `posts` SET `title` = '$title', `content` = '$content', `category` = '$category', `tags` = '$tags', `date` = '$date', `description` = '$description', `keywords` = '$keywords', `author` = '$author', `image` = '$image' WHERE `posts`.`url` = '$url'";
+    $sql = "UPDATE `posts` SET `title` = '$title', `content` = '$content', `category` = '$category', `tags` = '$tags', `date` = '$date', `description` = '$description', `keywords` = '$keywords', `author` = '$author' WHERE `posts`.`url` = '$url'";
     $result = mysqli_query($conn, $sql);
 
     if($result){
