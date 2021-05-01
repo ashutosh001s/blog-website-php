@@ -14,7 +14,7 @@ $content = $_POST['content'];
 $content = str_replace('"', "&quot;" , $content);
 $content = str_replace("'", "	&apos;" , $content);
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
 
     
           
@@ -27,4 +27,3 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         echo "insertion failed ".mysqli_error($conn)."";
     }
 
-}
