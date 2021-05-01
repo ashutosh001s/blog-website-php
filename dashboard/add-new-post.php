@@ -128,6 +128,19 @@
                   </div>
                 </div>
                 <!-- / Post Overview -->
+                <!-- Post Overview -->
+                <div class='card card-small mb-3'>
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">Categories</h6>
+                  </div>
+                  <div class='card-body p-0'>
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                  </div>
+                </div>
+                <!-- / Post Overview -->
               </div>
             </div>
           </div>
