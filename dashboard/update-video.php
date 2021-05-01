@@ -57,7 +57,7 @@
                         $description = $row['description'];
                         $date = $row['$date'];
                 
-                echo'<form action="../partials/_update-video.php" method="POST" enctype="multipart/form-data">
+                echo'<form action="../partials/_update-video.php" method="POST">
                 <div class="card card-small mb-3">
                   <div class="card-body">
                     <div class="add-new-post">
