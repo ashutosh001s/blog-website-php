@@ -53,8 +53,10 @@
                     <h6 class="m-0">Actions</h6>
                   </div>
                   <div class='card-body p-0'>
+                  <div class="card-input">
                   <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
                   <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                  </div>
                   </div>
                 </div>
                 <!-- / Post Overview -->
@@ -98,6 +100,13 @@
                         </div>
                       </li>
                     </ul>
+                    <hr>
+                  <div class="card-input">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                  </div>
                   </div>
                 </div>
                 <!-- / Post Overview -->
@@ -107,10 +116,9 @@
                     <h6 class="m-0">Categories</h6>
                   </div>
                   <div class='card-body p-0'>
+                  <div class="card-input">
                   <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
-                  <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" value="7898 Kensington Junction, New York, USA">
+                  </div>
                   </div>
                 </div>
                 <!-- / Post Overview -->
