@@ -1,5 +1,5 @@
 <?php
-include 'partials/_dbconnect.php';
+include '_dbconnect.php';
 $url = $_POST['url'];
 $title = $_POST['title'];
 $playlist = $_POST['playlist'];
@@ -18,13 +18,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     
           
-    $sql = "INSERT INTO `videos` (`url`, `title`, `content`, `playlist`, `tags`, `date`, `description`, `keywords`, `creator`, `video_id`, `is_valid`, `image`) VALUES ('fefh', 'fefe', 'fefe', 'efe', 'fe', 'date', 'effe', 'efe', 'fe', 'efhf', '0', 'sfs')";
+    $sql = "INSERT INTO `videos` (`url`, `title`, `content`, `playlist`, `tags`, `date`, `description`, `keywords`, `creator`, `video_id`) VALUES ('$url', '$title', '$content', '$playlist', '$tags', '$date', '$description', '$keywords', '$creator', '$videoId');";
     $result = mysqli_query($conn, $sql);
 
-    if($conn){
+    if($result){
         echo "data inserted";
     }else{
-        echo "insertion failed ";
+        echo "insertion failed ".mysqli_error($conn)."";
     }
 
 }

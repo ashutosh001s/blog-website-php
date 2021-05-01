@@ -1,5 +1,5 @@
 <?php
-include 'partials/_dbconnect.php';
+include '_dbconnect.php';
 $url = $_POST['url'];
 $title = $_POST['title'];
 $category = $_POST['category'];
