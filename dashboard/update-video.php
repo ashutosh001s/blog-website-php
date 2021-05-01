@@ -30,8 +30,8 @@
             <!-- Page Header -->
             <div class="page-header row no-gutters py-4">
               <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                <span class="text-uppercase page-subtitle">Blog Posts</span>
-                <h3 class="page-title">Add New Post</h3>
+                <span class="text-uppercase page-subtitle">Videos</span>
+                <h3 class="page-title">Update Post</h3>
               </div>
             </div>
             <!-- End Page Header -->
@@ -41,7 +41,7 @@
                 <?php
                        //edit post opens here
                         $id = $_GET['post'];
-                        $sql = "SELECT * FROM `posts` WHERE url = '$id'";
+                        $sql = "SELECT * FROM `videos` WHERE url = '$id'";
                         $result = mysqli_query($conn, $sql);
 
                         $row = mysqli_fetch_assoc($result);
@@ -49,15 +49,15 @@
                         $url = $row['url'];
                         $title = $row['title'];
                         $content = $row['content'];
-                        $readMin = $row['read_time'];
-                        $category = $row['category'];
+                        $videoId = $row['video_id'];
+                        $playlist = $row['playlist'];
                         $tags = $row['tags'];
                         $keywords = $row['keywords'];
-                        $author= $row['author'];
+                        $creator= $row['creator'];
                         $description = $row['description'];
                         $date = $row['$date'];
                 
-                echo'<form action="../partials/_update-post.php" method="POST" enctype="multipart/form-data">
+                echo'<form action="../partials/_update-video.php" method="POST" enctype="multipart/form-data">
                 <div class="card card-small mb-3">
                   <div class="card-body">
                     <div class="add-new-post">
@@ -76,7 +76,7 @@
                 <!-- Post Overview -->
                 <div class="card card-small mb-3">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Actions</h6>
+                    <h6 class="m-0">Seo</h6>
                   </div>
                   <div class="card-body p-0">
                   <div class="card-input-box">
@@ -90,15 +90,15 @@
                 <!-- Post Overview -->
                 <div class="card card-small mb-3">
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Categories</h6>
+                    <h6 class="m-0">Extra Info</h6>
                   </div>
                   <div class="card-body p-0">
                   <div class="card-input-box">
-                        <input type="text" class="form-control card-input" value="'.$category.'" name="category" placeholder="Category" required>
+                        <input type="text" class="form-control card-input" value="'.$playlist.'" name="category" placeholder="Category" required>
                         <input type="text" class="form-control card-input" value="'.$tags.'" name="tags" placeholder="Tags" required>
                         <input type="text" class="form-control card-input" value="'.$keywords.'" name="keywords" placeholder="Keywords" required>
-                        <input type="text" class="form-control card-input" value="'.$author.'" name="author" placeholder="Author" required>
-                        <input type="text" class="form-control card-input" value="'.$readMin.'" name="read" placeholder="Read Time" required> 
+                        <input type="text" class="form-control card-input" value="'.$creator.'" name="author" placeholder="Author" required>
+                        <input type="text" class="form-control card-input" value="'.$videoId.'" name="read" placeholder="Read Time" required> 
                         <button class="btn btn-primary btn-sm" type="submit">submit</button>
                   </div>
                   </div>
