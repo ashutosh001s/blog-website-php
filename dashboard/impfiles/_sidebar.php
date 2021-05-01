@@ -36,6 +36,12 @@ echo '<aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
       </a>
     </li>
     <li class="nav-item">
+      <a class="nav-link " href="components-video-posts.php">
+        <i class="material-icons">video_library</i>
+        <span>Video Posts</span>
+      </a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link " href="add-new-post.php">
         <i class="material-icons">note_add</i>
         <span>Add New Post</span>
