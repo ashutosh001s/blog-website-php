@@ -9,7 +9,7 @@ if (isset($_SESSION['loggedin'])  && $_SESSION['loggedin'] == true) {
   $adminEmail = $row['user_email'];
 
   if ($useremail == $adminEmail) {
-    return;
+    continue;
 
   }else{
     header('Location: /404');
