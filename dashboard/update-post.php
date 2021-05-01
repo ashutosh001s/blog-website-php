@@ -58,7 +58,7 @@
                         $date = $row['$date'];
                         $image = $row['image'];
                 
-                echo'<form action="../submit-post.php" method="POST" enctype="multipart/form-data">
+                echo'<form action="../update-post.php" method="POST" enctype="multipart/form-data">
                 <div class="card card-small mb-3">
                   <div class="card-body">
                     <div class="add-new-post">
