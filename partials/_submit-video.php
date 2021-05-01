@@ -18,7 +18,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     
           
-    $sql = "INSERT INTO `videos` (`url`, `title`, `content`, `playlist`, `tags`, `date`, `description`, `keywords`, `creator`, `video_id`) VALUES ('$url', '$title', '$content', '$playlist', '$tags', '$date', '$description', '$keywords', '$creator', '$videoId');";
+    $sql = "INSERT INTO `videos` (`sr_no`, `url`, `title`, `content`, `playlist`, `tags`, `date`, `description`, `keywords`, `creator`, `video_id`, `is_valid`, `image`) VALUES (NULL, 'fe', 'fefe', 'fefe', 'efe', 'fe', 'date', 'effe', 'efe', 'fe', 'ef', '0', 'ss')";
     $result = mysqli_query($conn, $sql);
 
     if($result){
