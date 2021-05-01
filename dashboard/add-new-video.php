@@ -57,11 +57,11 @@
                 <!-- Post Overview -->
                 <div class='card card-small mb-3'>
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Actions</h6>
+                    <h6 class="m-0">Seo </h6>
                   </div>
                   <div class='card-body p-0'>
                   <div class="card-input-box">
-                  <input type="text" class="form-control card-input" name="url" placeholder="Post Url" required> 
+                  <input type="text" class="form-control card-input" name="url" placeholder="Video Url" required> 
                   <input type="text" class="form-control card-input" name="discription" placeholder="Discription" required> 
                   </div>
                   </div>
@@ -71,16 +71,15 @@
                 <!-- Post Overview -->
                 <div class='card card-small mb-3'>
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Categories</h6>
+                    <h6 class="m-0">Extra Info</h6>
                   </div>
                   <div class='card-body p-0'>
                   <div class="card-input-box">
                         <input type="text" class="form-control card-input" name="playlist" placeholder="Playlist" required>
                         <input type="text" class="form-control card-input" name="tags" placeholder="Tags" required>
                         <input type="text" class="form-control card-input" name="keywords" placeholder="Keywords" required>
-                        <input type="text" class="form-control card-input" name="author" placeholder="Author" required>
+                        <input type="text" class="form-control card-input" name="creator" placeholder="Creator" required>
                         <input type="text" class="form-control card-input" name="video_id" placeholder="Video Id" required> 
-                        <input type="file" class="btn btn-info btn-sm" name="uploadfile" class="form-control card-input" aria-label="file" required>
                         <button class="btn btn-primary btn-sm" type="submit">submit</button>
                   </div>
                   </div>

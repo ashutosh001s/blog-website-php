@@ -42,6 +42,12 @@ echo '<aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
       </a>
     </li>
     <li class="nav-item">
+      <a class="nav-link " href="add-new-video.php">
+        <i class="material-icons">note_add</i>
+        <span>Add New Video</span>
+      </a>
+    </li>
+    <li class="nav-item">
       <a class="nav-link" href="tables.php">
         <i class="material-icons">table_chart</i>
         <span>Activity</span>
