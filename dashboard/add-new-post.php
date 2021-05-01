@@ -57,7 +57,7 @@
                 <!-- Post Overview -->
                 <div class='card card-small mb-3'>
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Actions</h6>
+                    <h6 class="m-0">Seo</h6>
                   </div>
                   <div class='card-body p-0'>
                   <div class="card-input-box">
@@ -71,14 +71,14 @@
                 <!-- Post Overview -->
                 <div class='card card-small mb-3'>
                   <div class="card-header border-bottom">
-                    <h6 class="m-0">Categories</h6>
+                    <h6 class="m-0">Extra Info</h6>
                   </div>
                   <div class='card-body p-0'>
                   <div class="card-input-box">
                         <input type="text" class="form-control card-input" name="category" placeholder="Category" required>
                         <input type="text" class="form-control card-input" name="tags" placeholder="Tags" required>
                         <input type="text" class="form-control card-input" name="keywords" placeholder="Keywords" required>
-                        <input type="text" class="form-control card-input" name="author" placeholder="Author" required>
+                        <input type="text" class="form-control card-input" name="author" value="Ashutosh singh" placeholder="Author" required>
                         <input type="text" class="form-control card-input" name="read" placeholder="Read Time" required> 
                         <input type="file" class="btn btn-info btn-sm" name="uploadfile" class="form-control card-input" aria-label="file" required>
                         <button class="btn btn-primary btn-sm" type="submit">submit</button>

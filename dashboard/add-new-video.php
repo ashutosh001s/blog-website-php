@@ -42,7 +42,7 @@
                 <div class="card card-small mb-3">
                   <div class="card-body">
                     <div class="add-new-post">
-                      <input class="form-control form-control-lg mb-3" type="text" name="title" placeholder="Your Post Title" required>
+                      <input class="form-control form-control-lg mb-3" type="text" name="title" placeholder="Video Title" required>
                       
                       <textarea id="texteditor" name="content" placeholder="Write here..." required>
                       
@@ -78,7 +78,7 @@
                         <input type="text" class="form-control card-input" name="playlist" placeholder="Playlist" required>
                         <input type="text" class="form-control card-input" name="tags" placeholder="Tags" required>
                         <input type="text" class="form-control card-input" name="keywords" placeholder="Keywords" required>
-                        <input type="text" class="form-control card-input" name="creator" placeholder="Creator" required>
+                        <input type="text" class="form-control card-input" name="creator" value="Ashutosh singh" placeholder="Creator" required>
                         <input type="text" class="form-control card-input" name="video_id" placeholder="Video Id" required> 
                         <button class="btn btn-primary btn-sm" type="submit">submit</button>
                   </div>
