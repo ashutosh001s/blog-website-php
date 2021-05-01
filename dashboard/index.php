@@ -12,11 +12,11 @@ if (isset($_SESSION['loggedin'])  && $_SESSION['loggedin'] == true) {
     echo 'you are admin';
 
   }else{
-    header('Location /404');
+    header('Location: /404');
   } 
 }
 else{
-  header('Location /404');
+  header('Location: /404');
 }
 ?>
 <!doctype html>
