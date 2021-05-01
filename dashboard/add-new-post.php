@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="styles/extras.1.1.0.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/f78fim1rlfmk51mmqwkbubj31o4dwybrbi30kliqoin43ovu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script src="scripts/tinymce.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.6/quill.snow.css"> 
   </head>
