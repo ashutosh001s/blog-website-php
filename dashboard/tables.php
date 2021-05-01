@@ -243,7 +243,7 @@
                       <?php
                       include '../partials/_dbconnect.php';
                       $sr_no = 0;
-                      $sql = "SELECT * FROM `visitors` ORDER BY `v_no` DESC";
+                      $sql = "SELECT * FROM `visitors` ORDER BY `v_no` DESC LIMIT 100";
                       $result = mysqli_query($conn, $sql);
                       while ($row = mysqli_fetch_assoc($result)) {
                         $sr_no++;
