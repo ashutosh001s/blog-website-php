@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
           
     $sql = "INSERT INTO `videos` (`url`, `title`, `content`, `playlist`, `tags`, `date`, `description`, `keywords`, `creator`, `video_id`, `is_valid`, `image`) VALUES ('fefh', 'fefe', 'fefe', 'efe', 'fe', 'date', 'effe', 'efe', 'fe', 'efhf', '0', 'sfs')";
-    $result = mysqli_query($conn, $sql);
+    $result = ($conn);
 
     if($result){
         echo "data inserted";
