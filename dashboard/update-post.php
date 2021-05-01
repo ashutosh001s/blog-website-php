@@ -63,8 +63,8 @@
                     <div class="add-new-post">
                       <input class="form-control form-control-lg mb-3" value="'.$title.'" type="text" name="title" placeholder="Your Post Title" required>
                       
-                      <textarea id="texteditor" name="content" value = "'.$content.'" placeholder="Write here..." required>
-                      
+                      <textarea id="texteditor" name="content" placeholder="Write here..." required>
+                                         '.$content.'
                       </textarea>
 
                     </div>
