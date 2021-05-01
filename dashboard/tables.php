@@ -239,6 +239,7 @@
                           <th scope="col" class="border-0">Visit Time</th>
                         </tr>
                       </thead>
+                      <tbody>
                       <?php
                       include '../partials/_dbconnect.php';
                       $sr_no = 0;
@@ -251,7 +252,7 @@
                         $v_url = $row['v_url'];
                         $v_load_time = $row['load_time'];
                         $v_time = $row['v_time'];
-                      echo'<tbody>
+                      echo'
                         <tr>
                           <td>' . $sr_no . '</td>
                           <td>' . $v_ip . '</td>
@@ -261,9 +262,10 @@
                           <td>' . $v_time . '</td>
                         </tr>
                         
-                      </tbody>';
+                      ';
                       }
                       ?>
+                      </tbody>
                     </table>
                   </div>
                 </div>
