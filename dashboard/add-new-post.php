@@ -36,12 +36,12 @@
             <div class="row">
               <div class="col-lg-9 col-md-12">
                 <!-- Add New Post Form -->
-                <form action="/submit-post.php" method="POST" enctype="multipart/form-data">
+                <form action="../submit-post.php" method="POST" enctype="multipart/form-data">
                 <div class="card card-small mb-3">
                   <div class="card-body">
                     <div class="add-new-post">
                       <input class="form-control form-control-lg mb-3" type="text" name="title" placeholder="Your Post Title" required>
-                      <div id="editor-container" class="add-new-post__editor mb-1"></div>
+                      <div id="editor-container" name = "content" class="add-new-post__editor mb-1"></div>
                     </div>
                   </div>
                 </div>
@@ -75,6 +75,7 @@
                         <input type="text" class="form-control card-input" name="author" placeholder="Author" required>
                         <input type="text" class="form-control card-input" name="read" placeholder="Read Time" required> 
                         <input type="file" name="uploadfile" class="form-control card-input" aria-label="file" required>
+                        <button type="submit">submit</button>
                   </div>
                   </div>
                 </div>
