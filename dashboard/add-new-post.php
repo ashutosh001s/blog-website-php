@@ -44,7 +44,7 @@
                     <div class="add-new-post">
                       <input class="form-control form-control-lg mb-3" type="text" name="title" placeholder="Your Post Title" required>
                       
-                      <textarea id="texteditor">
+                      <textarea id="texteditor" name="content" placeholder="Write here..." required>
                       
                       </textarea>
 
