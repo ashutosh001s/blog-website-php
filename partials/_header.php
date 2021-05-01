@@ -64,7 +64,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     $row = mysqli_fetch_assoc($result);
     $adminEmail = $row['user_email'];
     if ($useremail == $adminEmail) {
-      echo '<li><a class="nav-link active" aria-current="page" href="/dashboard.php?inspect=true" target="_blank">Dashboard</a></li>';
+      echo '<li><a class="nav-link active" aria-current="page" href="/dashboard/" target="_blank">Dashboard</a></li>';
     }
   }
   echo ' <li><a class="nav-link active" aria-current="page" href="/partials/_logout.php">Logout</a></li>
