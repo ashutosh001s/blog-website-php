@@ -10,8 +10,13 @@ if (!isset($_SESSION['loggedin'])  && $_SESSION['loggedin'] == false) {
 
   if ($useremail != $adminEmail) {
     header('Location /404');
+  }else{
+    die();
   }
   header('Location /404');
+}
+else{
+  die();
 }
 ?>
 <!doctype html>
