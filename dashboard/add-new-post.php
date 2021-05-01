@@ -41,7 +41,7 @@
                   <div class="card-body">
                     <div class="add-new-post">
                       <input class="form-control form-control-lg mb-3" type="text" name="title" placeholder="Your Post Title" required>
-                      <textarea id="editor-container" class="add-new-post__editor mb-1"></textarea>
+                      <div id="editor-container" class="add-new-post__editor mb-1"></div>
                     </div>
                   </div>
                 </div>
