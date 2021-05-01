@@ -4,8 +4,8 @@ echo '<aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
   <nav class="navbar align-items-stretch navbar-light bg-white flex-md-nowrap border-bottom p-0">
     <a class="navbar-brand w-100 mr-0" href="#" style="line-height: 25px;">
       <div class="d-table m-auto">
-        <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="images/shards-dashboards-logo.svg" alt="Shards Dashboard">
-        <span class="d-none d-md-inline ml-1">Shards Dashboard</span>
+        <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="../assets/img/cover/logo2.png" alt="Blogg Bat Dashboard">
+        <span class="d-none d-md-inline ml-1">Blogg Bat Dashboard</span>
       </div>
     </a>
     <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
@@ -27,7 +27,7 @@ echo '<aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
     <li class="nav-item">
       <a class="nav-link " href="index.php">
         <i class="material-icons">edit</i>
-        <span>Blog Dashboard</span>
+        <span>Dashboard</span>
       </a>
     </li>
     <li class="nav-item">
@@ -43,21 +43,9 @@ echo '<aside class="main-sidebar col-12 col-md-3 col-lg-2 px-0">
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link " href="form-components.php">
-        <i class="material-icons">view_module</i>
-        <span>Forms &amp; Components</span>
-      </a>
-    </li>
-    <li class="nav-item">
       <a class="nav-link" href="tables.php">
         <i class="material-icons">table_chart</i>
-        <span>Tables</span>
-      </a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link " href="user-profile-lite.php">
-        <i class="material-icons">person</i>
-        <span>User Profile</span>
+        <span>Activity</span>
       </a>
     </li>
   </ul>
