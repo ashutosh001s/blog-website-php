@@ -38,7 +38,7 @@
             <div class="row">
               <div class="col-lg-9 col-md-12">
                 <!-- Add New Post Form -->
-                <form action="../partials/_submit-video.php" method="POST" enctype="multipart/form-data">
+                <form action="../partials/_submit-video.php" method="POST">
                 <div class="card card-small mb-3">
                   <div class="card-body">
                     <div class="add-new-post">
