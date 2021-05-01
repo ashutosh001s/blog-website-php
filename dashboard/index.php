@@ -1,3 +1,19 @@
+<?php
+session_start();
+include 'partials/_dbconnect.php';
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == false) {
+  $useremail = $_SESSION['useremail'];
+  $sql = "SELECT * FROM `users` WHERE user_roles = 'administrator'";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_assoc($result);
+  $adminEmail = $row['user_email'];
+
+  if ($useremail != $adminEmail) {
+    header('Location /404');
+  }
+  header('Location /404');
+}
+?>
 <!doctype html>
 <html class="no-js h-100" lang="en">
   <head>
