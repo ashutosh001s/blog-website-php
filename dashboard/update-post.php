@@ -38,13 +38,33 @@
             <div class="row">
               <div class="col-lg-9 col-md-12">
                 <!-- Add New Post Form -->
-                <form action="../submit-post.php" method="POST" enctype="multipart/form-data">
+                <?php
+                       //edit post opens here
+                        $id = $_GET['post'];
+                        $sql = "SELECT * FROM `posts` WHERE url = '$id'";
+                        $result = mysqli_query($conn, $sql);
+
+                        $row = mysqli_fetch_assoc($result);
+
+                        $url = $row['url'];
+                        $title = $row['title'];
+                        $content = $row['content'];
+                        $readMin = $row['read_time'];
+                        $category = $row['category'];
+                        $tags = $row['tags'];
+                        $keywords = $row['keywords'];
+                        $author= $row['author'];
+                        $description = $row['description'];
+                        $date = $row['$date'];
+                        $image = $row['image'];
+                
+                echo'<form action="../submit-post.php" method="POST" enctype="multipart/form-data">
                 <div class="card card-small mb-3">
                   <div class="card-body">
                     <div class="add-new-post">
-                      <input class="form-control form-control-lg mb-3" type="text" name="title" placeholder="Your Post Title" required>
+                      <input class="form-control form-control-lg mb-3" value="'.$title.'" type="text" name="title" placeholder="Your Post Title" required>
                       
-                      <textarea id="texteditor" name="content" placeholder="Write here..." required>
+                      <textarea id="texteditor" name="content" value = "'.$content.'" placeholder="Write here..." required>
                       
                       </textarea>
 
@@ -55,38 +75,39 @@
               </div>
               <div class="col-lg-3 col-md-12">
                 <!-- Post Overview -->
-                <div class='card card-small mb-3'>
+                <div class="card card-small mb-3">
                   <div class="card-header border-bottom">
                     <h6 class="m-0">Actions</h6>
                   </div>
-                  <div class='card-body p-0'>
+                  <div class="card-body p-0">
                   <div class="card-input-box">
-                  <input type="text" class="form-control card-input" name="url" placeholder="Post Url" required> 
-                  <input type="text" class="form-control card-input" name="discription" placeholder="Discription"> 
+                  <input type="text" class="form-control card-input" value="'.$url.'" name="url" placeholder="Post Url" required> 
+                  <input type="text" class="form-control card-input" value="'.$description.'" name="discription" placeholder="Discription"> 
                   </div>
                   </div>
                 </div>
                 <!-- / Post Overview -->
                 
                 <!-- Post Overview -->
-                <div class='card card-small mb-3'>
+                <div class="card card-small mb-3">
                   <div class="card-header border-bottom">
                     <h6 class="m-0">Categories</h6>
                   </div>
-                  <div class='card-body p-0'>
+                  <div class="card-body p-0">
                   <div class="card-input-box">
-                        <input type="text" class="form-control card-input" name="category" placeholder="Category" required>
-                        <input type="text" class="form-control card-input" name="tags" placeholder="Tags" required>
-                        <input type="text" class="form-control card-input" name="keywords" placeholder="Keywords" required>
-                        <input type="text" class="form-control card-input" name="author" placeholder="Author" required>
-                        <input type="text" class="form-control card-input" name="read" placeholder="Read Time" required> 
-                        <input type="file" class="btn btn-info btn-sm" name="uploadfile" class="form-control card-input" aria-label="file" required>
+                        <input type="text" class="form-control card-input" value="'.$category.'" name="category" placeholder="Category" required>
+                        <input type="text" class="form-control card-input" value="'.$tags.'" name="tags" placeholder="Tags" required>
+                        <input type="text" class="form-control card-input" value="'.$keywords.'" name="keywords" placeholder="Keywords" required>
+                        <input type="text" class="form-control card-input" value="'.$author.'" name="author" placeholder="Author" required>
+                        <input type="text" class="form-control card-input" value="'.$readMin.'" name="read" placeholder="Read Time" required> 
+                        <input type="file" class="btn btn-info btn-sm" value="'.$image.'" name="uploadfile" class="form-control card-input" aria-label="file" required>
                         <button class="btn btn-primary btn-sm" type="submit">submit</button>
                   </div>
                   </div>
                 </div>
                 <!-- / Post Overview -->
-              </form>
+              </form>';
+              ?>
               </div>
             </div>
           </div>
