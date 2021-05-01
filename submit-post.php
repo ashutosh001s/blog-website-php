@@ -5,7 +5,7 @@ $title = $_POST['title'];
 $category = $_POST['category'];
 $tags = $_POST['tags'];
 $readTime = $_POST['read'];
-$description = $_POST['description'];
+$description = $_POST['discription'];
 $keywords = $_POST['keywords'];
 $author = $_POST['author'];
 date_default_timezone_set("Asia/Kolkata");

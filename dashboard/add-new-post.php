@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="styles/extras.1.1.0.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.6/quill.snow.css"> </head>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="scripts/tinymce.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/quill/1.3.6/quill.snow.css"> 
+  </head>
   <body class="h-100">
     <div class="container-fluid">
       <div class="row">
@@ -41,7 +44,11 @@
                   <div class="card-body">
                     <div class="add-new-post">
                       <input class="form-control form-control-lg mb-3" type="text" name="title" placeholder="Your Post Title" required>
-                      <div id="editor-container" name = "content" class="add-new-post__editor mb-1"></div>
+                      
+                      <textarea id="basic-conf">
+                      This editor uses the Basic configuration example.
+                      </textarea>
+
                     </div>
                   </div>
                 </div>
