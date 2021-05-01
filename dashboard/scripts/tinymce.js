@@ -1,7 +1,8 @@
 
 tinymce.init({
+
     selector: '#texteditor',
-    width: 100,
+    width: 800,
     height: 500,
     plugins: [
       'advlist autolink link image lists charmap print preview hr anchor pagebreak',
