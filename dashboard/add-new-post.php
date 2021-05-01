@@ -80,8 +80,8 @@
                         <input type="text" class="form-control card-input" name="Keywords" placeholder="Keywords" required>
                         <input type="text" class="form-control card-input" name="author" placeholder="Author" required>
                         <input type="text" class="form-control card-input" name="read" placeholder="Read Time" required> 
-                        <input type="file" name="uploadfile" class="form-control card-input" aria-label="file" required>
-                        <button type="submit">submit</button>
+                        <input type="file" class="btn btn-info btn-sm" name="uploadfile" class="form-control card-input" aria-label="file" required>
+                        <button class="btn btn-primary btn-sm" type="submit">submit</button>
                   </div>
                   </div>
                 </div>
