@@ -49,13 +49,14 @@
                  $content = str_replace("=", "", $content);
          
                  $srno = $row['sr_no'];
+                 $image = $row['image'];
                  $cate = $row['category'];
                  $title = $row['title'];
                  $url = $row['url'];
                 
                  echo '<div class="col-lg-3 col-md-6 col-sm-12 mb-4">
                  <div class="card card-small card-post h-100">
-                   <div class="card-post__image" style="background-image: url();"></div>
+                   <div class="card-post__image" style="background-image: url("../assets/img/cover/' . $image . '");"></div>
                    <div class="card-body">
                      <h5 class="card-title">
                        <a class="text-fiord-blue" href="'.$url.'">' . $title . '</a>
