@@ -240,6 +240,7 @@
                         </tr>
                       </thead>
                       <tbody>
+                      <tr>
                       <?php
                       include '../partials/_dbconnect.php';
                       $sr_no = 0;
@@ -253,18 +254,19 @@
                         $v_load_time = $row['load_time'];
                         $v_time = $row['v_time'];
                       echo'
-                        <tr>
+                        
                           <td>' . $sr_no . '</td>
                           <td>' . $v_ip . '</td>
                           <td>' . $v_email . '</td>
                           <td>' . $v_url . '</td>
                           <td>' . $v_load_time . '</td>
                           <td>' . $v_time . '</td>
-                        </tr>
+                        
                         
                       ';
                       }
                       ?>
+                      </tr>
                       </tbody>
                     </table>
                   </div>
