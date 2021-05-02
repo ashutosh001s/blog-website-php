@@ -126,11 +126,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         
         </html>';
 
-        echo smtp_mailer(''.$email.'','forgot email',$html);
+        smtp_mailer(''.$email.'','forgot email',$html);
+        header('Location: /account/login?email=sent');
 
     }else{
 
-        echo 'no email exist';
+        header('Location: /account/login?email=fail');
     }
     
   
