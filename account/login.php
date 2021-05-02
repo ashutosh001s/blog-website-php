@@ -62,7 +62,7 @@
 								
 								if (isset($_GET['email']) && $_GET['email'] == 'send') {
 									echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
-									<strong>OOps!</strong> Password Mismatched.
+									<strong>Email Send!</strong> Check your email or spam folder.
 									  </div>';
 								}
 		
