@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     $sql = "UPDATE `users` SET `forgot_token` = '$token' WHERE `users`.`user_email` = '$email'";
     $result = mysqli_query($conn , $sql);
-    $html= $token;
+    $html= "test";
 
     echo smtp_mailer(''.$email.'','forgot email',$html);
 
