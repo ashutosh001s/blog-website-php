@@ -20,10 +20,10 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Forgot Password</h4>
-							<form method="POST" class="my-login-validation" novalidate="">
+							<form method="POST" action="../partials/_forgotPass.php" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="email">E-Mail Address</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+									<input id="email" type="email" class="form-control" name="forgotEmail" value="" required autofocus>
 									<div class="invalid-feedback">
 										Email is invalid
 									</div>
