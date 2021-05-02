@@ -8,11 +8,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = $_POST['email'];
     $token = $_POST['token'];
 
-    $sql = "SELECT * FROM `users` WHERE `user_email` = '$email'";
+    $sql = "SELECT * FROM `users` WHERE `user_email` = 'ashutoshcharan121@gmail.com'";
     $result1 = mysqli_query($conn , $sql);
     $numRows = mysqli_num_rows($result1);
     echo $numRows;
-    
+    echo $email;
     // if($numRows == 1){
         
 
