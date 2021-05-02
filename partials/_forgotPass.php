@@ -24,9 +24,10 @@ function smtp_mailer($to,$subject, $msg){
 		'allow_self_signed'=>false
 	));
 	if(!$mail->Send()){
-		echo $mail->ErrorInfo;
+		$mail->ErrorInfo;
+        header('Location: /account/login/fail');
 	}else{
-		return 'Sent';
+		header('Location: /account/login/send');
 	}
 }
 
@@ -125,11 +126,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         smtp_mailer(''.$email.'','forgot email',$html);
 
-        header('Location: /');
+        
 
     }else{
 
-        header('Location: /account/login/fail');
+        echo 'no email found re-check your email and try again';
     }
     
   
