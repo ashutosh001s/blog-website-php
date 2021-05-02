@@ -83,7 +83,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                                     <span
                                                         style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; width:100px;"></span>
                                                     <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
-                                                        Use the link below to set up a new password for your account. If you did not request to reset your password, ignore this email and the link will expire on its own.
+                                                    Verify your email to finish signing up for Blogg Bat Account
+                                                    </p>
+                                                    <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
+                                                    Please use the verification code below on the Blogg Bat website
                                                     </p>
                                                     <a href="https://bloggbat.com/account/reset/'.$email.'/'.$token.'"
                                                         style="background:#0069D9;text-decoration:none !important; font-weight:500; margin:35px 0px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">'.$otp.'</a>
@@ -114,7 +117,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             
             </html>';
 
-            smtp_mailer(''.$email.'','Email Verification',$html);
+            smtp_mailer(''.$email.'','Verify your email to finish signing up for Blogg Bat Account',$html);
             
             if($result){
                 header("Location: /index.php?signup=true");
