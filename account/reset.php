@@ -36,7 +36,9 @@
 							$date2=date_create($today); 
 							
 							
-							$diff=date_diff($date2, $date1);
+							$diff = abs(strtotime($date2) - strtotime($date1));
+
+							echo $diff;
 
 				
 
