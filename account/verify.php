@@ -26,7 +26,7 @@
 							echo'<form method="POST" action="/partials/_verifyEmail.php" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="otp">Enter OTP</label>
-									<input id="otp" type="number" class="form-control" name="otp" required autofocus data-eye>
+									<input id="otp" type="text" class="form-control" name="otp" required autofocus data-eye>
 									<input type="hidden" value="'.$email.'" name="email">
 									<div class="invalid-feedback">
 										OTP is required
