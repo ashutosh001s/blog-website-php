@@ -1,12 +1,6 @@
 <?php
 
-  
-
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
-    echo $email;
-            echo $otp;
-            echo $numRows;
 
     include '_dbconnect.php';
     $email = $_POST['email'];
@@ -24,14 +18,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
             $sql = "UPDATE `users` SET `otp` = '' WHERE `users`.`user_email` = '$email'";
             $result = mysqli_query($conn , $sql);
-            echo 'success';
+            header('Location: index.php?signup=true');
             
         }else{
-            echo 'unsuccess';
+            header('Location: index.php?signup=false');
             
         }
     }else{
-        echo 'fail';
+        header('Location: index.php?signup=false');
     }
 }
 ?>

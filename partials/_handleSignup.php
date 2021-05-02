@@ -88,7 +88,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                                     <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
                                                     Please use the verification code below on the Blogg Bat website
                                                     </p>
-                                                    <a href="https://bloggbat.com/account/reset/'.$email.'/'.$token.'"
+                                                    <a href="#"
                                                         style="background:#0069D9;text-decoration:none !important; font-weight:500; margin:35px 0px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">'.$otp.'</a>
                                                 </td>
                                             </tr>
@@ -120,7 +120,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             smtp_mailer(''.$email.'','Verify your email to finish signing up for Blogg Bat Account',$html);
             
             if($result){
-                header("Location: /account/verify/?email=$email");
+                header("Location: /account/verify?email=$email");
                 exit();
             }
             
