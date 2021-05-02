@@ -91,13 +91,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                                 <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
                                                     Use the link below to set up a new password for your account. If you did not request to reset your password, ignore this email and the link will expire on its own.
                                                 </p>
-                                                <a href="javascript:void(0);"
+                                                <a href="https://bloggbat.com/account/reset/'.$email.'/'.$token.'"
                                                     style="background:#20e277;text-decoration:none !important; font-weight:500; margin:35px 0px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">Reset
                                                     Password</a>
                                                     <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
                                                         Unable to click on the button above?
                                                         Click on the link below or copy/paste in the address bar.
-                                                        <a>'.$token.'</a>
+                                                        <a href= "https://bloggbat.com/account/reset/'.$email.'/'.$token.'">https://bloggbat.com/account/reset/'.$email.'/'.$token.'</a>
                                                     </p>
                                             </td>
                                         </tr>
