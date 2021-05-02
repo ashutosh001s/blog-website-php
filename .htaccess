@@ -23,13 +23,13 @@ RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
 #Rewrite for search.php
 RewriteRule ^search$ search.php [NC,L]
 
-#Rewrite for search.php
+#Rewrite for login.php
 RewriteRule ^account/login$ /account/login.php [NC,L]
 
-#Rewrite for search.php
+#Rewrite for register.php
 RewriteRule ^account/register$ /account/register.php [NC,L]
 
-#Rewrite for search.php
+#Rewrite for forgot.php
 RewriteRule ^account/forgot$ /account/forgot.php [NC,L]
 
 # NC makes the rule non case sensitive
@@ -45,8 +45,11 @@ RewriteRule ^account/forgot$ /account/forgot.php [NC,L]
 # Rewrite for videos.php?u=xxxxx&v=xxx
  RewriteRule ^video/([^/]+)/([^/]+)$ videos.php?play=$1&id=$2 [L]
 
-# Rewrite for videos.php?u=xxxxx&v=xxx
+# Rewrite for reset.php?u=xxxxx&v=xxx
  RewriteRule ^account/reset/([^/]+)/([^/]+)$ /account/reset.php?email=$1&token=$2 [L]
+
+# Rewrite for login.php?u=xxxxx
+ RewriteRule ^account/login/([^/\.]+)/?$ /account/login.php?email=$1 [L]
 
 Options -Indexes 
 
