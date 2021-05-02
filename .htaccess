@@ -23,6 +23,15 @@ RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
 #Rewrite for search.php
 RewriteRule ^search$ search.php [NC,L]
 
+#Rewrite for search.php
+RewriteRule ^account/login$ /account/login.php [NC,L]
+
+#Rewrite for search.php
+RewriteRule ^account/register$ /account/register.php [NC,L]
+
+#Rewrite for search.php
+RewriteRule ^account/forgot$ /account/forgot.php [NC,L]
+
 # NC makes the rule non case sensitive
 # L makes this the last rule that this specific condition will match
 # $ in the regular expression makes the matching stop so that "customblah" will not work
