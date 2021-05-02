@@ -38,7 +38,7 @@
 							
 							$diff=date_diff($date2, $date1);
 
-							echo '$diff';
+							echo $diff;
 
 
 							if($numRows == 0){
