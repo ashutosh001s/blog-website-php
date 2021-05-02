@@ -32,29 +32,19 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
     else{
         if($pass == $conformPass){
-            
             include '_generateOtp.php';
             include '_sendMail.php';
-
             $otp = generateNumericOTP($n);
-
             $hash = password_hash($pass, PASSWORD_DEFAULT);
-
             $sql = "INSERT INTO `users` (`user_name`, `user_email`, `user_pass`, `verification` , `otp` , `user_roles` , `account_date`) VALUES ('$name', '$email', '$hash', '0', '$otp', 'user', current_timestamp())";
             $result = mysqli_query($conn, $sql);
-
             $html = $otp;
             smtp_mailer(''.$email.'','Email Verification',$html);
-
-            if(!$mail->Send()){
-                header('Location: /account/login/fail');
-            }else{
-                header('Location: /account/login/send');
+            
+            if($result){
+                header("Location: /index.php?signup=true");
+                exit();
             }
-            // if($result){
-            //     header("Location: /index.php?signup=true");
-            //     exit();
-            // }
             
         }else{
             header("Location: /index.php?signup=password-mismatched");
