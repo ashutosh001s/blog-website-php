@@ -61,7 +61,7 @@
 					</div>
 					<div class="footer">
 						<?php  $date = date("Y");
-						echo'Copyright &copy; '.$date.' &mdash; Blogg Bat;'
+						echo'Copyright &copy; '.$date.' &mdash; Blogg Bat';
 						?>
 					</div>
 				</div>

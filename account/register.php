@@ -47,7 +47,7 @@
 								<div class="form-group">
 									<div class="custom-checkbox custom-control">
 										<input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
-										<label for="agree" class="custom-control-label">I agree to the <a href="#">Terms and Conditions</a></label>
+										<label for="agree" class="custom-control-label">I agree to the <a href="/privacy-policy">Privacy Policy</a></label>
 										<div class="invalid-feedback">
 											You must agree with our Terms and Conditions
 										</div>
@@ -67,7 +67,7 @@
 					</div>
 					<div class="footer">
 					<?php  $date = date("Y");
-						echo'Copyright &copy; '.$date.' &mdash; Blogg Bat;'
+						echo'Copyright &copy; '.$date.' &mdash; Blogg Bat';
 						?>
 					</div>
 				</div>
