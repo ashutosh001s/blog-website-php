@@ -18,14 +18,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
             $sql = "UPDATE `users` SET `otp` = '' WHERE `users`.`user_email` = '$email'";
             $result = mysqli_query($conn , $sql);
-            header('Location: index.php?signup=true');
+            header('Location: /index.php?signup=true');
             
         }else{
-            header('Location: index.php?signup=false');
+            header('Location: /index.php?signup=false');
             
         }
     }else{
-        header('Location: index.php?signup=false');
+        header('Location: /index.php?signup=false');
     }
 }
 ?>
