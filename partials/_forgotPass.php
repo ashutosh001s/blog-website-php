@@ -1,9 +1,35 @@
 <?php
-   use PHPMailer\PHPMailer\PHPMailer;
-   require 'vendor/autoload.php';
-   $mail = new PHPMailer;
-
 include '_dbconnect.php';
+include('smtp/PHPMailerAutoload.php');
+$html='Msg';
+function smtp_mailer($to,$subject, $msg){
+	$mail = new PHPMailer(); 
+	$mail->SMTPDebug  = 3;
+	$mail->IsSMTP(); 
+	$mail->SMTPAuth = true; 
+	$mail->SMTPSecure = 'tls'; 
+	$mail->Host = "smtp.gmail.com";
+	$mail->Port = 587; 
+	$mail->IsHTML(true);
+	$mail->CharSet = 'UTF-8';
+	$mail->Username = "admin@bloggbat.com";
+	$mail->Password = "wEWedB$8";
+	$mail->SetFrom("SMTP_EMAIL_ID");
+	$mail->Subject = $subject;
+	$mail->Body =$msg;
+	$mail->AddAddress($to);
+	$mail->SMTPOptions=array('ssl'=>array(
+		'verify_peer'=>false,
+		'verify_peer_name'=>false,
+		'allow_self_signed'=>false
+	));
+	if(!$mail->Send()){
+		echo $mail->ErrorInfo;
+	}else{
+		return 'Sent';
+	}
+}
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     $email = $_POST['forgotEmail'];
@@ -18,27 +44,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     $sql = "UPDATE `users` SET `forgot_token` = '$token' WHERE `users`.`user_email` = '$email'";
     $result = mysqli_query($conn , $sql);
+    $html= $token;
 
- 
-        $mail->isSMTP();
-        $mail->SMTPDebug = 2;
-        $mail->Host = 'smtp.hostinger.com';
-        $mail->Port = 587;
-        $mail->SMTPAuth = true;
-        $mail->Username = 'admin@bloggbat.com';
-        $mail->Password = 'LANxG5[Y4b!M';
-        $mail->setFrom('admin@bloggbat.com', 'admin');
-        $mail->addReplyTo('admin@bloggbat.com', 'admin');
-        $mail->addAddress(''.$email.'', 'Receiver Name');
-        $mail->Subject = 'Testing PHPMailer';
-        $mail->msgHTML(file_get_contents('message.html'), __DIR__);
-        $mail->Body = ''.$token.'';
-        //$mail->addAttachment('test.txt');
-        if (!$mail->send()) {
-            echo 'Mailer Error: ' . $mail->ErrorInfo;
-        } else {
-            echo 'The email message was sent.';
-        }
+    echo smtp_mailer(''.$email.'','forgot email',$html);
+
+    
 }
 
 
