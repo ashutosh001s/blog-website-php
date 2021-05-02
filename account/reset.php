@@ -64,7 +64,7 @@
 										Reset Password
 									</button>
 								</div>
-							</form>' . $diff;
+							</form>';
 							?>
 						</div>
 					</div>
