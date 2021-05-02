@@ -32,6 +32,9 @@ RewriteRule ^account/register$ /account/register.php [NC,L]
 #Rewrite for forgot.php
 RewriteRule ^account/forgot$ /account/forgot.php [NC,L]
 
+#Rewrite for forgot.php
+RewriteRule ^account/verify$ /account/verify.php [NC,L]
+
 # NC makes the rule non case sensitive
 # L makes this the last rule that this specific condition will match
 # $ in the regular expression makes the matching stop so that "customblah" will not work
