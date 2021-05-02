@@ -23,6 +23,10 @@
 							<?php
 							$email = $_GET['email'];
 							$token = $_GET['token'];
+
+							if($token ==''){
+								header('Location: /404');
+							}
 							
 							echo'<form method="POST" action="/partials/_resetPass.php" class="my-login-validation" novalidate="">
 								<div class="form-group">

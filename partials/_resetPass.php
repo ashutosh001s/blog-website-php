@@ -4,7 +4,7 @@
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     include '_dbconnect.php';
-    
+
     $newPass = $_POST['newPassword'];
     $email = $_POST['email'];
     $token = $_POST['token'];
@@ -18,8 +18,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $hash = password_hash($newPass, PASSWORD_DEFAULT);
         $sql = "UPDATE `users` SET `user_pass` = '$hash' WHERE `users`.`user_email` = '$email'";
         $result = mysqli_query($conn, $sql);
+        
             if($result){
+
+                $sql = "UPDATE `users` SET `forgot_token` = '' WHERE `users`.`user_email` = '$email'";
+                $result = mysqli_query($conn , $sql);
                 echo 'password reset successful';
+
             }else{
                 echo 'password reset unsuccessful';
             }
