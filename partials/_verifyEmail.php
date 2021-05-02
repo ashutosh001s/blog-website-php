@@ -24,6 +24,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             
         }else{
             echo 'unsuccess';
+            echo $email;
+            echo $otp;
+            echo $numRows;
         }
     }else{
         echo 'fail';
