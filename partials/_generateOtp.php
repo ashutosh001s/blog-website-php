@@ -28,6 +28,6 @@
     
   // Main program
   $n = 6;
-  print_r(generateNumericOTP($n));
+//   print_r(generateNumericOTP($n));
     
   ?>
