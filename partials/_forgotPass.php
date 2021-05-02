@@ -4,7 +4,7 @@ include('smtp/PHPMailerAutoload.php');
 $html='Msg';
 function smtp_mailer($to,$subject, $msg){
 	$mail = new PHPMailer(); 
-	$mail->SMTPDebug  = 3;
+	$mail->SMTPDebug  = 0;
 	$mail->IsSMTP(); 
 	$mail->SMTPAuth = true; 
 	$mail->SMTPSecure = 'tls'; 
@@ -24,7 +24,6 @@ function smtp_mailer($to,$subject, $msg){
 		'allow_self_signed'=>false
 	));
 	$mail->Send();
-    $mail->SMTPDebug = 0;
 		
 
     header('Location: /account/login/send');
