@@ -80,6 +80,11 @@
 									<strong>OOPs!</strong> Something went wrong try again later.
 									  </div>';
 								}
+								if (isset($_GET['email']) && $_GET['email'] == 'invalid-email') {
+									echo '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+									<strong>Wrong Email!</strong> Email not exist please recheck your email.
+									  </div>';
+								}
 		
 							?>
 						</div>

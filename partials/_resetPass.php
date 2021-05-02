@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             }
 
     }else{
-        echo 'no email found recheck your email and try again';
+        header('Location: /account/login/invalid-email');
     }
 }
 
