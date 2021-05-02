@@ -94,11 +94,11 @@
                   </div>
                   <div class="card-body p-0">
                   <div class="card-input-box">
-                        <input type="text" class="form-control card-input" value="'.$playlist.'" name="category" placeholder="Category" required>
+                        <input type="text" class="form-control card-input" value="'.$playlist.'" name="playlist" placeholder="Playlist" required>
                         <input type="text" class="form-control card-input" value="'.$tags.'" name="tags" placeholder="Tags" required>
                         <input type="text" class="form-control card-input" value="'.$keywords.'" name="keywords" placeholder="Keywords" required>
-                        <input type="text" class="form-control card-input" value="'.$creator.'" name="author" placeholder="Author" required>
-                        <input type="text" class="form-control card-input" value="'.$videoId.'" name="read" placeholder="Read Time" required> 
+                        <input type="text" class="form-control card-input" value="'.$creator.'" name="creator" placeholder="Creator" required>
+                        <input type="text" class="form-control card-input" value="'.$videoId.'" name="video_id" placeholder="Video Id" required> 
                         <button class="btn btn-primary btn-sm" type="submit">submit</button>
                   </div>
                   </div>
