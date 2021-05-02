@@ -65,6 +65,21 @@
 									<strong>Email Send!</strong> Check your email or spam folder.
 									  </div>';
 								}
+								if (isset($_GET['email']) && $_GET['email'] == 'fail') {
+									echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+									<strong>Email not send!</strong> Something went wrong recheck your email and try again.
+									  </div>';
+								}
+								if (isset($_GET['email']) && $_GET['email'] == 'reset-success') {
+									echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+									<strong>Success!</strong> Your password reset successfully.
+									  </div>';
+								}
+								if (isset($_GET['email']) && $_GET['email'] == 'reset-fail') {
+									echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+									<strong>OOPs!</strong> Something went wrong try again later.
+									  </div>';
+								}
 		
 							?>
 						</div>

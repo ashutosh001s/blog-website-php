@@ -23,14 +23,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
                 $sql = "UPDATE `users` SET `forgot_token` = '' WHERE `users`.`user_email` = '$email'";
                 $result = mysqli_query($conn , $sql);
-                echo 'password reset successful';
+                
+                header('Location: /account/login/reset-success');
 
             }else{
-                echo 'password reset unsuccessful';
+                header('Location: /account/login/reset-fail');
             }
 
     }else{
-        echo 'no email found';
+        echo 'no email found recheck your email and try again';
     }
 }
 
