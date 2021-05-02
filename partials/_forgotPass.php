@@ -14,7 +14,7 @@ function smtp_mailer($to,$subject, $msg){
 	$mail->CharSet = 'UTF-8';
 	$mail->Username = "admin@bloggbat.com";
 	$mail->Password = "wEWedB$8";
-	$mail->SetFrom("SMTP_EMAIL_ID");
+	$mail->SetFrom("admin@bloggbat.com");
 	$mail->Subject = $subject;
 	$mail->Body =$msg;
 	$mail->AddAddress($to);
