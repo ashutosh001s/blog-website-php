@@ -58,6 +58,23 @@
 									Don't have an account? <a href="register">Create One</a>
 								</div>
 							</form>
+							<?php
+								$response = $_GET['email'];
+								if($response == 'send'){
+									echo $alert;
+								}
+								$alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
+								<strong>OOps!</strong> Password Mismatched.
+							  	</div>';
+
+								$alert2 = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+								<strong>OOps!</strong> Password Mismatched.
+								</div>';
+
+								$alert3 = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
+								<strong>OOps!</strong> Password Mismatched.
+								</div>';
+							?>
 						</div>
 					</div>
 					<div class="footer">
