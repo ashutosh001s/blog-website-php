@@ -21,10 +21,10 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Login</h4>
-							<form method="POST" class="my-login-validation" novalidate="">
+							<form method="POST" action="../partials/_handleLogin.php" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="email">E-Mail Address</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
+									<input id="email" type="email" class="form-control" name="loginId" value="" required autofocus>
 									<div class="invalid-feedback">
 										Email is invalid
 									</div>
@@ -36,7 +36,7 @@
 											Forgot Password?
 										</a>
 									</label>
-									<input id="password" type="password" class="form-control" name="password" required data-eye>
+									<input id="password" type="password" class="form-control" name="loginPass" required data-eye>
 								    <div class="invalid-feedback">
 								    	Password is required
 							    	</div>
