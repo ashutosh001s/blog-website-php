@@ -48,8 +48,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             
             <head>
                 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-                <title>Reset Password Email Template</title>
-                <meta name="description" content="Reset Password Email Template.">
+                <title>Verify Password Email</title>
+                <meta name="description" content="Verify Password Email">
                 <style type="text/css">
                     a:hover {text-decoration: underline !important;}
                 </style>
@@ -78,13 +78,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                             </tr>
                                             <tr>
                                                 <td style="padding:0 35px;">
-                                                    <h1 style="color:#1e1e2d; font-weight:500; margin:0;font-size:32px;font-family:"Rubik",sans-serif;">You have
-                                                        requested to reset your password</h1>
+                                                    <h1 style="color:#1e1e2d; font-weight:500; margin:0;font-size:32px;font-family:"Rubik",sans-serif;">Verify your email to finish signing up for Blogg Bat Account</h1>
                                                     <span
                                                         style="display:inline-block; vertical-align:middle; margin:29px 0 26px; border-bottom:1px solid #cecece; width:100px;"></span>
-                                                    <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
-                                                    Verify your email to finish signing up for Blogg Bat Account
-                                                    </p>
                                                     <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
                                                     Please use the verification code below on the Blogg Bat website
                                                     </p>
