@@ -1,34 +1,6 @@
 <?php
 include '_dbconnect.php';
-include('smtp/PHPMailerAutoload.php');
-$html='Msg';
-function smtp_mailer($to,$subject, $msg){
-	$mail = new PHPMailer(); 
-	$mail->SMTPDebug  = 0;
-	$mail->IsSMTP(); 
-	$mail->SMTPAuth = true; 
-	$mail->SMTPSecure = 'tls'; 
-	$mail->Host = "	smtp.hostinger.in";
-	$mail->Port = 587; 
-	$mail->IsHTML(true);
-	$mail->CharSet = 'UTF-8';
-	$mail->Username = "admin@bloggbat.com";
-	$mail->Password = "wEWedB$8";
-	$mail->SetFrom("admin@bloggbat.com", "Blogg Bat");
-	$mail->Subject = $subject;
-	$mail->Body =$msg;
-	$mail->AddAddress($to);
-	$mail->SMTPOptions=array('ssl'=>array(
-		'verify_peer'=>false,
-		'verify_peer_name'=>false,
-		'allow_self_signed'=>false
-	));
-	if(!$mail->Send()){
-		header('Location: /account/login/fail');
-	}else{
-		header('Location: /account/login/send');
-	}
-}
+include '_sendMail.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
@@ -89,7 +61,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                                                     Use the link below to set up a new password for your account. If you did not request to reset your password, ignore this email and the link will expire on its own.
                                                 </p>
                                                 <a href="https://bloggbat.com/account/reset/'.$email.'/'.$token.'"
-                                                    style="background:#20e277;text-decoration:none !important; font-weight:500; margin:35px 0px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">Reset
+                                                    style="background:#0069D9;text-decoration:none !important; font-weight:500; margin:35px 0px; color:#fff;text-transform:uppercase; font-size:14px;padding:10px 24px;display:inline-block;border-radius:50px;">Reset
                                                     Password</a>
                                                     <p style="color:#455056; font-size:15px;line-height:24px; margin:0;">
                                                         Unable to click on the button above?
@@ -124,6 +96,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         </html>';
 
         smtp_mailer(''.$email.'','Password Recovery For Blogg Bat Account',$html);
+
+        if(!$mail->Send()){
+            header('Location: /account/login/fail');
+        }else{
+            header('Location: /account/login/send');
+        }
         
 
     }else{
