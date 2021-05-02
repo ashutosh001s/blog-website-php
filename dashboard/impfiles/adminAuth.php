@@ -16,6 +16,6 @@ if (isset($_SESSION['loggedin'])  && $_SESSION['loggedin'] == true) {
   } 
 }
 else{
-  header('Location: /404');
+  header('Location: /account/login');
 }
 ?>
