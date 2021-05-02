@@ -123,7 +123,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         
         </html>';
 
-        smtp_mailer(''.$email.'','forgot email',$html);
+        smtp_mailer(''.$email.'','Password Recovery For Blogg Bat Account',$html);
         
 
     }else{
