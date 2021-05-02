@@ -44,9 +44,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //Convert the binary data into hexadecimal representation.
         $token = bin2hex($token);
 
-        //Print it out for example purposes.
-        echo $token;
-
         $sql = "UPDATE `users` SET `forgot_token` = '$token' WHERE `users`.`user_email` = '$email'";
         $result = mysqli_query($conn , $sql);
         $html= '<!doctype html>
@@ -127,7 +124,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         </html>';
 
         smtp_mailer(''.$email.'','forgot email',$html);
-        header('Location: /account/login/send');
+
+        header('Location: /');
 
     }else{
 
