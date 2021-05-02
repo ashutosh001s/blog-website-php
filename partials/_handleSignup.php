@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             $sql = "INSERT INTO `users` (`user_name`, `user_email`, `user_pass`, `verification` , `otp` , `user_roles` , `account_date`) VALUES ('$name', '$email', '$hash', '0', '$otp', 'user', current_timestamp())";
             $result = mysqli_query($conn, $sql);
 
-            $html= 'your otp is : '.$otp.'';
+            $html= $otp;
 
             smtp_mailer(''.$email.'','Email Verification',$html);
 
