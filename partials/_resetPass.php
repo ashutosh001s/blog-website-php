@@ -24,7 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             }
 
     }else{
-        echo 'password reset unsuccessful';
+        echo 'no email found';
     }
 }
 
