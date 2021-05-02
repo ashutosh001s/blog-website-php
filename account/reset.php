@@ -20,10 +20,16 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Reset Password</h4>
-							<form method="POST" class="my-login-validation" novalidate="">
+							<?php
+							$email = $_GET['email'];
+							$token = $_GET['token'];
+							
+							echo'<form method="POST" action="/partials/_resetPass.php" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="new-password">New Password</label>
-									<input id="new-password" type="password" class="form-control" name="password" required autofocus data-eye>
+									<input id="new-password" type="password" class="form-control" name="newPassword" required autofocus data-eye>
+									<input type="hidden" value="'.$email.'" name="email">
+									<input type="hidden" value="'.$token.'" name="token">
 									<div class="invalid-feedback">
 										Password is required
 									</div>
@@ -37,7 +43,8 @@
 										Reset Password
 									</button>
 								</div>
-							</form>
+							</form>';
+							?>
 						</div>
 					</div>
 					<div class="footer">
