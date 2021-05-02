@@ -23,12 +23,6 @@ function smtp_mailer($to,$subject, $msg){
 		'verify_peer_name'=>false,
 		'allow_self_signed'=>false
 	));
-	if(!$mail->Send()){
-		// $mail->ErrorInfo;
-        header('Location: /account/login/fail');
-	}else{
-		
-	}
 
     header('Location: /account/login/send');
 }
