@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     include '_dbconnect.php';
     $email = $_POST['email'];
-    $pass = $_POST['otp'];
+    $otp = $_POST['otp'];
 
     $sql = "SELECT * FROM `users` WHERE user_email = '$email' and `otp` = '$otp'";
     $result = mysqli_query($conn , $sql);
