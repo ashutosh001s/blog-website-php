@@ -38,7 +38,7 @@
 							
 							$diff=date_diff($date2, $date1);
 
-							echo $diff;
+				
 
 
 							if($numRows == 0){
@@ -64,7 +64,7 @@
 										Reset Password
 									</button>
 								</div>
-							</form>';
+							</form>' . $diff;
 							?>
 						</div>
 					</div>
