@@ -23,13 +23,13 @@
 							<?php
 							$email = $_GET['email'];
 							$token = $_GET['token'];
-							
+
 							include '_dbconnect.php';
 							$sql = "SELECT * FROM `users` WHERE user_email = '$email' AND forgot_token = '$token'";
    							$result = mysqli_query($conn , $sql);
 							$numRows = mysqli_num_rows($result);
 
-							if($numRows == 1){
+							if($numRows == 0){
 								header('Location: /404');
 							}
 							
