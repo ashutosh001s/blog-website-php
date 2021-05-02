@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         //Convert the binary data into hexadecimal representation.
         $token = bin2hex($token);
 
-        $sql = "UPDATE `users` SET `forgot_token` = '$token' WHERE `users`.`user_email` = '$email'";
+        $sql = "UPDATE `users` SET `forgot_token` = '$token', `token_expire_time` = CURRENT_TIMESTAMP() WHERE `users`.`user_email` = '$email'";
         $result = mysqli_query($conn , $sql);
         $html= '<!doctype html>
         <html lang="en-US">
@@ -124,6 +124,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         </html>';
 
         smtp_mailer(''.$email.'','forgot email',$html);
+
+        $sql = "DELETE FROM `users` WHERE `users`.`user_no` = 20";
         
 
     }else{
