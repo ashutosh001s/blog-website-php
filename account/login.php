@@ -59,21 +59,13 @@
 								</div>
 							</form>
 							<?php
-								$response = $_GET['email'];
-								if($response == 'send'){
-									echo $alert;
+								
+								if (isset($_GET['email']) && $_GET['email'] == 'send') {
+									echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+									<strong>OOps!</strong> Password Mismatched.
+									  </div>';
 								}
-								$alert = '<div class="alert alert-success alert-dismissible fade show" role="alert">
-								<strong>OOps!</strong> Password Mismatched.
-							  	</div>';
-
-								$alert2 = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-								<strong>OOps!</strong> Password Mismatched.
-								</div>';
-
-								$alert3 = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-								<strong>OOps!</strong> Password Mismatched.
-								</div>';
+		
 							?>
 						</div>
 					</div>
