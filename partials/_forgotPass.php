@@ -27,8 +27,10 @@ function smtp_mailer($to,$subject, $msg){
 		// $mail->ErrorInfo;
         header('Location: /account/login/fail');
 	}else{
-		header('Location: /account/login/send');
+		
 	}
+
+    header('Location: /account/login/send');
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
