@@ -120,10 +120,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             }else{
                 header('Location: /account/login/send');
             }
-            // if($result){
-            //     header("Location: /index.php?signup=true");
-            //     exit();
-            // }
+            if($result){
+                header("Location: /index.php?signup=true");
+                exit();
+            }
             
         }else{
             header("Location: /index.php?signup=password-mismatched");
