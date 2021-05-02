@@ -4,6 +4,10 @@
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
+    echo $email;
+            echo $otp;
+            echo $numRows;
+
     include '_dbconnect.php';
     $email = $_POST['email'];
     $pass = $_POST['otp'];
@@ -24,9 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             
         }else{
             echo 'unsuccess';
-            echo $email;
-            echo $otp;
-            echo $numRows;
+            
         }
     }else{
         echo 'fail';
