@@ -4,7 +4,7 @@ include('smtp/PHPMailerAutoload.php');
 $html='Msg';
 function smtp_mailer($to,$subject, $msg){
 	$mail = new PHPMailer(); 
-	$mail->SMTPDebug  = 0;
+	$mail->SMTPDebug  = 3;
 	$mail->IsSMTP(); 
 	$mail->SMTPAuth = true; 
 	$mail->SMTPSecure = 'tls'; 
@@ -23,10 +23,11 @@ function smtp_mailer($to,$subject, $msg){
 		'verify_peer_name'=>false,
 		'allow_self_signed'=>false
 	));
-	$mail->Send();
-		
-
-    header('Location: /account/login/send');
+	if(!$mail->Send()){
+		header('Location: /account/login/fail');
+	}else{
+		header('Location: /account/login/send');
+	}
 }
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -123,12 +124,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         </html>';
 
         smtp_mailer(''.$email.'','forgot email',$html);
-
         
 
     }else{
-
-        echo 'no email found re-check your email and try again';
+        echo 'Email not exist recheck your email and try again';
     }
     
   
