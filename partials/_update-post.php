@@ -17,12 +17,12 @@ $content = str_replace("'", "	&apos;" , $content);
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    // $sql = "UPDATE `posts` SET `title` = '$title', `content` = '$content', `category` = '$category', `tags` = '$tags', `date` = '$date', `description` = '$description', `keywords` = '$keywords', `author` = '$author' , `read_time` = '$readTime' WHERE `posts`.`url` = '$url'";
-    // $result = mysqli_query($conn, $sql);
-echo $url;
-    // if($result){
-    //     echo "data inserted";
-    // }else{
-    //     echo "insertion failed ".mysqli_error($conn)."";
-    // }
+    $sql = "UPDATE `posts` SET `title` = '$title', `content` = '$content', `category` = '$category', `tags` = '$tags', `date` = '$date', `description` = '$description', `keywords` = '$keywords', `author` = '$author' , `read_time` = '$readTime' WHERE `posts`.`url` = '$url'";
+    $result = mysqli_query($conn, $sql);
+
+    if($result){
+        echo "data inserted";
+    }else{
+        echo "insertion failed ".mysqli_error($conn)."";
+    }
 }

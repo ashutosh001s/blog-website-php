@@ -16,12 +16,15 @@ $content = str_replace("'", "	&apos;" , $content);
 
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
-    $sql = "UPDATE `videos` SET `url` = '$url', `title` = '$title', `content` = '$content', `playlist` = '$playlist', `tags` = '$tags', `date` = '$date', `description` = '$description', `keywords` = '$keywords', `creator` = '$creator', `video_id` = '$videoId' WHERE `videos`.`url` = '$url'";
-    $result = mysqli_query($conn, $sql);
+    echo $url;
+    echo $playlist;
 
-    if($result){
-        echo "data inserted";
-    }else{
-        echo "insertion failed ".mysqli_error($conn)."";
-    }
+    // $sql = "UPDATE `videos` SET `url` = '$url', `title` = '$title', `content` = '$content', `playlist` = '$playlist', `tags` = '$tags', `date` = '$date', `description` = '$description', `keywords` = '$keywords', `creator` = '$creator', `video_id` = '$videoId' WHERE `videos`.`url` = '$url'";
+    // $result = mysqli_query($conn, $sql);
+
+    // if($result){
+    //     echo "data inserted";
+    // }else{
+    //     echo "insertion failed ".mysqli_error($conn)."";
+    // }
 }
