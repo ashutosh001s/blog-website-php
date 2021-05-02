@@ -51,11 +51,13 @@ RewriteRule ^account/verify$ /account/verify.php [NC,L]
 # Rewrite for reset.php?u=xxxxx&v=xxx
  RewriteRule ^account/reset/([^/]+)/([^/]+)$ /account/reset.php?email=$1&token=$2 [L]
 
+# Rewrite for verify.php?u=xxxxx
+  RewriteRule ^account/verify/([^/\.]+)/?$ /account/verify.php?email=$1 [L]
+
 # Rewrite for login.php?u=xxxxx
  RewriteRule ^account/login/([^/\.]+)/?$ /account/login.php?email=$1 [L]
 
- # Rewrite for verify.php?u=xxxxx
-  RewriteRule ^/verify/([^/\.]+)/?$ /account/verify.php?email=$1 [L]
+ 
 
 Options -Indexes 
 
