@@ -5,7 +5,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = $_POST['loginId'];
     $pass = $_POST['loginPass'];
     
-    $sql = "SELECT * FROM `users` WHERE user_email = '$email'";
+    $sql = "SELECT * FROM `users` WHERE user_email = '$email' and `verification` = '1'";
     $result = mysqli_query($conn , $sql);
     $numRows = mysqli_num_rows($result);
     
