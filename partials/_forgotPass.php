@@ -97,12 +97,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         smtp_mailer(''.$email.'','Password Recovery For Blogg Bat Account',$html);
 
-        if(!$mail->Send()){
-            header('Location: /account/login/fail');
-        }else{
-            header('Location: /account/login/send');
-        }
-        
 
     }else{
         header('Location: /account/login/invalid-email');
