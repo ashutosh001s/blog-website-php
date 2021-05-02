@@ -29,25 +29,6 @@
    							$result = mysqli_query($conn , $sql);
 							$numRows = mysqli_num_rows($result);
 
-							$row = mysqli_fetch_assoc($result);
-							$expire = $row['token_expire_time'];
-							$today = date("Y-m-d H:i:s");  
-							$date1=date_create($expire); 
-							$date2=date_create($today); 
-							
-							
-							$diff = abs(strtotime($date2) - strtotime($date1));
-
-							$years = floor($diff / (365*60*60*24));
-$months = floor(($diff - $years * 365*60*60*24) / (30*60*60*24));
-$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24)/ (60*60*24));
-$days = floor(($diff - $years * 365*60*60*24 - $months*30*60*60*24) * (60*60*24));
-
-printf("%d years, %d months, %d days\n", $years, $months, $days);
-
-				
-
-
 							if($numRows == 0){
 								header('Location: /404');
 							}
