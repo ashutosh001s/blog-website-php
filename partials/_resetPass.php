@@ -15,7 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if($numRows == 1){
 
         $hash = password_hash($newPass, PASSWORD_DEFAULT);
-        $sql = "UPDATE `users` SET `user_pass` = "."'$hash'"." WHERE `users`.`user_email` = "."'$email'".";
+        $sql = "UPDATE `users` SET `user_pass` = "."'$hash'"." WHERE `users`.`user_email` = "."'$email'";
         $result = mysqli_query($conn, $sql);
             if($result){
                 echo 'password reset successful';
