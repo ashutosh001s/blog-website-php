@@ -37,7 +37,7 @@ RewriteRule ^search$ search.php [NC,L]
  RewriteRule ^video/([^/]+)/([^/]+)$ videos.php?play=$1&id=$2 [L]
 
 # Rewrite for videos.php?u=xxxxx&v=xxx
- RewriteRule ^/account/reset/([^/]+)/([^/]+)$ /account/reset.php?email=$1&token=$2 [L]
+ RewriteRule ^reset/([^/]+)/([^/]+)$ /account/reset.php?email=$1&token=$2 [L]
 
 Options -Indexes 
 
