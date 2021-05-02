@@ -8,7 +8,7 @@ function smtp_mailer($to,$subject, $msg){
 	$mail->IsSMTP(); 
 	$mail->SMTPAuth = true; 
 	$mail->SMTPSecure = 'tls'; 
-	$mail->Host = "smtp.gmail.com";
+	$mail->Host = "	smtp.hostinger.in";
 	$mail->Port = 587; 
 	$mail->IsHTML(true);
 	$mail->CharSet = 'UTF-8';
