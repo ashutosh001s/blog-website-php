@@ -23,7 +23,7 @@
 							<?php
 							$email = $_GET['email'];	
 							
-							echo'<form method="POST" action="/partials/_resetPass.php" class="my-login-validation" novalidate="">
+							echo'<form method="POST" action="/partials/_verifyEmail.php" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="otp">Enter OTP</label>
 									<input id="otp" type="number" class="form-control" name="otp" required autofocus data-eye>
