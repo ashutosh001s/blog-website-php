@@ -120,7 +120,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
             smtp_mailer(''.$email.'','Verify your email to finish signing up for Blogg Bat Account',$html);
             
             if($result){
-                header("Location: /account/verify/$email");
+                header("Location: /account/verify/?email=$email");
                 exit();
             }
             

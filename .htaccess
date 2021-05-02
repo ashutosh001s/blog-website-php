@@ -54,8 +54,8 @@ RewriteRule ^account/verify$ /account/verify.php [NC,L]
 # Rewrite for login.php?u=xxxxx
  RewriteRule ^account/login/([^/\.]+)/?$ /account/login.php?email=$1 [L]
 
-# Rewrite for post.php?u=xxxxx
- RewriteRule ^account/verify/([^/\.]+)/?$ /account/verify.php?id=$1 [L]
+# Rewrite for verify.php?u=xxxxx
+# RewriteRule ^account/verify/([^/\.]+)/?$ /account/verify.php?id=$1 [L]
 
 Options -Indexes 
 
