@@ -29,6 +29,18 @@
    							$result = mysqli_query($conn , $sql);
 							$numRows = mysqli_num_rows($result);
 
+							$row = mysqli_fetch_assoc($result);
+							$expire = $row['token_expire_time'];
+							$today = date("Y-m-d H:i:s");  
+							$date1=date_create($expire); 
+							$date2=date_create($today); 
+							
+							
+							$diff=date_diff($date2, $date1);
+
+							echo '$diff';
+
+
 							if($numRows == 0){
 								header('Location: /404');
 							}
