@@ -11,8 +11,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $sql = "SELECT * FROM `users` WHERE `user_email` = '$email' AND `forgot_token` = '$token'";
     $result = mysqli_query($conn , $sql);
     $numRows = mysqli_num_rows($result);
+    echo $numRows;
     
     if($numRows == 1){
+        
 
         $hash = password_hash($newPass, PASSWORD_DEFAULT);
         $sql = "UPDATE `users` SET `user_pass` = '$hash' WHERE `users`.`user_email` = '$email'";
@@ -26,7 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }else{
         echo 'no email found';
         // echo $email;
-        echo $numRows;
+        
         // echo $token;
     }
 }
