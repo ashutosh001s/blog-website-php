@@ -26,6 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }else{
         echo 'no email found';
         echo $email;
+        echo $numRows;
         echo $token;
     }
 }
