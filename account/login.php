@@ -21,7 +21,7 @@
 					<div class="card fat">
 						<div class="card-body">
 							<h4 class="card-title">Login</h4>
-							<form method="POST" action="../partials/_handleLogin.php" class="my-login-validation" novalidate="">
+							<form method="POST" action="/partials/_handleLogin.php" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="email">E-Mail Address</label>
 									<input id="email" type="email" class="form-control" name="loginId" value="" required autofocus>
