@@ -23,6 +23,8 @@ function smtp_mailer($to,$subject, $msg){
 		'verify_peer_name'=>false,
 		'allow_self_signed'=>false
 	));
+	$mail->Send();
+		
 
     header('Location: /account/login/send');
 }
