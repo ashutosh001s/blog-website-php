@@ -14,7 +14,7 @@ function smtp_mailer($to,$subject, $msg){
 	$mail->CharSet = 'UTF-8';
 	$mail->Username = "admin@bloggbat.com";
 	$mail->Password = "wEWedB$8";
-	$mail->SetFrom("Blogg Bat");
+	$mail->SetFrom("admin@bloggbat.com", "Blogg Bat");
 	$mail->Subject = $subject;
 	$mail->Body =$msg;
 	$mail->AddAddress($to);
@@ -44,7 +44,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     $sql = "UPDATE `users` SET `forgot_token` = '$token' WHERE `users`.`user_email` = '$email'";
     $result = mysqli_query($conn , $sql);
-    $html= "test";
+    $html= $token;
 
     echo smtp_mailer(''.$email.'','forgot email',$html);
 
