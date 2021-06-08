@@ -53,7 +53,7 @@
 .card-text {
   font-size: 12px;
   margin: 20px 0px;
-  text-transform: lowercase;
+  text-transform: capitalize;
 }
 
 .card img {
