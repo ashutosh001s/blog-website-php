@@ -130,7 +130,7 @@ function minifier($code)
           <a href="blog/' . $url . '"><img src="/assets/img/cover/' . $image . '" class="card-img-top" alt="..."></a>
           <div class="card-body">
           <a href="blog/' . $url . '" style=" text-decoration: none; "> <h5 class="card-title">' . substr($title, 0, 70) . '</h5> </a>
-            <p class="card-text">Creator : ' . $creator . ' <b>.</b> ' . $date . '</p>
+            <p class="card-text">Author : ' . $creator . ' <b>.</b> ' . $date . '</p>
           </div>
         </div>
      </div>';
