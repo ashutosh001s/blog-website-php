@@ -1,4 +1,4 @@
-<!-- Site starts here -->
+<!-- Site starts from here -->
 <?php
 $time = microtime();
 $time = explode(' ', $time);
