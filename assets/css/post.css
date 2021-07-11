@@ -45,18 +45,18 @@
 }
 
 .redheading {
-  /* font-size: 25px;
+  font-size: 25px;
   text-transform: uppercase;
   color: #008eff;
   font-weight: bold;
-  margin: 25px 0px; */
+  margin: 25px 0px;
 
-  background-color: #2626e21a;
+  /* background-color: #2626e21a;
   border-radius: 10px 38px;
   border-left: 20px solid blue;
   font-family: cursive;
   border-right: 20px solid blue;
-  padding: 10px;
+  padding: 10px; */
 }
 
 .imageCenterPost {
